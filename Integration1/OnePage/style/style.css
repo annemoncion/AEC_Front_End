@@ -1,0 +1,98 @@
+/* style.css */
+/* Programmé par Anne Moncion */
+/* Le 21 novembre 2019 */
+
+body {
+    width: 900px;
+    margin: 40px auto;
+    background-color: #fff;
+    background: url("../img/bg-hiver.jpg") no-repeat center;
+    background-size: cover;
+}
+
+section {
+    background-color: rgba(255,255,255,.9);
+    padding: 40px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h1, h2 {
+    color: #607d8b;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+a {
+    color: lightskyblue;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+img {
+    display: block;
+    width: 600px;
+    margin: 0  auto 20px;
+    border-radius: 12px;
+}
+
+img:hover {
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.28);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.28);
+    box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.28);
+}
+
+table {
+    border: 1px solid #607d8b;
+    margin: 0 auto 20px;
+    padding: 20px;
+}
+
+td, th {
+    padding: 10px 20px;
+}
+
+th {
+    text-align: left;
+    color: #607d8b;
+    font-size: 1.5rem;
+}
+
+td {
+    color: #607d8b;
+    font-size: 1rem;
+}
+
+ul, ol {
+    font-size: 1.2rem;
+    color: #34a79c;
+}
+
+.lien-top {
+    text-align: center;
+}
+
+#haut-de-page {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+}
+
+#haut-de-page h2 {
+    width: 25%;
+}
+
+
