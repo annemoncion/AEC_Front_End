@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19fa015e-48d8-4fb0-8669-c68ce97d45d8" name="Default Changelist" comment="" />
+    <list default="true" id="76188b87-e731-41a7-8b81-ede2a0d4ad2f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,20 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1TIAx9FSBOAY8v0UKXOdDSUpnVP" />
+  <component name="ProjectId" id="1UFRVq9hq8uAlbUIdBm39KRD809" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Mes documents\GitHubProjects\AEC_Front_End\Programmation1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Mes documents\GitHubProjects\AEC_Front_End\Programmation1\" />
-    </key>
+    <property name="js.last.introduce.type" value="VAR" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,21 +48,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19fa015e-48d8-4fb0-8669-c68ce97d45d8" name="Default Changelist" comment="" />
-      <created>1573137479270</created>
+      <changelist id="76188b87-e731-41a7-8b81-ede2a0d4ad2f" name="Default Changelist" comment="" />
+      <created>1574950382472</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573137479270</updated>
-      <workItem from="1573137480421" duration="12711000" />
-      <workItem from="1573776161186" duration="224000" />
-      <workItem from="1573778872574" duration="6333000" />
-      <workItem from="1573825766205" duration="1081000" />
-      <workItem from="1574379289061" duration="96000" />
-      <workItem from="1574803959768" duration="193000" />
-      <workItem from="1574804162217" duration="10000" />
-      <workItem from="1574804188973" duration="1585000" />
-      <workItem from="1574950262035" duration="23000" />
-      <workItem from="1574950334836" duration="48000" />
+      <updated>1574950382472</updated>
+      <workItem from="1574950383643" duration="12501000" />
     </task>
     <servers />
   </component>
@@ -82,9 +65,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -94,19 +75,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/exercice2-1.js</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/js/exercice7.js</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/exercice2-2.js</url>
-          <line>30</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/exercice23.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
