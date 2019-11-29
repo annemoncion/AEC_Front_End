@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76188b87-e731-41a7-8b81-ede2a0d4ad2f" name="Default Changelist" comment="" />
+    <list default="true" id="8ec72617-3ae1-4b34-81e1-f752abe093e9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +24,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1UFRVq9hq8uAlbUIdBm39KRD809" />
+  <component name="ProjectId" id="1UGab6x3ADMmp0un2IVdT1pHIWO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="js.last.introduce.type" value="VAR" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,12 +47,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76188b87-e731-41a7-8b81-ede2a0d4ad2f" name="Default Changelist" comment="" />
-      <created>1574950382472</created>
+      <changelist id="8ec72617-3ae1-4b34-81e1-f752abe093e9" name="Default Changelist" comment="" />
+      <created>1574985453112</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574950382472</updated>
-      <workItem from="1574950383643" duration="13124000" />
+      <updated>1574985453112</updated>
+      <workItem from="1574985454357" duration="3713000" />
     </task>
     <servers />
   </component>
@@ -70,17 +69,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/exercice7.js</url>
-          <line>3</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
