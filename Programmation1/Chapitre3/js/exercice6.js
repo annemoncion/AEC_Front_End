@@ -1,9 +1,7 @@
-// Combien de temps pour exécuter une boucle qui n'affiche rien 100 000 fois ? (Moins de 1s, c'est instantané.)
+// Faire afficher 15 fois le mot "ATTENTION".
 
-var incrementation = 1;
-var texte = "";
+var mot = "ATTENTION";
 
-while(incrementation <= 100000) {
-    document.write(texte);
-    incrementation ++;
+for (incrementation = 0; incrementation < 15; incrementation++) {
+    document.write(mot + " ");
 }

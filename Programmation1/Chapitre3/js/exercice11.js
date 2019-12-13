@@ -1,20 +1,10 @@
-// Lire un code de sexe d'un individu (M ou F) et imprimer le sexe de l'individu par le mot corespondant (Masculin ou Féminin)
-// Traiter plusieurs codes de sexe jusqu'à temps que ce code soit autre chose que M ou F.
-// De plus, afficher le nombre de M qui ont été entrés ainsi que le nombre de F qui ont été entrés.
+// Afficher les nombres de 1 à 10 avec le carré et le cube de chacun de ces nombres.
 
-nombreDeM = 0;
-nombreDeF = 0;
-sexe = prompt("Entrer le sexe de l'individu, en inscrivant 'M' ou 'F'.").toUpperCase();
+var carre;
+var cube;
 
-while(sexe === 'M' || sexe === 'F') {
-    sexe = prompt("Entrer le sexe de l'individu, en inscrivant 'M' ou 'F'.").toUpperCase();
-    if (sexe === 'M') {
-        document.write("Masculin<br>");
-        nombreDeM ++;
-    } else if (sexe === 'F') {
-        document.write("Féminin<br>");
-        nombreDeF++;
-    }
+for (nombre = 1; nombre <= 10; nombre++) {
+    carre = Math.pow(nombre, 2);
+    cube = Math.pow(nombre, 3);
+    document.write(nombre + ", " + carre + " ," + cube + "<br>");
 }
-
-document.write("Il y a " + nombreDeF + " femme(s) et " + nombreDeM + " homme(s).");
