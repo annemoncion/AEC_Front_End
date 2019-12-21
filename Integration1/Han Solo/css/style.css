@@ -2,10 +2,60 @@
 ** Par Anne Moncion
 ** 21 décembre 2019
  */
+@font-face {
+    font-family: "Starjedi";
+    src: url("../font/Starjedi.ttf");
+}
 
 body {
     width: 1000px;
     margin: 0 auto;
-    background-image:url("../img/etoileMort.jpg") no-repeat;
-    background-color: #000;
+    background: url("../img/etoileMort.jpg") no-repeat #000;
+}
+
+h1 {
+    font-size: 140px;
+    text-align: center;
+    color: yellow;
+    font-family: "Starjedi";
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    font-size: 72px;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+h4 {
+    font-size: 44px;
+}
+
+p {
+    text-align: justify;
+    color: #fff;
+    font-size: 16px;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.film {
+    color: yellow;
+}
+
+header a {
+    color: #fff;
+    text-decoration: underline;
 }
