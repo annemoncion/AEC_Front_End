@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7a7b5bc-458b-4144-9202-72f6dd1d8d1f" name="Default Changelist" comment="" />
+    <list default="true" id="acb957b3-1cca-4457-9629-931baeefa529" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,12 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PremierProjet" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -24,21 +30,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1TNnpTlUb3Z1TauVo6rG60LlY4C" />
+  <component name="ProjectId" id="1VIRzJjz7sIHjpuUPpvki1FNhSv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Han Solo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Mes documents\GitHubProjects\AEC_Front_End\Integration1\OnePage" />
+      <recent name="C:\Users\Shany\Dropbox\www\Han Solo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Mes documents\GitHubProjects\AEC_Front_End\Integration1\OnePage" />
-      <recent name="C:\Mes documents\GitHubProjects\AEC_Front_End\Integration1\OnePage\html" />
+      <recent name="C:\Users\Shany\Dropbox\www\PremierProjet" />
+      <recent name="C:\Users\Shany\Dropbox\www\PremierProjet\Medias" />
+      <recent name="C:\Users\Shany\Dropbox\www\PremierProjet\HTML" />
+      <recent name="C:\Users\Shany\Dropbox\www\PremierProjet\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -53,20 +63,37 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b7a7b5bc-458b-4144-9202-72f6dd1d8d1f" name="Default Changelist" comment="" />
-      <created>1573309603477</created>
+      <changelist id="acb957b3-1cca-4457-9629-931baeefa529" name="Default" comment="" />
+      <created>1492819173832</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573309603477</updated>
-      <workItem from="1573309604585" duration="338000" />
-      <workItem from="1574379387471" duration="4374000" />
-      <workItem from="1574803941280" duration="17000" />
-      <workItem from="1576936763622" duration="2102000" />
+      <updated>1492819173832</updated>
+      <workItem from="1492819175135" duration="602000" />
+      <workItem from="1493250410158" duration="5989000" />
+      <workItem from="1493381611956" duration="1251000" />
+      <workItem from="1493658686727" duration="3967000" />
+      <workItem from="1493763983187" duration="6399000" />
+      <workItem from="1493840451324" duration="777000" />
+      <workItem from="1493902246181" duration="2266000" />
+      <workItem from="1493937236139" duration="1208000" />
+      <workItem from="1552676839065" duration="3154000" />
+      <workItem from="1576938885211" duration="1099000" />
     </task>
     <servers />
   </component>
@@ -78,12 +105,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
     </option>
   </component>
 </project>

@@ -1,0 +1,11 @@
+/* style.css
+** Par Anne Moncion
+** 21 décembre 2019
+ */
+
+body {
+    width: 1000px;
+    margin: 0 auto;
+    background-image:url("../img/etoileMort.jpg") no-repeat;
+    background-color: #000;
+}

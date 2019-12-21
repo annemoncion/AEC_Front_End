@@ -30,7 +30,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Integration1/OnePage" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -62,6 +62,8 @@
       <workItem from="1574950383643" duration="13124000" />
       <workItem from="1576193921898" duration="12573000" />
       <workItem from="1576529594862" duration="7013000" />
+      <workItem from="1576787765140" duration="411000" />
+      <workItem from="1576936748406" duration="14000" />
     </task>
     <servers />
   </component>
