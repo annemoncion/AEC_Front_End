@@ -35,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Contrats/Seisho/seisho_vue" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -93,7 +93,8 @@
       <workItem from="1493902246181" duration="2266000" />
       <workItem from="1493937236139" duration="1208000" />
       <workItem from="1552676839065" duration="3154000" />
-      <workItem from="1576938885211" duration="2006000" />
+      <workItem from="1576938885211" duration="2839000" />
+      <workItem from="1577383330368" duration="25000" />
     </task>
     <servers />
   </component>
@@ -105,7 +106,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
