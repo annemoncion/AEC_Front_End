@@ -1,21 +1,62 @@
-.rouge {
-    background-color: red;
+.header {
+    background-image:url("../img/cover.jpg");
+    background-size: cover;
+    padding: 12.5% 0;
+    text-align: center;
+}
+.header p, .header h1 {
+    color: #fff;
 }
 
-.vert {
-    background-color: green;
+.section-pleine {
+    padding: 8rem 1rem;
+    text-align: center;
+}
+.section-titre {
+    padding: 8rem 1rem 2rem;
+}
+.section-icones {
+    padding: 0 2rem 8rem;
+    text-align: center;
+}
+.section-icones p {
+    max-width: 300px;
 }
 
-.bleu {
-    background-color: blue;
+@media (min-width: 1400px) {
+    .section-icones {
+        padding: 0 16.66% 8rem;
+    }
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+p {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: .5rem 1rem 2rem;
+}
+
+i {
+    color: #F8B34F;
+    padding-bottom: 1rem;
+}
+
+.regle {
+    width: 4rem;
+    border: 1px solid #F8B34F;
+}
+
+.regle.blanc {
+    border: 1px solid #fff;
 }
 
 .jaune {
-    background-color: yellow;
+    background-color: #F8B34F;
 }
-
-
-.rouge, .vert, .jaune, .bleu {
-    height: 300px;
+.blanc {
+    background-color: #fff;
 }
 

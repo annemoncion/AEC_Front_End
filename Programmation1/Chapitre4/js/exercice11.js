@@ -9,29 +9,29 @@ Truc : il faut utiliser l'indice du tableau pour représenter le nombre d'enfant
 Par exemple : tab[2] = 10; signifie qu'il y a 10 familles qui ont 2 enfants. */
 
 var enfantsParFamille = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var nombreEnfants;
+var nombreEnfants = 0;
 
-// Comptabiliser 20 familles
-for (var i = 0; i < 20; i++) {
-    nombreEnfants = Number(prompt("Combien avez-vous d'enfants?"));
+// Comptabiliser le nombre d'enfants par famille pour plusieurs familles
+while (!isNaN(nombreEnfants)) {
+    nombreEnfants = Number(prompt("Combien avez-vous d'enfants? Appuyez sur une lettre pour terminer."));
     if ( nombreEnfants > 0 && nombreEnfants < 10 ) {
-        enfantsParFamille[nombreEnfants]++
+        enfantsParFamille[nombreEnfants-1]++;
     }
     else if ( nombreEnfants >= 10 ) {
         enfantsParFamille[9]++;
     }
 }
 
-//Afficher le tableau
+//Afficher le tableau du nombre de familles en fonction du nombre d'enfants par famille
+document.write("<table><tr><th>Nombre d'enfants par famille</th><th>Nombre de familles recensées</th></tr>");
 for (var i = 0; i < enfantsParFamille.length; i++) {
-    document.write("Nombre d'enfants: ");
+    document.write("<tr><td>");
     if (i === enfantsParFamille.length-1) {
-        document.write((i+1) + " et plus");
+        document.write((i+1) + "+");
     }
     else {
         document.write(i+1);
     }
-    document.write(" Nb familles recensées: " + enfantsParFamille[i] + "<br>");
+    document.write("</td><td>" + enfantsParFamille[i] + "</td></tr>");
 }
-
-
+document.write("</table>");

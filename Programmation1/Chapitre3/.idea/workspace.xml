@@ -30,7 +30,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="E:/AEC Front End/Travaux/Examen1" />
+    <property name="last_opened_file_path" value="E:/Contrats/Seisho/seisho_vue" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -66,6 +66,8 @@
       <workItem from="1576936748406" duration="14000" />
       <workItem from="1578681902248" duration="856000" />
       <workItem from="1578753566066" duration="52000" />
+      <workItem from="1579215733815" duration="443000" />
+      <workItem from="1579218674770" duration="939000" />
     </task>
     <servers />
   </component>
