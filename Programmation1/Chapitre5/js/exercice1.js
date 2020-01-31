@@ -35,25 +35,32 @@ let mario = new JoueurHockey("Mario Lemieux", 690, 1033);
 let jaromir = new JoueurHockey("Jaromir Jagr", 766, 1155);
 
 class Equipe {
-    constructor(joueur1, joueur2, joueur3) {
-        this.joueur1 = joueur1;
-        this.joueur2 = joueur2;
-        this.joueur3 = joueur3;
+    constructor(joueurs) {
+        this.joueurs = joueurs;
     }
 
     AfficherAlignement() {
-        return("Alignement: "+ this.joueur1.nom + ", " +  this.joueur2.nom + ", " + this.joueur3.nom + "<br>");
+        let alignement = "Alignement: <br>";
+        for (let i = 0; i < this.joueurs.length; i++) {
+            alignement += this.joueurs[i].nom + "<br>";
+        }
+        return alignement;
     }
 
     AfficherPointsTotaux() {
-        return("Total des points: " + (this.joueur1.Total() + this.joueur2.Total() + this.joueur3.Total()))
+        let points = 0;
+        for (let i = 0; i < this.joueurs.length; i++) {
+            points += this.joueurs[i].Total();
+        }
+        return points;
     }
 }
 
-let equipe1 = new Equipe(sydney, mario, jaromir);
+let equipe1 = new Equipe([sydney, mario, jaromir]);
 
 let alignementEquipe1 = equipe1.AfficherAlignement();
 document.write(alignementEquipe1);
 
+
 let pointsTotauxEquipe1 = equipe1.AfficherPointsTotaux();
-document.write(pointsTotauxEquipe1);
+document.write("Points totaux: " + pointsTotauxEquipe1);
