@@ -2,26 +2,21 @@
  qui contient une petite poupée russe qui contient une très petite poupée russe.
 Chacune de ces poupées possède la fonction GetParents() qui retourne dans combien de poupées russes
 elle se situe et GetEnfants() qui retourne combien de poupées russes sont à l’intérieur d’elle. */
+let compteur = 0;
+
 
 class TresGrossePoupee {
     constructor(grossePoupee) {
         this.grossePoupee = grossePoupee;
-        this.couleur = "rouge";
     }
 
     GetParents() {
-        let compteur = 0;
-
+        return compteur;
     }
 
     GetEnfants() {
-        let compteur = 0;
-        for (let key in TresGrossePoupee) {
-            if (typeof(TresGrossePoupee[key]) === 'object' && TresGrossePoupee[key] !== null) {
-                compteur++;
-                console.log("iteration");
-            }
-        }
+        this.grossePoupee.GetEnfants();
+        compteur++;
         return compteur;
     }
 }
@@ -29,27 +24,69 @@ class TresGrossePoupee {
 class GrossePoupee {
     constructor(poupee) {
         this.poupee = poupee;
-        this.couleur = "bleue";
+    }
+
+    GetParents() {
+        TresGrossePoupee.prototype.GetParents();
+        compteur++;
+        return compteur;
+    }
+
+    GetEnfants() {
+        this.poupee.GetEnfants();
+        compteur++;
+        return compteur;
     }
 }
 
 class Poupee {
     constructor(petitePoupee) {
         this.petitePoupee = petitePoupee;
-        this.couleur = "verte";
+    }
+
+    GetParents() {
+        GrossePoupee.prototype.GetParents();
+        compteur++;
+        return compteur;
+    }
+
+    GetEnfants() {
+        this.petitePoupee.GetEnfants();
+        compteur++;
+        return compteur;
     }
 }
 
 class PetitePoupee {
     constructor(tresPetitePoupee) {
         this.tresPetitePoupee = tresPetitePoupee;
-        this.couleur = "jaune";
+    }
+
+    GetParents() {
+        Poupee.prototype.GetParents();
+        compteur++;
+        return compteur;
+    }
+
+    GetEnfants() {
+        this.tresPetitePoupee.GetEnfants();
+        compteur++;
+        return compteur;
     }
 }
 
 class TresPetitePoupee {
     constructor() {
-        this.couleur = "mauve";
+    }
+
+    GetParents() {
+        PetitePoupee.prototype.GetParents();
+        compteur++;
+        return compteur;
+    }
+
+    GetEnfants() {
+        return compteur;
     }
 }
 
@@ -58,10 +95,7 @@ let anna = new PetitePoupee(ann);
 let annab = new Poupee(anna);
 let annabel = new GrossePoupee(annab);
 let annabelle = new TresGrossePoupee(annabel);
-let compteurAnnabelle = annabelle.GetEnfants();
 
-document.write(compteurAnnabelle);
-console.log(typeof(annabelle.grossePoupee));
-
+document.write(annab.GetEnfants());
 
 

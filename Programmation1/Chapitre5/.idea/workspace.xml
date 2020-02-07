@@ -29,6 +29,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -52,7 +53,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580429550893</updated>
-      <workItem from="1580429551986" duration="14740000" />
+      <workItem from="1580429551986" duration="17139000" />
+      <workItem from="1580913050878" duration="1802000" />
+      <workItem from="1580923806666" duration="2283000" />
+      <workItem from="1581035755737" duration="25000" />
+      <workItem from="1581039668209" duration="3682000" />
     </task>
     <servers />
   </component>
@@ -64,7 +69,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
