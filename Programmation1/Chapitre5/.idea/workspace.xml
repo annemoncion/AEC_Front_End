@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Contrats/Seisho/seisho_vue" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,7 +57,8 @@
       <workItem from="1580913050878" duration="1802000" />
       <workItem from="1580923806666" duration="2283000" />
       <workItem from="1581035755737" duration="25000" />
-      <workItem from="1581039668209" duration="3682000" />
+      <workItem from="1581039668209" duration="4109000" />
+      <workItem from="1581182141549" duration="15000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,6 @@ Chacune de ces poupées possède la fonction GetParents() qui retourne dans comb
 elle se situe et GetEnfants() qui retourne combien de poupées russes sont à l’intérieur d’elle. */
 let compteur = 0;
 
-
 class TresGrossePoupee {
     constructor(grossePoupee) {
         this.grossePoupee = grossePoupee;

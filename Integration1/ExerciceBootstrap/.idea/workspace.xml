@@ -29,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/Contrats/Seisho/seisho_vue" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -64,7 +64,8 @@
       <updated>1579045890738</updated>
       <workItem from="1579045891838" duration="3713000" />
       <workItem from="1579183180736" duration="350000" />
-      <workItem from="1579822546677" duration="6396000" />
+      <workItem from="1579822546677" duration="7641000" />
+      <workItem from="1580317993315" duration="26000" />
     </task>
     <servers />
   </component>
