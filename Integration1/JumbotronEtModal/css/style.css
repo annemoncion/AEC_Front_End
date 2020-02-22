@@ -1,0 +1,81 @@
+.container-video {
+    position: relative;
+    background-color : black;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+.container-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform : translateX(-50%) translateY(-50%);
+    -webkit-transform : translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.container-video .sur-video {
+    position: relative;
+    z-index: 2;
+    padding-top: 6rem;
+}
+
+.container-video .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color : black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.jumbotron {
+    background-image: url("../img/lindyhop-fonce.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+h1, p {
+    color: #fff;
+}
+
+.display-4, .lead {
+    font-weight: 700;
+}
+
+.inside-jumbo {
+    min-height: calc(100vh - 3.25rem);
+    padding-left: 4rem;
+}
+
+.modal-dialog {
+    max-width: calc(100% - 2rem);
+}
+
+.close {
+    font-size: 3rem;
+    color: #fff;
+    position: absolute;
+    right: 1rem;
+}
+
+.logos {
+    margin-top: 2rem;
+}
+
+.logo {
+    max-width: 100px;
+    margin-right: 1rem;
+}
