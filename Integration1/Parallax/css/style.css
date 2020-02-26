@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Khand:700|Ubuntu:400,700&display=swap&subset=latin-ext');
+
+html, body {
+    margin:0;
+    height:100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.125rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p, li {
+    font-size: 1.125rem;
+}
+
+i {
+    color: #e84819;
+}
+
+button {
+    background-color: #e84819;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 0.75rem 1.25rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+.parallax {
+    /* L’hauteur du Parallax */
+    height: 100%;
+    /* Création de l’effet */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bg1 {
+    /* L’image du Parallax */
+    background-image: url("../img/belette-mobile.jpg");
+}
+
+.bg2 {
+    /* L’image du Parallax */
+    background-image: url("../img/belette2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.bg3 {
+    /* L’image du Parallax */
+    background-image: url("../img/ecureuil1.jpg");
+}
+
+.bg4 {
+    background-image: url("../img/ecureuil2.jpg");
+}
+.bg4::after {
+    content: "";
+    background-color: #000;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.bg3, .bg4 {
+    color: #fff;
+    height: auto;
+    padding: 6rem 1rem;
+}
+
+.jaune {
+    background-color: hsla(58, 100%, 37%, 0.71);
+    position: absolute;
+    bottom: 17.25rem;
+    padding: 1.5rem;
+}
+
+.jaune p {
+    margin-bottom: 0;
+}
+
+.blanc {
+    background-color: rgba(255,255,255,.7);
+    padding: 1.75rem 2rem 2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.plein {
+    padding: 6rem 1rem;
+    display: none;
+}
+
+.plein p, .plein ul {
+    margin-right: 2rem;
+}
+
+.liste {
+    position: relative;
+    left: -0.75rem;
+}
+
+.top {
+    position: relative;
+    z-index: 2;
+}
+
+.bloc {
+    text-align: center;
+    padding: 4rem;
+}
+
+.bloc i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.bloc p {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.bloc1 {
+    background-color: #33b573;
+}
+.bloc2 {
+    background-color: #c9bc85;
+    display: none;
+}
+.bloc3 {
+    background-color: #1ea1bd;
+}
+
+@media screen and (min-width: 768px) {
+    .bg1 {
+        background-image: url("../img/belette1.jpg");
+    }
+
+    .bg3, .bg4 {
+        padding: 0;
+    }
+
+    .bg3 {
+        height: 600px;
+    }
+
+    .bg4 {
+        height: 800px;
+    }
+
+    .plein, .bloc2 {
+        display: block;
+    }
+
+    h1 {
+        font-size: 4.375rem;
+    }
+
+    .jaune {
+        bottom: 12rem;
+    }
+}
