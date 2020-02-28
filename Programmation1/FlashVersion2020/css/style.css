@@ -1,0 +1,45 @@
+html,body { margin:0; height:100%;}
+
+.centralCity{
+    background-image: url("../img/centralCity.jpg");
+    overflow: hidden;
+}
+
+#explosion{
+    background-image: url("../img/explosion.jpg");
+    background-size: cover;
+}
+
+.textFlash{
+    color: #FEDF1A;
+}
+
+.h-10{
+    height: 10%;
+}
+
+#flashID {
+    position:relative;
+    left:100px;
+    top: 0;
+}
+
+#titre {
+    color: yellow;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#eclair {
+    width: 10px;
+    height: 10px;
+    background-color: orangered;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    left: 120px;
+    top: -30px;
+}
