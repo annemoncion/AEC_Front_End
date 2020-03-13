@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Khand:700|Ubuntu:400,700&display=swap&subset=latin-ext');
+
+html, body {
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3.125rem;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p, li {
+    font-size: 1.125rem;
+}
+
+i {
+    color: #e84819;
+}
+
+
+.btn-recherche {
+    width: 100%;
+}
+
+.inside-inline {
+    width: 100%;
+}
+
+.input-nombre {
+    max-width: 4rem;
+}

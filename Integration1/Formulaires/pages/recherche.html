@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire envoyé</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<form>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <img class="img-fluid" src="../img/coronavirus.jpg" alt="coronavirus logo" class="logo" />
+            </div>
+            <div class="col-md-4">
+                <h3>Coronavirus Inc.</h3>
+                <p>Toutes les rues, Toutes les villes,<br>Planète Terre, Univers</p>
+                <p>(XXX) XXX-XXXX</p>
+                <p>corona@lagrandepanique.com</p>
+            </div>
+            <form action="../index.html">
+            </form>
+        </div>
+
+        <div class="row m-4">
+            <h1 class="text-center offset-1 col-10" >Recherche d'un forfait voyage</h1>
+        </div>
+
+        <div class="row mb-5">
+            <div class="form-inline col-12 justify-content-center">
+                <label class="sr-only" for="nom">Nom</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="nom" placeholder="Nom">
+                <label class="sr-only" for="prenom">Prénom</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="prenom" placeholder="Prénom">
+                <label class="sr-only" for="adresse">Adresse</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="adresse" placeholder="Adresse">
+            </div>
+
+            <div class="form-inline col-12 justify-content-center">
+                <label class="sr-only" for="ville">Ville</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="ville" placeholder="Ville">
+                <label class="sr-only" for="cp">Code postal</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="cp" placeholder="Code postal">
+                <label class="sr-only" for="tel">Téléphone</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="tel" placeholder="Téléphone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label class="sr-only" for="destination">Choississez votre destination</label>
+                <select class="form-control" id="destination">
+                    <option value="" disabled selected hidden>Choississez votre destination...</option>
+                    <option value="mexique">Mexique</option>
+                    <option value="france">France</option>
+                    <option value="colombie">Colombie</option>
+                    <option value="cuba">Cuba</option>
+                    <option value="espagne">Espagne</option>
+                    <option value="grece">Grèce</option>
+                    <option value="italie">Italie</option>
+                </select>
+            </div>
+
+            <div class=" form-group col-md-6">
+                <div class="input-group mb-2 mr-3">
+                    <label class="sr-only" for="depart">Date de départ</label>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="depart">Date de départ</span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Date de départ" aria-label="Date de départ" aria-describedby="depart">
+                </div>
+                <div class="input-group mb-2">
+                    <label class="sr-only" for="retour">Date de retour</label>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="retour">Date de retour</span>
+                    </div>
+                    <input type="date" class="form-control" placeholder="Date de retour" aria-label="Date de retour" aria-describedby="retour">
+                </div>
+            </div>
+
+            <div class="form-inline col-md-6 offset-6">
+                <div class="input-group mb-4 mr-3">
+                    <label class="sr-only" for="adultes">Nombre d'adultes</label>
+                    <input type="number" class="form-control input-nombre" aria-label="Nombre d'adultes" aria-describedby="nombre d'adultes">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="adultes">Adultes</span>
+                    </div>
+                </div>
+                <div class="input-group mb-4">
+                    <label class="sr-only" for="retour">Nombre d'enfants</label>
+                    <input type="number" class="form-control input-nombre" aria-label="Nombre d'enfants" aria-describedby="nombre d'enfants">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="retour">Enfants</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 offset-6">
+                <div class="btn-group btn-group-toggle mr-3 mb-2" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Train
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Avion
+                    </label>
+                </div>
+                <div class="btn-group btn-group-toggle mr-3 mb-2" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> 1ere classe
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> Économique
+                    </label>
+                </div>
+                <div class="check-options mb-2 mt-2">
+                    <span><strong>Caractéristiques de l'hôtel:</strong></span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="toutCompris">
+                        <label class="form-check-label" for="toutCompris">
+                            Tout compris
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="plage">
+                        <label class="form-check-label" for="plage">
+                            Sur la plage
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="golf">
+                        <label class="form-check-label" for="golf">
+                            Près d'un golf
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-12 mt-4 mb-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d357981.05053421354!2d9.03561747685246!3d45.4954428465914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sItalie!5e0!3m2!1sfr!2sca!4v1584059682780!5m2!1sfr!2sca" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
+            <div class="col-12 mb-4">
+                <button type="submit" class="btn btn-primary btn-recherche">Lancer la recherche</button>
+            </div>
+
+        </div>
+
+    </div>
+</form>
+
+
+
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
+
