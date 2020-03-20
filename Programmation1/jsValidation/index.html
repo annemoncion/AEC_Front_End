@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+	<meta charset="utf-8">
+	<title>Validation Javascript - Exercice</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+<body>
+
+<form id="formComicon">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="m-4 text-center">Comicon 2019</h1>
+			</div>
+			<section class="col-md-6">
+				<div class="form-group">
+    				<label class="sr-only" for="nomUsager">Nom usager</label>
+    				<input type="text" class="form-control" id="nomUsager" aria-describedby="nomUsager" placeholder="Nom usager">
+    				<small id="noteUsager" class="note"></small>
+  				</div>
+
+  				<div class="form-group">
+    				<label class="sr-only" for="mdp">Mot de passe</label>
+    				<input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
+    				<small id="noteMdp" class="note"></small>
+  				</div>
+
+  				<div class="form-group">
+    				<label class="sr-only" for="confirmationMdp">Confirmation mot de passe</label>
+    				<input type="password" class="form-control" id="confirmationMdp" placeholder="Confirmation mot de passe">
+    				<small id="noteConfirmation" class="note"></small>
+  				</div>
+
+  				<div class="form-group">
+    				<label class="sr-only" for="email">Adresse courriel</label>
+    				<input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Adresse courriel">
+    				<small id="noteEmail" class="note"></small>
+  				</div>
+
+  			</section>
+
+  			<section id="harryPotter" class="col-md-6 apparait">
+				<select id="persoHarry" class="custom-select custom-select-md mb-3">
+  					<option selected>Choississez un personnage</option>
+  					<option value="hermione">Hermione</option>
+  					<option value="luna">Luna</option>
+  					<option value="dobby">Dobby</option>
+				</select>
+			</section>
+
+			<section id="lotr" class="col-md-6 apparait">
+				<select id="persoLotr" class="custom-select custom-select-md mb-3">
+  					<option selected>Choississez un personnage</option>
+  					<option value="hermione">Frodon</option>
+  					<option value="luna">Galadriel</option>
+  					<option value="dobby">Bilbon</option>
+				</select>
+			</section>
+
+			<section id="zelda" class="col-md-6 apparait">
+				<select id="persoZelda" class="custom-select custom-select-md mb-3">
+  					<option selected>Choississez un personnage</option>
+  					<option value="hermione">Zelda</option>
+  					<option value="luna">Link</option>
+				</select>
+			</section>
+
+			<div class="col-12 d-flex justify-content-center">
+
+  				<div class="btn-group btn-group-toggle mr-4 mt-5" data-toggle="buttons">
+  					<label class="btn btn-secondary">
+    					<input type="radio" name="options" id="harry" autocomplete="off"> Harry Potter
+  					</label>
+  					<label class="btn btn-secondary">
+    					<input type="radio" name="options" id="lotr" autocomplete="off"> Seigneur des Anneaux
+  					</label>
+  					<label class="btn btn-secondary">
+    					<input type="radio" name="options" id="zelda" autocomplete="off"> Zelda
+  					</label>
+				</div>
+
+  				<button type="submit" id="envoyer" class="btn btn-primary mt-5">Envoyer</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<section id="resume" class="apparait container">
+	<div class="row">
+		<div class="col-md-6">
+			<img id="imagePerso" src="" alt=""/>
+		</div>
+		<div class="col-md-6">
+			<p id="resumeNom"><strong>Nom dusager: </strong></p>
+			<p id="resumeEmail"><strong>Adresse courriel: </strong></p>
+			<p id="resumeUnivers"><strong>Univers choisi: </strong></p>
+			<p id="resumePerso"><strong>Personnage choisi: </strong></p>
+		</div>
+	</div>
+
+
+</section>
+
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</head>
+</body>
+</html>

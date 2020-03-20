@@ -1,0 +1,46 @@
+section {
+	padding: 4rem 0;
+}
+
+.apparait {
+	display: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center bottom;
+}
+
+.apparu {
+	display: block;
+}
+
+#harryPotter {
+	background-image: url("../img/harry-potterr.jpg");
+}
+
+#lotr {
+	background-image: url("../img/lotr.jpg");
+}
+
+#zelda {
+	background-image: url("../img/zelda.jpg");
+}
+
+.note {
+	padding-left: .75rem;
+}
+
+.invalide {
+	color: red;
+}
+
+.valide {
+	color: green;
+}
+
+.moyen {
+	color: orange;
+}
+
+img {
+	max-width: 100%;
+}
