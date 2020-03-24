@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+@font-face {
+    font-family: "Buckwheat";
+    src: url("../font/Buckwheat_TC_Sans_Painted.otf");
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inconsolata', monospace;
+}
+
+h1,h2,h3 {
+    font-family: 'Buckwheat', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+   font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+
+a {
+    color: #28170b;
+}
+a:hover {
+    color: #000;
+}
+
+.btn, .card-link {
+    background-color: rgba(255,255,255,.8);
+    border: 1px solid #000;
+    border-radius: 0;
+}
+
+.btn:hover, .card-link:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+.fullBg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header h3 {
+    max-width: 280px;
+}
+
+.headerAccueil {
+    background-image: url("../img/bg-foret1.jpg");
+    background-position: center center;
+}
+.headerAccueil h3 {
+    color: #fff;
+}
+.svgIntro {
+    background-image: url("../img/intro1.svg");
+    background-repeat: no-repeat;
+    background-position: center 105%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.headerJeux {
+    background-image: url("../img/bg-foret2.jpg");
+    background-position: center top;
+    position: relative;
+}
+
+.headerJeux h2 {
+    color: #28170b;
+}
+.headerJeux .lead {
+    color: #000;
+}
+
+.navbar {
+    z-index: 100;
+    background-color: #fff;
+    height: 3rem;
+    padding-top: 1.5rem;
+    overflow-y: visible;
+}
+
+.navbar-brand {
+    position: relative;
+    top: 0.75rem;
+}
+
+.nav-link {
+    border: 1px solid transparent;
+}
+.nav-link:hover {
+    border: 1px solid #000;
+}
+.active .nav-link {
+    border: 1px solid transparent;
+    border-bottom: 1px solid #000;
+    cursor: default;
+}
+
+.degrade-blanc {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.degrade-blanc1 {
+    height: 300px;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,0) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 17%, rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.degrade-blanc2 {
+    height: 100%;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,0.30015756302521013) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,0.30015756302521013) 100%);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,0.30015756302521013) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+.footer-nav {
+    padding: 2rem 2rem 0;
+    list-style: none;
+}
+
+footer {
+    color: #fff;
+    background-color: #1a1a1a;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+footer p {
+    max-width: 330px;
+}
+
+footer .nav-link {
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+
+footer .nav-link:hover {
+    border: 0;
+    border-bottom: 1px solid #fff;
+}
+
+/* DRAG & DROP Jeu d'association d'icônes */
+.sectionAwesome {
+    padding-top: 8rem;
+    padding-bottom: 1rem;
+}
+.emplacements {
+    margin-bottom: 6rem;
+}
+
+.caseGrise {
+    border-radius: 2px;
+    background-color: #e3e2db;
+    width: 6rem;
+    height: 6rem;
+}
+
+.icones {
+    position: relative;
+}
+
+.icone {
+    color: #e3e2db;
+    position: absolute;
+}
+.icone:hover {
+    cursor: pointer;
+}
+
+.icones #user {
+    font-size: 6rem;
+    right: 0;
+    top: -6rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.icones #binoculars {
+    font-size: 5rem;
+    right: 6rem;
+    top: -9rem;
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
+    transform: rotate(40deg);
+}
+.icones #puzzle-piece {
+    font-size: 4rem;
+    right: 12rem;
+    top: -7rem;
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+.icones #mouse {
+    font-size: 4rem;
+    right: 16rem;
+    top: -7rem;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.inventaire {
+    background-color: #e3e2db;
+    padding: .5rem 1rem .5rem 2rem;
+    display: none;
+}
+.inside-inventaire {
+    width: auto;
+    overflow: hidden;
+}
+.titreInventaire {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    padding-right: 1rem;
+}
+.groupe-cases {
+    width: 84rem;
+}
+.case {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255,255,255,.5);
+    margin: 0 .25rem;
+}
+.iconeInventaire {
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+}
+.cacher, .fas.cacher {
+    display: none;
+}
+.iconePoser {
+    font-size: 4rem;
+}
+.emplacementCombler {
+    background-color: #fff;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: rgba(77,77,77,.5);
+    overflow:hidden;
+    color: #fff;
+}
+
+.lead {
+    font-weight: bold;
+}
+
+.jumbotron.jumboHead {
+    background-color: transparent;
+    z-index: 50;
+}
+
+.bgBouge {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background: url('../img/bg-cabane.jpg') no-repeat center center;
+    background-size: cover;
+
+    transform: scale(1.1);
+}
+
+.contenant-mur {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.mur {
+    position: relative;
+    min-height: 700px;
+}
+
+.sectionJeux {
+    padding-top: 8rem;
+}
+.card {
+    border: 0;
+    position: relative;
+}
+.card-title {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.card-body {
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 2rem;
+}
+.card-link {
+    position: absolute;
+    bottom: 1rem;
+}
+.age {
+    padding-bottom: 4rem;
+}
+.jeux {
+    margin-bottom: 6rem;
+}
+
+.formulaire {
+    background-color: #e3e2db;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.input-group-prepend {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.input-group-text {
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1em;
+    border: 0;
+    border-radius: 0;
+}
+.input-group-text.questionJeu {
+    white-space: normal;
+}
