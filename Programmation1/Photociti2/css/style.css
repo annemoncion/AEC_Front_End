@@ -1,0 +1,119 @@
+.contenantPhotociti {
+    max-width: 1400px;
+}
+
+.cacher {
+    display: none;
+}
+
+.titre, h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.2em;
+}
+
+.entrerMot {
+    align-items: start;
+}
+.erreur {
+    color: red;
+    display: none;
+}
+
+.couleurs {
+    padding-left: 0;
+}
+
+.couleur {
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    list-style: none;
+    margin-right: .5rem;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+#blanc {
+    background-image: url("../background/blanc.jpg");
+}
+#bleu {
+    background-image: url("../background/bleu.jpg");
+}
+#bleuFonce {
+    background-image: url("../background/bleuFonce.jpg");
+}
+#gris {
+    background-image: url("../background/gris.jpg");
+}
+#noir {
+    background-image: url("../background/noir.jpg");
+}
+#rose {
+    background-image: url("../background/rose.jpg");
+}
+#rouge {
+    background-image: url("../background/rouge.jpg");
+}
+
+.couleur.active {
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(153,153,153,1);
+    -moz-box-shadow: 1px 2px 5px 0px rgba(153,153,153,1);
+    box-shadow: 1px 2px 5px 0px rgba(153,153,153,1);
+}
+
+.apercuMot {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 .25rem;
+    background-image: url("../background/blanc.jpg");
+    -webkit-print-color-adjust: exact;
+}
+.contenantImage {
+    display: none;
+    padding: 2rem .25rem;
+}
+@media (min-width: 768px) {
+    .apercuMot {
+        padding: 0 1rem;
+    }
+}
+@media (min-width: 1200px) {
+    .contenantImage {
+        padding: 2rem 1rem;
+    }
+}
+
+.lettre {
+    border: 2px solid #fff;
+    padding: 0;
+    cursor: pointer;
+}
+
+.carousel-item img {
+    border: solid 4px transparent;
+    border-radius: 0;
+    cursor: pointer;
+    max-height: 400px;
+}
+
+.carousel-item img.active {
+    border: solid 4px #007bff;
+    border-radius: 10px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    color: #007bff;
+    font-size: 3rem;
+    opacity: 1;
+    background-image: none;
+    transition: all .2s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon {
+    color: #000;
+}

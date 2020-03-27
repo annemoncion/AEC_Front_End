@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photociti</title>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<form id="genererMot" class="mt-md-5">
+    <div class="container-fluid p-4 contenantPhotociti">
+
+        <div class="form-row d-print-none">
+            <div class="form-group col-md-6 entrerMot pr-4">
+                <label for="inputMot" class="titre mb-4">1. Entrez votre mot</label>
+                <div class="d-flex">
+                    <input type="text" class="form-control mr-2" id="inputMot" placeholder="Un mot entre 3 et 12 caractères">
+                    <button type="submit" class="btn btn-primary">Go !</button>
+                </div>
+                <small id="erreurLongueur" class="form-text erreur">Attention, le mot doit avoir entre 3 et 12 caractères.</small>
+                <small id="erreurCaractere" class="form-text erreur">Attention, le texte ne doit contenir aucune ponctuation, et vous ne disposez que des lettres de l'alphabet et du '*' pour utiliser des caractères spéciaux.</small>
+                <small id="photocitiAide" class="form-text">Tapez * pour utiliser des caractères spéciaux.</small>
+            </div>
+
+            <div class="col-md-6 changerFond pl-md-4 d-print-none cacher">
+                <h2 class="mb-4">2. Changez la couleur de fond</h2>
+                <p>Choississez parmi ces fonds texturés:</p>
+                <ul class="couleurs d-flex">
+                    <li id="blanc" class="couleur active"></li>
+                    <li id="bleu" class="couleur"></li>
+                    <li id="bleuFonce" class="couleur"></li>
+                    <li id="gris" class="couleur"></li>
+                    <li id="noir" class="couleur"></li>
+                    <li id="rose" class="couleur"></li>
+                    <li id="rouge" class="couleur"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row titreApercu d-print-none cacher">
+            <div class="col-12 mt-4 mb-4">
+                <h2>3. Cliquez sur une lettre pour changer la photo.</h2>
+            </div>
+        </div>
+        <div class="row apercuMot justify-content-center d-print-flex">
+            <div id="contenantImage1" class="contenantImage">
+                <img id="lettre1" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre"/>
+            </div>
+            <div id="contenantImage2" class="contenantImage">
+                <img id="lettre2" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage3" class="contenantImage">
+                <img id="lettre3" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage4" class="contenantImage">
+                <img id="lettre4" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage5" class="contenantImage">
+                <img id="lettre5" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage6" class="contenantImage">
+                <img id="lettre6" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage7" class="contenantImage">
+                <img id="lettre7" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage8" class="contenantImage">
+                <img id="lettre8" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage9" class="contenantImage">
+                <img id="lettre9" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage10" class="contenantImage">
+                <img id="lettre10" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage11" class="contenantImage">
+                <img id="lettre11" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+            <div id="contenantImage12" class="contenantImage">
+                <img id="lettre12" class="lettre img-fluid m-auto" data-toggle="modal" data-target="#modifierLettre" />
+            </div>
+        </div>
+
+        <div id="modifierLettre" class="modal d-print-none" tabindex="-1" role="dialog">
+            <div class="modal-dialog h-100 d-flex align-items-center my-0" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sélectionnez votre photo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselLettre" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img id="imgCarousel1" class="d-block img-fluid m-auto" src="" alt="Première lettre">
+                                </div>
+                                <div class="carousel-item">
+                                    <img id="imgCarousel2" class="d-block img-fluid m-auto" src="" alt="Deuxième lettre">
+                                </div>
+                                <div class="carousel-item">
+                                    <img id="imgCarousel3" class="d-block img-fluid m-auto" src="" alt="Troisième lettre">
+                                </div>
+                                <div class="carousel-item">
+                                    <img id="imgCarousel4" class="d-block img-fluid m-auto" src="" alt="Quatrième lettre">
+                                </div>
+                                <div class="carousel-item">
+                                    <img id="imgCarousel5" class="d-block img-fluid m-auto" src="" alt="Cinquième lettre">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselLettre" role="button" data-slide="prev">
+                                <i class="fas fa-chevron-left carousel-control-prev-icon" aria-hidden="true"></i>
+                                <span class="sr-only">Précédent</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselLettre" role="button" data-slide="next">
+                                <i class="fas fa-chevron-right carousel-control-next-icon" aria-hidden="true"></i>
+                                <span class="sr-only">Suivant</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <small id="erreurModif" class="erreur">Veuillez cliquer sur la photo de votre choix pour remplacer la photo actuelle.</small>
+                        <button id="boutonSauvegarder" type="button" class="btn btn-primary">Sauvegarder</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="JS/jquery-3.3.1.min.js"></script>
+<script src="Bootstrap/js/bootstrap.js"></script>
+<script src="JS/photociti.js"></script>
+</body>
+</html>
