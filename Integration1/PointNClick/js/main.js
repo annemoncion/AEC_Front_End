@@ -58,8 +58,6 @@ let associations = 0;
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    console.log(ev.target.id);
-    console.log(data);
     if (ev.target.id === "emplacementMouse" && data === "mouseInventaire") {
         ev.target.appendChild(document.getElementById(data));
         associations++;
