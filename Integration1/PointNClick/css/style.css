@@ -554,8 +554,8 @@ footer .nav-link:hover {
 
 @media (min-width: 768px) {
     .headerHistorique {
-        height: calc(100% - 5rem);
-        min-height: 860px;
+        height: calc(100% - 6rem);
+        min-height: 760px;
     }
 
     .titreGrotte {
@@ -565,12 +565,12 @@ footer .nav-link:hover {
 
     .grotte {
         height: 100vh;
-        min-height: calc(860px + 5rem);
+        min-height: calc(760px + 6rem);
     }
 
     .grotte img {
         height: 100vh;
-        min-height: calc(860px + 5rem);
+        min-height: calc(760px + 6rem);
     }
 
     .sectionHistorique1 {
