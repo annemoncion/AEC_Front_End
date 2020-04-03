@@ -344,6 +344,7 @@ footer .nav-link:hover {
     background-color: #e3e2db;
     width: 6rem;
     height: 6rem;
+    cursor: pointer;
 }
 
 .icones {
@@ -429,14 +430,26 @@ footer .nav-link:hover {
     margin: auto;
     text-align: center;
 }
+
 .cacher, .fas.cacher {
     display: none;
 }
+
 .iconePoser {
     font-size: 4rem;
 }
+
+.caseOccupied {
+    cursor: pointer;
+}
+
 .emplacementCombler {
     background-color: #fff;
+    cursor: default;
+}
+
+.caseOccupied.surbrillance {
+    background-color: yellow;
 }
 
 @media (min-width: 768px) {
