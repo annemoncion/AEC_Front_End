@@ -49,7 +49,7 @@ $(".icone").click(function() {
     if (compteCase > 0) {
         $(".inventaire").css("display", "block");
 
-        if (window.matchMedia("(max-width: 992px)").matches) {
+        if (window.matchMedia("(max-width: 991px)").matches) {
             $(".caseOccupied").click(function() {
 
                 if (caseClicked != "") {
@@ -66,7 +66,7 @@ $(".icone").click(function() {
     }
 });
 
-if (window.matchMedia("(max-width: 992px)").matches) {
+if (window.matchMedia("(max-width: 991px)").matches) {
     $(".caseGrise").click(function() {
         if ($(this).attr("id") === "emplacementMouse" && iconeClickedId === "mouseInventaire") {
             $(this).append("<i id='" + iconeClickedId + "' class='iconePoser " + iconeClickedClass + "'></i>");
@@ -110,14 +110,14 @@ function allowDrop(ev) {
 }
 
 function drag(ev) {
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia("(min-width: 992px)").matches) {
         ev.dataTransfer.setData("text", ev.target.id);
     }
 }
 
 function drop(ev) {
     ev.preventDefault();
-    if (window.matchMedia("(min-width: 768px)").matches) {
+    if (window.matchMedia("(min-width: 992px)").matches) {
         var data = ev.dataTransfer.getData("text");
         if (ev.target.id === "emplacementMouse" && data === "mouseInventaire") {
             ev.target.appendChild(document.getElementById(data));
