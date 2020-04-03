@@ -12,21 +12,22 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg position-absolute w-100 nav-inverse">
-    <a class="navbar-brand pl-4" href="../index.html">
+<nav class="navbar navbar-expand-lg position-absolute w-100">
+    <a class="navbar-brand pl-sm-4 pl-2" href="../index.html">
         <img src="../img/logo.svg" alt="Logo Point'n Click" class="logo" /><span class="sr-only">(current)</span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="navbar-toggler-icon fas fa-bars"></i>
+    <button id="boutonMenu" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times cacher"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item pl-4 pr-2">
-                <a class="nav-link pl-4 pr-4" href="jeux.html">découvrir des jeux</a>
+            <li class="nav-item pl-lg-4 pr-lg-2 mb-lg-0 mb-2 d-flex ml-auto">
+                <a class="nav-link px-lg-4 px-2" href="jeux.html">découvrir des jeux</a>
             </li>
-            <li class="nav-item pl-2 pr-4 active">
-                <a class="nav-link pl-4 pr-4" href="#">historique</a>
+            <li class="nav-item pl-lg-2 pr-lg-4 d-flex ml-auto active">
+                <a class="nav-link px-lg-4 px-2" href="#">historique</a>
             </li>
         </ul>
     </div>
@@ -35,7 +36,6 @@
 <header class="container-fluid fullBg headerHistorique parallax sectionHistorique">
     <div class="grotte row position-relative">
         <img class="mobile" src="../img/grotte-mobile1.svg" />
-        <img class="desktop" src="../img/grotte-et-texte4.svg" />
         <div class="offset-md-3 col-md-6">
             <h2 class="titreGrotte text-center">L'évolution du jeu d'aventure</h2>
         </div>

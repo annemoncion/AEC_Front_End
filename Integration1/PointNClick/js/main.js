@@ -91,4 +91,11 @@ function drop(ev) {
 
 }
 
+// Changer le bouton du menu s'il est ouvert ou fermé
+
+$("#boutonMenu").click(function() {
+    $(".fa-bars").toggleClass("cacher");
+    $(".fa-times").toggleClass("cacher");
+});
+
 

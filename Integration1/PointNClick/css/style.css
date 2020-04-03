@@ -31,7 +31,7 @@ h2 {
    font-size: 2.2rem;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.5em;
 }
 
@@ -46,6 +46,10 @@ header h3 {
 @media (min-width: 768px) {
     h2 {
         font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
     }
 }
 
@@ -66,6 +70,7 @@ a:hover {
     background-color: rgba(255,255,255,.8);
     border: 1px solid #000;
     border-radius: 0;
+    cursor: pointer;
 }
 
 .btn:hover, .card-link:hover {
@@ -73,11 +78,19 @@ a:hover {
 }
 
 /* *** Style - Bloc communs *** */
-.mobile {
+.mobile, .smallMobile {
     display: block;
 }
-.desktop {
+.desktop, .tablette {
     display: none;
+}
+@media (min-width: 576px) {
+    .smallMobile {
+        display: none;
+    }
+    .tablette {
+        display: block;
+    }
 }
 @media (min-width: 768px) {
     .mobile {
@@ -91,8 +104,8 @@ a:hover {
 .jumbotron {
     margin-bottom: 0;
     position: relative;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     background-color: rgba(77,77,77,.5);
     overflow:hidden;
     color: #fff;
@@ -129,14 +142,22 @@ a:hover {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
 
+@media (min-width: 768px) {
+    .jumbotron {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
+
 /* <<<<<<<<<<<<<*** NAVIGATION ***>>>>>>>>>>>>>>>>> */
 
 .navbar {
     z-index: 100;
-    background-color: #fff;
-    height: 3rem;
-    padding-top: 1.5rem;
+    /*background-color: #fff;*/
     overflow-y: visible;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar-brand {
@@ -144,16 +165,64 @@ a:hover {
     top: 0.75rem;
 }
 
-.nav-link {
-    border: 1px solid transparent;
+.navbar-nav {
+    padding-top: 1rem;
 }
-.nav-link:hover {
+
+.navbar .nav-link {
+    border: 2px solid #fff;
+    font-weight: bold;
+    background-color: rgba(255,255,255,.5);
+}
+
+.nav-link:hover, .navbar .nav-link:hover {
     border: 1px solid #000;
 }
-.active .nav-link {
+.active .nav-link, .navbar .active .nav-link {
     border: 1px solid transparent;
     border-bottom: 1px solid #000;
+    background-color: #fff;
     cursor: default;
+}
+
+.navbar-toggler {
+    border: 0;
+    border-radius: 0;
+    /*padding: 0.625rem 0.75rem;*/
+    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: 2px;
+}
+.navbar-toggler:focus {
+    outline-color: #e3e2db;
+}
+
+.navbar .fa-bars, .navbar .fa-times {
+    color: #28170b;
+    position: relative;
+    top: 1px;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        padding-top: 1.5rem;
+        height: 3rem;
+    }
+
+    .navbar-nav {
+        padding-top: 0;
+    }
+
+    .navbar .nav-link {
+        border: 1px solid transparent;
+        background-color: transparent;
+    }
+
+    .navbar .active .nav-link {
+        background-color: transparent;
+    }
 }
 
 /* <<<<<<<<<<<<<*** FOOTER ***>>>>>>>>>>>>>>>>> */
@@ -228,9 +297,10 @@ footer .nav-link:hover {
     color: #fff;
 }
 .svgIntro {
-    background-image: url("../img/intro1.svg");
+    background-image: url("../img/intro1-mobile.svg");
     background-repeat: no-repeat;
-    background-position: center 105%;
+    background-position: center center;
+    background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -238,11 +308,33 @@ footer .nav-link:hover {
     right: 0;
 }
 
+@media (min-width: 576px) {
+    .headerAccueil {
+        background-image: url("../img/bg-accueil1-tablette.jpg");
+    }
+
+    .svgIntro {
+        background-size: 100%;
+        background-image: url("../img/intro1.svg");
+    }
+}
+
+@media (min-width: 768px) {
+    .headerAccueil {
+        background-image: url("../img/bg-foret1.jpg");
+    }
+
+    .svgIntro {
+        background-size: auto;
+    }
+}
+
 /* DRAG & DROP Jeu d'association d'icônes */
 .sectionAwesome {
-    padding-top: 8rem;
+    padding-top: 4rem;
     padding-bottom: 1rem;
 }
+
 .emplacements {
     margin-bottom: 6rem;
 }
@@ -278,7 +370,7 @@ footer .nav-link:hover {
 .icones #binoculars {
     font-size: 5rem;
     right: 6rem;
-    top: -9rem;
+    top: -5rem;
     -webkit-transform: rotate(40deg);
     -moz-transform: rotate(40deg);
     -o-transform: rotate(40deg);
@@ -286,8 +378,8 @@ footer .nav-link:hover {
 }
 .icones #puzzle-piece {
     font-size: 4rem;
-    right: 12rem;
-    top: -7rem;
+    top: -6rem;
+    left: 10rem;
     -webkit-transform: rotate(-60deg);
     -moz-transform: rotate(-60deg);
     -o-transform: rotate(-60deg);
@@ -295,8 +387,8 @@ footer .nav-link:hover {
 }
 .icones #mouse {
     font-size: 4rem;
-    right: 16rem;
-    top: -7rem;
+    top: -6rem;
+    left: 2rem;
     -webkit-transform: rotate(30deg);
     -moz-transform: rotate(30deg);
     -o-transform: rotate(30deg);
@@ -307,6 +399,9 @@ footer .nav-link:hover {
     background-color: #e3e2db;
     padding: .5rem 1rem .5rem 2rem;
     display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
 }
 .inside-inventaire {
     width: auto;
@@ -317,6 +412,8 @@ footer .nav-link:hover {
     font-weight: bold;
     letter-spacing: .1rem;
     padding-right: 1rem;
+    flex-basis: 100%;
+    margin-left: 0.25rem;
 }
 .groupe-cases {
     width: 84rem;
@@ -340,6 +437,47 @@ footer .nav-link:hover {
 }
 .emplacementCombler {
     background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .sectionAwesome {
+        padding-top: 8rem;
+    }
+
+    .emplacements {
+        padding-bottom: 3rem;
+    }
+
+    .icones #binoculars {
+        top: -9rem;
+    }
+
+    .icones #puzzle-piece {
+        right: 12rem;
+        top: -7rem;
+        left: auto;
+    }
+
+    .icones #mouse {
+        right: 16rem;
+        top: -7rem;
+        left: auto;
+    }
+
+    .inventaire {
+        position: static;
+    }
+
+    .titreInventaire {
+        flex-basis: auto;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .emplacements {
+        padding-bottom: 0;
+    }
 }
 
 /* Jumbotron avec image qui suit le curseur */
@@ -366,34 +504,40 @@ footer .nav-link:hover {
 
 /* <<<<<<<<<<<<<*** PAGE JEUX ***>>>>>>>>>>>>>>>>> */
 
-.sectionJeux {
-    padding-top: 8rem;
-}
-
 .headerJeux {
-    background-image: url("../img/bg-foret2.jpg");
-    background-position: center top;
+    background-image: url("../img/bg-jeux.jpg");
+    background-position: center center;
     position: relative;
 }
 
 .contenant-mur {
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
     left: 0;
+    bottom: 3.5rem;
     overflow: hidden;
-}
-.mur {
-    position: relative;
-    min-height: 700px;
+    background-image: url("../img/mur4.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .headerJeux h2 {
     color: #28170b;
 }
+
+.headerJeux .jumbotron {
+    padding-top: 7rem;
+}
+
 .headerJeux .lead {
     color: #000;
+}
+
+.sectionJeux {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .card {
@@ -415,20 +559,23 @@ footer .nav-link:hover {
     position: absolute;
     bottom: 1rem;
 }
-.age {
-    padding-bottom: 4rem;
+
+p.avecLien {
+    padding-bottom: 3rem;
 }
+
 .jeux {
-    margin-bottom: 6rem;
+    margin-bottom: 0;
 }
 
 .formulaire {
     background-color: #e3e2db;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 .input-group-prepend {
     border: 1px solid #000;
+    border-right-width: 2px;
     background-color: #fff;
 }
 .input-group-text {
@@ -454,6 +601,101 @@ footer .nav-link:hover {
 
 .nav-inverse {
     background-color: transparent;
+}
+
+label.active {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .headerJeux .jumbotron {
+        padding-top: 10rem;
+    }
+
+    .sectionJeux {
+        padding-bottom: 0;
+    }
+
+    .jeux {
+        margin-bottom: 2rem;
+    }
+
+    .contenant-mur {
+        bottom: 5rem;
+    }
+
+    .sectionJeux {
+        padding-top: 4rem;
+        padding-bottom: 0;
+    }
+
+    p.avecLien {
+        padding-bottom: 5rem;
+    }
+
+    .formulaire {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .jeux {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionJeux {
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+}
+
+/* <<<<<<<<<<<<<*** MODAL AVEC CAROUSEL ***>>>>>>>>>>>>>>>>> */
+.modal-content {
+    background-color: #1a1a1a;
+    color: #999;
+}
+
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.modal .close span {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.modal-body {
+    padding: 0 1rem 0 0;
+}
+
+.modal-body p {
+    color: #999;
+}
+
+.modal-body a {
+    color: #999;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #999;
+}
+
+.modal-body a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+}
+
+.groupeModal {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.carousel {
+    padding: 0;
 }
 
 /* <<<<<<<<<<<<<*** PAGE HISTORIQUE ***>>>>>>>>>>>>>>>>> */
@@ -554,7 +796,7 @@ footer .nav-link:hover {
 
 @media (min-width: 768px) {
     .headerHistorique {
-        height: calc(100% - 6rem);
+        height: calc(100vh - 6rem);
         min-height: 760px;
     }
 
@@ -564,13 +806,10 @@ footer .nav-link:hover {
     }
 
     .grotte {
-        height: 100vh;
-        min-height: calc(760px + 6rem);
-    }
-
-    .grotte img {
-        height: 100vh;
-        min-height: calc(760px + 6rem);
+        height: calc(100% + 6rem);
+        background-image: url("../img/grotte-et-texte4.svg");
+        background-size: cover;
+        background-position: center top;
     }
 
     .sectionHistorique1 {
