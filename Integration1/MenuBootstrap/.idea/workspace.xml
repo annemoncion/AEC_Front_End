@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c98ae78-7f4d-48da-8f5d-3be86c8065f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Han Solo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Han Solo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/JS/casseTete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/JS/casseTete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/casse-tete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/casse-tete.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -57,6 +60,12 @@
       <updated>1581639253989</updated>
       <workItem from="1581639255387" duration="5883000" />
       <workItem from="1582241173714" duration="30000" />
+      <workItem from="1584801307492" duration="10000" />
+      <workItem from="1584808441448" duration="7000" />
+      <workItem from="1584810570749" duration="33000" />
+      <workItem from="1585592660094" duration="17000" />
+      <workItem from="1585851715003" duration="167000" />
+      <workItem from="1585876417743" duration="614000" />
     </task>
     <servers />
   </component>
@@ -64,10 +73,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1581639369192">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1585592676256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581639369192" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585592676256" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1582241192590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

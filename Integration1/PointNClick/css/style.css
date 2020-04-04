@@ -491,6 +491,13 @@ footer .nav-link:hover {
     .emplacements {
         padding-bottom: 0;
     }
+
+    .caseOccupied {
+        cursor: default;
+    }
+    .iconeInventaire {
+        cursor: grab;
+    }
 }
 
 /* Jumbotron avec image qui suit le curseur */
@@ -572,6 +579,10 @@ footer .nav-link:hover {
     position: absolute;
     bottom: 1rem;
 }
+.card-link:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+}
 
 p.avecLien {
     padding-bottom: 3rem;
@@ -616,8 +627,13 @@ p.avecLien {
     background-color: transparent;
 }
 
-label.active {
+label.active  {
     background-color: #000;
+    color: #fff;
+}
+
+.questionRadio label:hover {
+    background-color: #1a1a1a;
     color: #fff;
 }
 

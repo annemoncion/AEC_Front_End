@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acb957b3-1cca-4457-9629-931baeefa529" name="Default" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="acb957b3-1cca-4457-9629-931baeefa529" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MenuBootstrap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MenuBootstrap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PointNClick/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../PointNClick/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PointNClick/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PointNClick/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PointNClick/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../PointNClick/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PointNClick/pages/jeux.html" beforeDir="false" afterPath="$PROJECT_DIR$/../PointNClick/pages/jeux.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/JS/casseTete.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/JS/casseTete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/casse-tete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Programmation1/Casse-Tete/casse-tete.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +40,15 @@
   </component>
   <component name="ProjectId" id="1VIRzJjz7sIHjpuUPpvki1FNhSv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/Contrats/Seisho/seisho_vue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -50,18 +63,6 @@
       <recent name="C:\Users\Shany\Dropbox\www\PremierProjet\HTML" />
       <recent name="C:\Users\Shany\Dropbox\www\PremierProjet\css" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="js.build_tools.gulp">
@@ -95,6 +96,9 @@
       <workItem from="1552676839065" duration="3154000" />
       <workItem from="1576938885211" duration="2839000" />
       <workItem from="1577383330368" duration="25000" />
+      <workItem from="1584801277487" duration="14000" />
+      <workItem from="1584810073467" duration="6000" />
+      <workItem from="1585592598867" duration="21000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,7 @@ $('.img-fluid').click(function() {
         ancienId = "#" + $(this).attr('id');
         ancienneSrc = $(this).attr('src');
     }
-    if (pair) {
+    else if (pair) {
         if (ancienneSrc === srcImage) {
             return;
         }
