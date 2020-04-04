@@ -495,7 +495,7 @@ footer .nav-link:hover {
     .caseOccupied {
         cursor: default;
     }
-    .iconeInventaire {
+    .inventaire .iconeInventaire {
         cursor: grab;
     }
 }
