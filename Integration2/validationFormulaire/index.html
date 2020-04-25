@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="favicon.png" />
+	<title>Exercice: Validation de formulaire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<form>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="nomChat">Nom</label>
+						<input type="text" class="form-control" id="nomChat" placeholder="Le nom de votre chat" required>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="ageChat">Âge de votre chat</label>
+						<input type="number" id="ageChat" max="25" min="0" required>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="dateChat">Date de naissance du chat</label>
+						<input type="date" id="dateChat">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="tailleChat">Taille (cm)</label>
+						<input type="number" id="tailleChat" max="80" min="10" required>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="poidsChat">Poids (kg)</label>
+						<input type="number" id="poidsChat" max="15" min="1" required>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="vaccin" id="checkboxVaccin">
+							<label class="form-check-label" fot="checkboxVaccin">Votre chat est vacciné </label>
+						</div>
+					</div>
+					<div class="form-group col-md-4">
+						<label for="couleurs">Couleur de votre chat</label>
+						<input list="couleurs" name="couleurs" required>
+						<datalist id="couleurs">
+							<option value="Noir">
+							<option value="Blanc">
+							<option value="Brun">
+							<option value="Mixte">
+						</datalist>
+					</div>
+					<div class="form-group col-md-4">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="typeChat" id="typeChat1" value="domestique">
+							<label class="form-check-label for=typeChat1">Chat domestique</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="typeChat" id="typeChat2" value="race">
+							<label class="form-check-label for=typeChat2">Chat racé</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="lieuNaissanceChat">Lieu de naissance</label>
+						<input type="text" class="form-control" id="lieuNaissanceChat" pattern="[A-Za-z]+" placeholder="Où votre chat est-il né?" required>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+</head>
+</body>
+</html>
