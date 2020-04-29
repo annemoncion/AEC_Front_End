@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.d1b05096.chunk.css",
-    "main.js": "/static/js/main.6cc3bb33.chunk.js",
-    "main.js.map": "/static/js/main.6cc3bb33.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2b12ed2f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2b12ed2f.js.map",
-    "static/css/2.69121389.chunk.css": "/static/css/2.69121389.chunk.css",
-    "static/js/2.2708b7df.chunk.js": "/static/js/2.2708b7df.chunk.js",
-    "static/js/2.2708b7df.chunk.js.map": "/static/js/2.2708b7df.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ef2a057529648aa7cda3339c373612c8.js": "/precache-manifest.ef2a057529648aa7cda3339c373612c8.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.69121389.chunk.css.map": "/static/css/2.69121389.chunk.css.map",
-    "static/css/main.d1b05096.chunk.css.map": "/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.2708b7df.chunk.js.LICENSE.txt": "/static/js/2.2708b7df.chunk.js.LICENSE.txt",
-    "static/media/lotr1.jpg": "/static/media/lotr1.d60ec724.jpg"
+    "main.css": "./static/css/main.d1b05096.chunk.css",
+    "main.js": "./static/js/main.a8413271.chunk.js",
+    "main.js.map": "./static/js/main.a8413271.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.03e9e90d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.03e9e90d.js.map",
+    "static/css/2.69121389.chunk.css": "./static/css/2.69121389.chunk.css",
+    "static/js/2.2708b7df.chunk.js": "./static/js/2.2708b7df.chunk.js",
+    "static/js/2.2708b7df.chunk.js.map": "./static/js/2.2708b7df.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.4425903abc6d8a7da45dc7b2cac3e6fd.js": "./precache-manifest.4425903abc6d8a7da45dc7b2cac3e6fd.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "./static/css/2.69121389.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "./static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.2708b7df.chunk.js.LICENSE.txt": "./static/js/2.2708b7df.chunk.js.LICENSE.txt",
+    "static/media/lotr1.jpg": "./static/media/lotr1.d60ec724.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2b12ed2f.js",
+    "static/js/runtime-main.03e9e90d.js",
     "static/css/2.69121389.chunk.css",
     "static/js/2.2708b7df.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.6cc3bb33.chunk.js"
+    "static/js/main.a8413271.chunk.js"
   ]
 }
