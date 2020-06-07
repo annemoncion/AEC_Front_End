@@ -1,0 +1,286 @@
+.App {
+  background-color: #2f2f2f;
+  min-height: 100vh;
+}
+
+.contenantLogo {
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.App .btn-primary {
+  border-radius: 3px;
+  background-color: #2f2f2f;
+  text-transform: uppercase;
+  color: #999;
+  font-size: .8rem;
+  letter-spacing: .1rem;
+  border: 0;
+  transition: all .2s ease;
+}
+
+.App .btn-primary:hover, .App .btn-primary:not(:disabled):not(.disabled):active, .App .btn-primary:focus {
+  background-color: #2f2f2f;
+}
+
+.App .btn-primary:focus, 
+.App .btn-primary:not(:disabled):not(.disabled).active:focus, 
+.App .btn-primary:not(:disabled):not(.disabled):active:focus, 
+.App .show>.btn-primary.dropdown-toggle:focus,
+.App .form-control:focus {
+    border-color: #999;
+    box-shadow: 0 0 0 0.2rem rgba(153, 153, 153, 0.5);
+}
+
+.App .btn-primary.btn-connexion {
+  background-color: #2f2f2f;
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav {
+  background-color: #242424;
+  padding: 0.5rem 1rem;
+ /* height: 3.375rem;*/
+  padding-top: 3rem;
+}
+
+.contenantTitre h1 {
+  color: #f2f2f2;
+  padding-left: .5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.App .catalogue {
+  background-color: #212121;
+  padding: 1rem 0;
+  margin: 0.5rem -0.5rem 0;
+}
+
+.App .card {
+  border: 0;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 0 auto 1rem;
+}
+
+.App .card-img-top {
+  border-radius: 0;
+  transition: all .2s ease;
+}
+
+.App .card-body {
+  padding: .5rem .5rem 1rem .25rem;
+  color: #999;
+  transition: all .2s ease;
+}
+
+.App .card-title.h5, .rappelInfos h2 {
+  font-size: 1.1rem;
+}
+.App .card-subtitle.h6, .rappelInfos h3 {
+  font-size: .9rem;
+}
+
+.App .hovered .card-img-top {
+  opacity: .6;
+}
+
+.App .hovered .card-body {
+  color: #fff;
+}
+
+.connexion {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.connexion .inside-connexion {
+  width: 600px;
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #212121;
+}
+
+.titreConnexion {
+  color: #f2f2f2;
+  text-align: center;
+  margin: 0 auto 3rem;
+  max-width: 400px;
+}
+
+.connexion small {
+  color: #999;
+}
+
+.App .contenantDeconnexion {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0;
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+}
+
+.App .contenantRecherche {
+  padding-right: 0;
+}
+
+.App .recherche {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+}
+
+.recherche input {
+  background-color: #333;
+  border: 0;
+  color: #ececec;
+}
+
+.App .recherche .form-control:focus {
+  color: #fff;
+}
+
+.recherche input::placeholder {
+  color: #999;
+}
+
+.recherche input:focus {
+  background-color:#272727;
+}
+
+.App label {
+  color: #999;
+}
+
+.App .coverAlbum {
+  margin-bottom: .5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.infosAlbum {
+  color: #fff;
+}
+
+.infosAlbum h2 {
+  font-size: 1.6rem;
+}
+
+.infosAlbum h3 {
+  font-size: 1rem;
+}
+
+.separateur:before {
+  content: "\2022";
+  margin: 0 .5rem;
+}
+
+.listeChansons ul {
+  color: #999;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.listeChansons li {
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.listeChansons li:nth-child(even) {
+  background-color: #2f2f2f;
+}
+.listeChansons li:nth-child(odd) {
+  background-color: #272727;
+}
+
+.listeChansons li:hover, .App .btn-primary:hover, .App .btn-primary:focus {
+  opacity: .7;
+  color: #fff;
+}
+
+.listeChansons li span:last-child {
+  margin-left: auto;
+  margin-right: 0;
+  font-size: .9rem;
+}
+
+.numeroChanson {
+  margin-right: 1rem;
+  font-size: .9rem;
+}
+
+.rappelInfos {
+  margin: 1rem 0;
+  color: #999;
+}
+
+.chanson {
+  margin-bottom: 3rem;
+}
+
+.chanson h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.chanson p {
+  color: #999;
+}
+
+.chanson span {
+  display: block;
+}
+
+.boutonRetour {
+  margin: 0 0 .5rem;
+}
+
+@media (min-width: 576px) {
+
+  .logo {
+    position: absolute;
+    top: -100px;
+    left: calc(50% - 50px);
+  }
+
+  .connexion .inside-connexion {
+    padding: 50px 2rem 2rem;
+  }
+
+  .nav {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .App .recherche {
+    margin-left: 1.5rem;
+  }
+
+  .App .contenantDeconnexion {
+    padding-right: 15px;
+    position: static;
+  }
+
+  .contenantTitre h1 {
+    padding-left: 1.5rem;
+  }
+
+  .App .catalogue {
+    padding: 1rem;
+  }
+}
