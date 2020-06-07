@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 export class App extends React.Component {
    constructor(props) {
     super(props);
-    this.state = {connexion: true};
+    this.state = {connexion: false};
 
     this.verifierConnexion = this.verifierConnexion.bind(this);
     this.seDeconnecter = this.seDeconnecter.bind(this);
