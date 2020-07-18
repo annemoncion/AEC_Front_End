@@ -1,0 +1,149 @@
+// Style.sass
+// Par Anne Moncion
+// Dernière modification: 18 juillet 2020
+
+@import 'nav', 'footer'
+
+$grisTresPale: #f6f6f6
+$grisPale: #e6e6e6
+$grisMoyen: #8d8d8d
+$grisFonce: #333
+$or: #d4aa00
+
+$ombre: 0px 15px 45px -9px rgba(0,0,0,.2)
+
+body
+  font-family: Montserrat
+  p.resume
+    font-family: Raleway
+
+h1, h2
+  font-weight: 700
+
+h1
+  font-size: 3rem
+
+h2
+  font-size: 1.75rem
+
+h4
+  font-weight: normal
+  font-size: 1.2rem
+
+h1, h4
+  color: #fff
+
+h2
+  line-height: 1em
+  color: $grisFonce
+  margin: .75rem 0 .9rem
+
+ul
+  padding-left: 0
+  margin-bottom: 0
+  list-style-type: none
+
+p, li
+  color: $grisMoyen
+  font-size: .9rem
+
+a
+  transition: all .2s ease
+
+a:hover
+  text-decoration: none
+
+@mixin petitTexte
+  font-size: .8rem
+
+@mixin bouton
+  display: inline
+  padding: .4rem 1rem
+  cursor: pointer
+  transition: all .2s ease
+
+@mixin survol
+  background-color: $or
+  color: #fff
+
+@mixin imgFluide
+  max-width: 100%
+  padding: 0
+  margin: 0
+
+@mixin arrondi
+  border-radius: 100px
+
+header
+  background-image: url("../img/banniere4.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center bottom
+
+.headerContent
+  padding: 8rem 0
+
+.filtres
+  ul
+    display: flex
+    justify-content: center
+  li
+    @include bouton
+    @include petitTexte
+    border-radius: 100px
+    border: solid 1px $grisPale
+    margin: 0 .5rem
+  li:hover, li.boutonActif
+    @include survol
+  li.boutonActif
+    font-weight: 700
+
+.posts
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  .post
+    width: 50%
+  .postContent
+    padding: 2rem 13% 0
+    box-shadow: $ombre
+  img
+    @include imgFluide
+  .contentMeta
+    @include petitTexte
+    margin-bottom: 0
+  p.resume
+    margin-bottom: 2rem
+  .postMeta
+    position: relative
+    padding-bottom: 1.25rem
+  a.comment
+    @include bouton
+    @include arrondi
+    display: flex
+    align-items: center
+    position: absolute
+    top: -2rem
+    right: 0
+    background-color: $grisTresPale
+  .nbCommentaires
+    @include petitTexte
+    padding-left: .3rem
+  a.comment:hover
+    @include survol
+  a
+    color: $grisMoyen
+  a:hover
+    color: $grisFonce
+  hr, ul
+    width: 75%
+    margin-left: 0
+  li
+    display: inline
+    text-transform: uppercase
+    @include petitTexte
+  li:not(:last-child):after
+    content: ','
+
+
+

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="favicon.png" />
+	<title>Exercice Maquette Sass</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-xl-8 offset-2">
+				<nav class="navbar navbar-expand-lg">
+					<a class="navbar-brand" href="#"><img src="img/logo.svg" alt="logo cactus" /></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Déserts
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="#">Amérique du Nord</a>
+									<a class="dropdown-item" href="#">Amérique du Sud</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Environnement</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Culture</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Société</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 d-flex align-items-center justify-content-center">
+				<div class="headerContent">
+					<h1 class="text-center mb-3">Accueil</h1>
+					<h4 class="text-center">Reproduction de maquette avec Sass</h4>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container-fluid pageContent">
+
+		<div class="row filtres pt-5">
+			<div class="col-12">
+				<ul>
+					<li class="boutonActif">Tous</li>
+					<li>Dunes</li>
+					<li>Cactus</li>
+					<li>Montagnes</li>
+					<li>Amérique du Nord</li>
+					<li>Améridque du Sud</li>
+					<li>Sans catégorie</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row pt-5">
+			<section class="col-8 col-xl-6 offset-xl-2 posts">
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/dunes1.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>23 novembre 2020</span>
+								</p>
+								<h2>Une aventure parmi les dunes</h2>
+								<p class="resume">Fusce scelerisque varius nisi, ac hendrerit justo sagittis eget. Sed placerat finibus velit at lacinia. Nulla lectus eros, porta vel mollis id, tempor in odio.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/dunes2.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/cactus1.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/dunes3.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/dunes4.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/cactus2.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+				<article class="post mb-5">
+					<div class="insidePost mx-3">
+						<div class="featureImg">
+							<img src="img/dunes5.jpg" alt="dunes désert" />
+						</div>
+						<div class="postContent">
+							<div class="postPreview">
+								<p class="contentMeta">
+									<span class="pr-2">par Anne Moncion</span>
+									<span>14 octobre 2020</span>
+								</p>
+								<h2>Aridité</h2>
+								<p class="resume">Mauris sit amet condimentum elit. Quisque posuere lacus nec enim pharetra, at convallis odio fermentum. Nullam eget ligula purus.</p>
+								<hr />
+							</div>
+							<div class="postMeta">
+								<a class="comment"><i class="far fa-comment"></i><span class="nbCommentaires">0</span></a>
+								<ul>
+									<li><a href="#">Voyage</a></li>
+									<li><a href="#">Désert</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+
+			</section>
+
+			<aside class="col-4 col-xl-4">
+				<div class="thumbnails">
+					<h3>Les plus récents</h3>
+				</div>
+				<div class="tags">
+					<h3>Tags populaires</h3>
+				</div>
+			</aside>
+		</div>
+
+	</div>
+
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/3aacd9892e.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

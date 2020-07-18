@@ -1,0 +1,167 @@
+.navbar a {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar a:hover {
+  color: #fff;
+}
+
+.navbar-brand img {
+  max-width: 40px;
+}
+
+body {
+  font-family: Montserrat;
+}
+body p.resume {
+  font-family: Raleway;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+h1, h4 {
+  color: #fff;
+}
+
+h2 {
+  line-height: 1em;
+  color: #333;
+  margin: 0.75rem 0 0.9rem;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+p, li {
+  color: #8d8d8d;
+  font-size: 0.9rem;
+}
+
+a {
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  background-image: url("../img/banniere4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.headerContent {
+  padding: 8rem 0;
+}
+
+.filtres ul {
+  display: flex;
+  justify-content: center;
+}
+.filtres li {
+  display: inline;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+  border-radius: 100px;
+  border: solid 1px #e6e6e6;
+  margin: 0 0.5rem;
+}
+.filtres li:hover, .filtres li.boutonActif {
+  background-color: #d4aa00;
+  color: #fff;
+}
+.filtres li.boutonActif {
+  font-weight: 700;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.posts .post {
+  width: 50%;
+}
+.posts .postContent {
+  padding: 2rem 13% 0;
+  box-shadow: 0px 15px 45px -9px rgba(0, 0, 0, 0.2);
+}
+.posts img {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.posts .contentMeta {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+.posts p.resume {
+  margin-bottom: 2rem;
+}
+.posts .postMeta {
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+.posts a.comment {
+  display: inline;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  background-color: #f6f6f6;
+}
+.posts .nbCommentaires {
+  font-size: 0.8rem;
+  padding-left: 0.3rem;
+}
+.posts a.comment:hover {
+  background-color: #d4aa00;
+  color: #fff;
+}
+.posts a {
+  color: #8d8d8d;
+}
+.posts a:hover {
+  color: #333;
+}
+.posts hr, .posts ul {
+  width: 75%;
+  margin-left: 0;
+}
+.posts li {
+  display: inline;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.posts li:not(:last-child):after {
+  content: ",";
+}
+
+/*# sourceMappingURL=style.css.map */
