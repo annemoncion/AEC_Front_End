@@ -4,8 +4,11 @@
 
 hauteurTotale = 0;
 
-$( ".post" ).each(function() {
-    hauteurTotale += ($(this).outerHeight());
+$( document ).ready(function() {
+    $( ".post" ).each(function() {
+        hauteurTotale += ($(this).outerHeight());
+    });
+
+    $(".posts").css("height", hauteurTotale/2 + 600);
 });
 
-$(".posts").css("height", hauteurTotale/2 + 600)
