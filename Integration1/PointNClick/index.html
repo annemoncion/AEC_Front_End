@@ -17,6 +17,18 @@
 	<meta name="description" content="Un répertoire nostalgique de jeux d'aventure point and click">
 	<meta name="theme-color" content="#e3e2db" />
 
+	<script>
+		// Register service worker.
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('service-worker.js')
+						.then((reg) => {
+							console.log('Service worker registered.', reg);
+						});
+			});
+		}
+	</script>
+
 <body>
 
 <nav class="navbar navbar-expand-lg position-absolute w-100">
