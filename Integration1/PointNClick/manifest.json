@@ -1,0 +1,37 @@
+{
+  "name": "PointNClick",
+  "short_name": "PnC",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color":  "#ffffff",
+  "theme_color": "#e3e2db",
+  "icons": [{
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_32X32.png",
+    "sizes": "32X32",
+    "type": "image/png"
+  }, {
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_128X128.png",
+    "sizes": "128X128",
+    "type": "image/png"
+  }, {
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_144X144.png",
+    "sizes": "144X144",
+    "type": "image/png"
+  }, {
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_152X152.png",
+    "sizes": "152X152",
+    "type": "image/png"
+  }, {
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_192X192.png",
+    "sizes": "192X192",
+    "type": "image/png"
+  }, {
+    "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_256X256.png",
+    "sizes": "256X256",
+    "type": "image/png"
+  }, {
+      "src": "/AEC_Front_End/Integration1/PointNClick/img/icones/icone_512X512.png",
+      "sizes": "512X512",
+      "type": "image/png"
+  }]
+}
