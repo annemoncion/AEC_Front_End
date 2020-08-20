@@ -1,7 +1,7 @@
 {
   "name": "PointNClick",
   "short_name": "PnC",
-  "start_url": "/index.html",
+  "start_url": "/AEC_Front_End/Integration1/PointNClick/index.html",
   "display": "standalone",
   "background_color":  "#ffffff",
   "theme_color": "#e3e2db",
