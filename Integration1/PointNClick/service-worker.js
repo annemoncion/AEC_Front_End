@@ -1,8 +1,44 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v1'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
+const CACHE_NAME = 'static-cache-v1.0.1'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
-    'offline.html'
+    'offline.html',
+    'index.html',
+    'pages/histoire.html',
+    'pages/jeux.html',
+    'img/baphomet-cover.jpg',
+    'img/bg-accueil-tablette.jpg',
+    'img/bg-cabane.jpg',
+    'img/bg-foret1.jpg',
+    'img/bg-foret2.jpg',
+    'img/bg-foret6.jpg',
+    'img/bg-foret7.jpg',
+    'img/bg-foret8.jpg',
+    'img/bg-historique3.jpg',
+    'img/bg-historique-section3.jpg',
+    'img/bg-jeux.jpg',
+    'img/carmen-cover.jpg',
+    'img/cubes2.jpg',
+    'img/ernest-cover.jpg',
+    'img/grotte-et-texte4.svg',
+    'img/grotte-mobile1.svg',
+    'img/ile-cover.jpg',
+    'img/intro1.svg',
+    'img/intro1-mobile.svg',
+    'img/logo.svg',
+    'img/logo-inverse.svg',
+    'img/mur3.svg',
+    'img/mur4.svg',
+    'img/myst-cover.jpg',
+    'img/nancy-cover.jpg',
+    'img/souris6.svg',
+    'img/souris-mobile1.svg',
+    'img/submachine-screenshot2.jpg',
+    'img/submachine-screenshot4.jpg',
+    'img/submachine-screenshot5.jpg',
+    'img/syberia-cover.jpg',
+    'js/jquery-3.4.1.min.js'
+    'js/main.js'
 ];
 
 
