@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v3'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
+const CACHE_NAME = 'static-cache-v4'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
@@ -83,7 +83,7 @@ self.addEventListener('fetch', (evt) => {
             .catch(() => {
                 return caches.open(CACHE_NAME)
                     .then((cache) => {
-                        return cache.match('/AEC_Front_End/Integration1/PointNClick/offline.html' );
+                        return cache.match('/AEC_Front_End/Integration1/PointNClick/index.html' );
                     });
             })
     );
