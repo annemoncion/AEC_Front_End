@@ -37,7 +37,7 @@ const FILES_TO_CACHE = [
     'img/submachine-screenshot4.jpg',
     'img/submachine-screenshot5.jpg',
     'img/syberia-cover.jpg',
-    'js/jquery-3.4.1.min.js'
+    'js/jquery-3.4.1.min.js',
     'js/main.js'
 ];
 
