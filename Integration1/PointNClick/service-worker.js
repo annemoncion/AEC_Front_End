@@ -1,11 +1,13 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v5'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
+const CACHE_NAME = 'static-cache-v6'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
     'index.html',
     'pages/histoire.html',
     'pages/jeux.html',
+    'css/style.css',
+    'css/bootstrap.css',
     'img/baphomet-cover.jpg',
     'img/bg-accueil-tablette.jpg',
     'img/bg-cabane.jpg',
