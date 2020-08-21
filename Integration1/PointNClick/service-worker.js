@@ -1,5 +1,5 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v9'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
+const CACHE_NAME = 'static-cache-v10'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
@@ -35,6 +35,7 @@ const FILES_TO_CACHE = [
     'img/nancy-cover.jpg',
     'img/souris6.svg',
     'img/souris-mobile1.svg',
+    'img/submachine-cover.jpg',
     'img/submachine-screenshot2.jpg',
     'img/submachine-screenshot4.jpg',
     'img/submachine-screenshot5.jpg',
