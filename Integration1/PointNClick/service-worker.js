@@ -1,12 +1,12 @@
 //Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v4'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
+const CACHE_NAME = 'static-cache-v5'; //Changer le nom de version à chaque fois qu'on modifie les fichiers en cache
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
     'index.html',
     'pages/histoire.html',
-    'pages/jeux.html'
-    /*'img/baphomet-cover.jpg',
+    'pages/jeux.html',
+    'img/baphomet-cover.jpg',
     'img/bg-accueil-tablette.jpg',
     'img/bg-cabane.jpg',
     'img/bg-foret1.jpg',
@@ -38,7 +38,8 @@ const FILES_TO_CACHE = [
     'img/submachine-screenshot5.jpg',
     'img/syberia-cover.jpg',
     'js/jquery-3.4.1.min.js',
-    'js/main.js'*/
+    'js/main.js',
+    'js/install.js'
 ];
 
 
