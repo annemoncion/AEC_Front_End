@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-Medium.woff2") format("woff2"), url("../fonts/Metropolis-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-RegularItalic.woff2") format("woff2"), url("../fonts/Metropolis-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-Regular.woff2") format("woff2"), url("../fonts/Metropolis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-MediumItalic.woff2") format("woff2"), url("../fonts/Metropolis-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-BoldItalic.woff2") format("woff2"), url("../fonts/Metropolis-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("../fonts/Metropolis-Bold.woff2") format("woff2"), url("../fonts/Metropolis-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #fff;
+  background-image: url("../img/fond_plantes3.jpg");
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12rem;
+}
+
+.header img {
+  max-width: 170px;
+}
+
+.grillePlantes {
+  margin: 1rem 0 4rem;
+}
+
+.grillePlantes .itemGrille {
+  position: relative;
+  background-color: #fff;
+  width: calc(50% - 2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+
+.grillePlantes .insideItem {
+  position: relative;
+  padding: 1rem 1rem 2rem;
+  overflow: hidden;
+}
+
+.grillePlantes svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+}
+
+.grillePlantes .titre {
+  font-family: 'Metropolis', sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: .5rem;
+  z-index: 100;
+  font-size: .9rem;
+  text-transform: lowercase;
+  text-align: center;
+  color: #000;
+}
+
+.grillePlantes .blanc {
+  background-color: #fff;
+}
+
+.grillePlantes .noir:not(.triangle) {
+  background-color: #000;
+}
+
+.grillePlantes .rose {
+  background-color: #c83737;
+}
+
+.grillePlantes img {
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.grillePlantes a {
+  width: 0;
+  height: 0;
+  display: none;
+}
+/*# sourceMappingURL=main-style.css.map */
