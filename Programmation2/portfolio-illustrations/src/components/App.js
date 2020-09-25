@@ -1,32 +1,96 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Accueil from './Accueil'; 
-import ModifyAnimal from './ModifyAnimal';
-import AddAnimal from './AddAnimal';
+import EditerPlante from './EditerPlante';
+import AjouterPlante from './AjouterPlante';
 import {Header} from './Header';
-import ButtonAddAnimal from './ButtonAddAnimal';
+import Footer from './Footer';
 import ButtonHomepage from './ButtonHomepage';
 import PageNotFound from './PageNotFound';
-import {Route, Switch, useLocation} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import {ToastContainer} from 'react-toastify';
-import './App.css';
+import {API} from '../constantes.js';
 import '../css/main-style.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
+  const[etatMontage, setEtatMontage] = useState("mobileCacher");
+
   let location = useLocation();
-  console.log(location.pathname);
+
+  
+  
+  // Fonction pour populer crudcrud
+
+  // createPlantes();
+
+  /*async function createPlantes() {  
+    try{  
+      const response = await fetch(API, {  
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        method: 'POST', 
+        body:JSON.stringify({
+          nomCommun:"Bleuetier",
+          nomLatin:"Vaccinium angustifolium",
+          couleurBg:"blanc",
+          image : "https://annemoncion.com/img/illustrations/plantes/fond-transparent/bleuetier.png",
+          animation:{
+            actif:true,
+            nom:"eventail",
+            profondeur:1
+          },
+          formes:{
+            actif:false,
+            type:"triangle",
+            profondeur:1,
+            etendue:false,
+            hauteur:300,
+            largeur:300,
+            couleur:"#000",
+            posY:50,
+            posX:50
+          }
+        })
+      });  
+     
+      if(response.ok){  
+        //const jsonResponse = await response.json();  
+        console.log("Ajout plante bd ok"); 
+        return response;  
+      }  
+      throw new Error('Request failed!');  
+    }  
+     
+    catch(error){  
+      console.log(error);  
+    }  
+  }*/
+
+  function handleEtatMontage(etat) {
+    setEtatMontage(etat)
+  }
+
   return (
     <> 
       <ToastContainer autoClose={3000} hideProgressBar />
-      <Header />
+      {(location.pathname.indexOf("mediatheque") <= -1)  && <Header etatMontage={etatMontage}/> }
+      {(location.pathname !== "/") && (location.pathname.indexOf("mediatheque") <= -1) && <ButtonHomepage etatMontage={etatMontage}/> }
       <Switch>
         <Route path="/" exact component={Accueil} /> 
-        <Route path="/ajouterAnimal" component={AddAnimal} />
-        <Route path="/plante/:id" component={ModifyAnimal} />  
+        <Route 
+          path="/illustration/:id"
+          render={(props) => (
+            <EditerPlante {...props} etatMontage={handleEtatMontage} />
+          )} />
+        <Route 
+          path="/ajouterMontage"
+          render={(props) => (
+            <AjouterPlante {...props} etatMontage={handleEtatMontage} />
+          )} />
+        <Redirect from="/ajouter" to="ajouterMontage" />
         <Route component={PageNotFound} />
       </Switch>
-      {(location.pathname !== "/ajouterAnimal" && !location.pathname.startsWith("/animal")) && <ButtonAddAnimal/> }
-      {(location.pathname !== "/") && <ButtonHomepage/> }
+      <Footer />
     </> 
   );
 }

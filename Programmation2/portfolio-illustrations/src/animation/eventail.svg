@@ -1,0 +1,12 @@
+<svg id="eventail" width="91.784mm" height="108.19mm" version="1.1" viewBox="0 0 91.784 108.19" xmlns="http://www.w3.org/2000/svg">
+  <rect id="ventc" className="eventail" transform="rotate(140 -46.355 -30.048)" x="-32.051" y="-196.64" width="2.1353" height="70"/>
+  <rect id="ventd" className="eventail" transform="rotate(130 -45.165 -35.225)" x="3.9854" y="-197.22" width="2.1353" height="60"/>
+  <rect id="vente" className="eventail" transform="rotate(150 -47.473 -25.19)" x="-67.396" y="-189.06" width="2.1353" height="80"/>
+  <rect id="ventf" className="eventail" transform="rotate(160 -48.539 -20.555)" x="-101.38" y="-175.53" width="2.1353" height="88"/>
+  <rect id="ventg" className="eventail" transform="rotate(170 -49.572 -16.061)" x="-132.37" y="-155.81" width="2.1353" height="94"/>
+  <rect id="venth" className="eventail" transform="rotate(178 -50.387 -12.518)" x="-154.92" y="-136.09" width="2.1353" height="100"/>
+  <rect id="venti" className="eventail" transform="rotate(4 282.59 -1460.3)" x="168.27" y="11.56" width="2.1353" height="107.56"/>
+  <rect id="ventj" className="eventail" transform="rotate(190 -51.608 -7.2088)" x="-184.05" y="-100.41" width="2.1353" height="92"/>
+  <rect id="ventk" className="eventail" transform="rotate(200 -52.642 -2.7144)" x="-200.71" y="-66.368" width="2.1353" height="70"/>
+  <rect id="ventl" className="eventail" transform="rotate(210 -53.708 1.9207)" x="-211.04" y="-29.609" width="2.1353" height="50"/>
+</svg>

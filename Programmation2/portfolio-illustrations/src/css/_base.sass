@@ -1,0 +1,57 @@
+@import 'variables', 'mixins';
+
+h1, h2, h3, h4, h5, h6, p, ul, a, button, input, label
+  font-family: 'Metropolis', sans-serif !important;
+
+.cacher
+  display: none;
+
+span.desktop
+  display: none;
+
+.blanc
+  background-color: #fff;
+.noir:not(.triangle)
+  background-color: $noir;
+
+
+#root, body
+  min-height: 100vh;
+#root
+  position: relative;
+  background-color: #fff;
+  background-image: url("../img/fond_plantes3.jpg");
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+
+.header.cacher
+  display: none;
+.header
+  @include flex-center;
+  height: 9rem;
+  img
+    max-width: 150px;
+
+footer
+  @include flex-center;
+  @include posAbsolue(absolute, auto, auto, 0, auto);
+  text-align: center;
+  width: 100%;
+  font-size: .9rem;
+  font-weight: bold;
+  color: $grisMoyen;
+
+@media (min-width: 768px)
+  span.desktop
+    display: inline;
+  span.mobile
+    display: none;
+
+@media (min-width: 991px)
+  .header
+    height: 12rem;
+    img
+      max-width: 170px;

@@ -1,102 +1,46 @@
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-Medium.woff2") format("woff2"), url("../fonts/Metropolis-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+@import 'variables', 'fonts', 'mixins', 'base', 'range', 'boutons', 'animations';
 
+/* Tables des matières
+  -- 1.0 -- Grille d'images en accueil
+  ------ 1.1 -- Bouton ajout d'un montage en acceuil
+  -- 2.0 -- Aperçu du montage
+  -- 3.0 -- Formulaire modification du montage
+  -- 4.0 -- Médiathèque
+  -- 5.0 -- Media queries 
+  */
 
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-RegularItalic.woff2") format("woff2"), url("../fonts/Metropolis-RegularItalic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-Regular.woff2") format("woff2"), url("../fonts/Metropolis-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-MediumItalic.woff2") format("woff2"), url("../fonts/Metropolis-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-BoldItalic.woff2") format("woff2"), url("../fonts/Metropolis-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-
-@font-face
-  font-family: 'Metropolis';
-  src: url("../fonts/Metropolis-Bold.woff2") format("woff2"), url("../fonts/Metropolis-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-
-$noir : #000;
-$jaune : #ffef1c;
-$rose: #c83737;
-
-#root
-  min-height: 100vh;
-  background-color: #fff;
-  background-image: url("../img/fond_plantes3.jpg");
-  background-attachment: fixed;
-  background-position: center bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-.header
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 12rem;
-  img
-    max-width: 170px;
-
+// 1.0 Grille d'images en accueil
 
 .grillePlantes
-  margin: 1rem 0 4rem;
+  margin: 1rem auto 4rem;
+  max-width: 900px;
   .itemGrille
-    position: relative;
-    background-color: #fff;
-    width: calc(50% - 2rem);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include transitionBase;
+    width: calc(100% - 2rem);
     margin: 1rem;
+  .itemGrille:not(.btnAjout).etatHover
+    opacity: .5;
+
+.itemGrille.restreintCadre
+  overflow: hidden;
+.itermGrille.depasseCadre
+  overflow: visible;
+
+.itemGrille
+  @include flex-center;
+  position: relative;
+  background-color: #fff;
   .insideItem
     position: relative;
     padding: 1rem 1rem 2rem;
-    overflow: hidden;
-  svg
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 25%;
-    right: 25%;
   .titre
+    @include posAbsolue(absolute, auto, .5rem, 0, auto);
     font-family: 'Metropolis', sans-serif;
-    position: absolute;
-    bottom: 0;
-    right: .5rem;
     z-index: 100;
     font-size: .9rem;
     text-transform: lowercase;
     text-align: center;
-    color: $noir;
-  .blanc
-    background-color: #fff;
-  .noir:not(.triangle)
-    background-color: $noir;
+    color: $or;
   .rose
     background-color: $rose;
   img
@@ -104,6 +48,384 @@ $rose: #c83737;
     position: relative;
     z-index: 2;
   a
+    @include posAbsolue;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    cursor: pointer;
+
+// 1.1 Bloc Ajouter un montage
+
+.btnAjout.itemGrille
+  @include transitionBase;
+  background-color: rgba(170, 136, 0 , .4);
+  color: $orPale
+  .insideItem
+    @include flex-center;
+    width: 100%;
+    height: 24rem;
+    padding: 0;
+  h2
+    text-align: center;
+    padding: 0 2rem;
+    color: inherit;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+.btnAjout:hover
+  color: $or;
+  background-color: rgba(170, 136, 0 , .3);
+
+// 2.0 Apercu illustration en mode modification
+
+.vueSeule 
+  justify-content: center;
+  .colApercu
+    z-index: 5;
+  .colApercu.apercuTransparent
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100wh;
+    .apercuPlante
+      border-radius: 0;
+      background-color: $grisMoyen;
+    .itemGrille
+      margin: 4rem auto 2rem;
+  .apercuPlante
+    @include flex-center;
+    width: 100%;
+    z-index: 5;
+    /*margin-top: 3rem;*/
+    background-color: rgba(120,120,120,.6);
+    border-radius: 1.5rem;
+    height: 100%;
+    /*min-height: 400px;*/
+    overflow: hidden;
+    padding: 1.5rem .5rem;
+  .itemGrille
+    max-width: 500px;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+  .insideItem
+    max-height: calc(100vh - 3rem);
+  img
+    max-height: calc(100vh - 6rem);
+
+// 3.0 Section formulaire de modification
+
+.formulaireModif
+  padding: 3.5rem 1.25rem 3rem;
+  background-color: $grisPale;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 6rem;
+  margin-top: -2rem;
+  p
+    font-size: 1.2rem;
+  input.form-control, .form-control:disabled
+    background-color: transparent;
+  .form-control, .form-control:disabled
+    border: 0;
+  .form-control:focus
+    border-color: $or;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(160,137,44,1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(160,137,44,1);
+    box-shadow: 0px 0px 5px 0px rgba(160,137,44,1);
+  .sectionUrl, .sectionNom
+    border-radius: .25rem;
+    background-color: #fff;
+    .btn-primary
+      width: 100%;
+      padding: .5rem;
+  .contenantBtnUrl .btnForm
+    margin-top: -2px;
+    margin-bottom: -2px;
+  .contenantAdresseUrl
+    @include flex-center;
+  .adresseUrl
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+    width: 100%;
+    background-color: $grisPale;
+  .contenantBtnUrl
+    padding: 0;
+  .sectionNom
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    input
+      padding-left: 0;
+      border-bottom: 2px solid $or;
+      border-radius: 0;
+
+  .optionsMontage
+    @include transitionBase;
+    @include posAbsolue(fixed)
+    background: rgba(255,255,255, .8);
+    z-index: 80;
+    padding: 0 1rem 1rem;
+    align-items: flex-start;
+  .optionsMontage.cacher, .sectionNom.cacher, .sectionUrl.cacher, .sectionBoutons.cacher
+    display: none;
+  .titreTypeVisuel
+    padding: 0;
+  .contenantBtnFermer
+    height: 3rem;
+  .btnFermer
+    @include posAbsolue(absolute, 50%, auto, auto, 50%);
+    @include transform-center;
+    
+  .champsConditionnels
+    padding-top: 0;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  .form-control
+    height: 2rem;
+  .form-group select, .form-group input
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+  .groupeCouleurBg
+    @include flex-center;
+  .form-group .form-label
+    font-weight: bold;
+    font-size: .8rem;
+    color: $or;
+  .form-group .form-label:not(.labelInline)
+    display: block;
+  .form-group .labelInline
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  .inputPastille, .inputPastille:not(.inputForme) input:after
+    width: 1.5rem;
+    height: 1.5rem;
+  .inputPastille
+    position: relative;
+  .inputForme:not(.inputFormeTriangle) input:after
+    width: 1.2rem;
+    height: 1.2rem;
+  .form-check-inline .form-check-input
+    margin-right: 0;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: 1rem;
+  .inputPastille input:after
+    @include transform-center;
+    @include transitionBase;
+    content: "";
+    display: block;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+  .groupeInline
+    margin-bottom: 0;
+  .inputForme
+    margin-bottom: .5rem;
+    margin-right: .2rem;
+  .inputForme input:after
+    background-color: $grisMoyen;
+    border-color: transparent transparent $grisMoyen transparent;
+  .inputCouleur input:after
+    border-radius: .25rem;
+  .inputCouleur.blanc, .inputCouleur.noir
+    background-color: transparent;
+  .inputCouleur.blanc input:after
+    border: solid 1px $grisMoyen;
+    background-color: #fff;
+  .inputCouleur.noir input:after
+    background-color: $noir;
+  .inputCouleur.selectionCouleur input:after
+    border: 2px solid $orPale;
+    border-radius: 50%;
+    cursor: default;
+  .labelRadio
+    margin-right: 0;
+  .labelRadio, .labelRadio .form-check-label
+    background-color: #fff;
+    border-radius: .25rem;
+    width: 5.94rem;
+  .labelRadio:nth-child(even)
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  .labelRadio:nth-child(odd)
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  .labelRadio .form-check-label
+    @include transitionBase;
+    padding: .25rem 1rem;
+    cursor: pointer;
+  .labelRadio.selectionLabel .form-check-label
+    background-color: $or;
+    color: #fff;
+    cursor: default;
+  #typeFormeTriangle:after
+    border-style: solid;
+    border-width: 0 0.65rem 1.2rem 0.65rem;
+    background-color: transparent;
     width: 0;
     height: 0;
-    display: none;
+  #typeFormeCercle:after
+    border-radius: 50%;
+  .inputForme.selection input:after
+    border-color: transparent transparent $or transparent;
+    background-color: $or;
+    cursor: default;
+  .contenantBtnBas
+    padding-left: 0;
+  .contenantBtnSupr
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+
+.champsConditionnels, button.cacher
+  display: none;
+.champsConditionnels.actif, button.actif
+  display: block;
+
+// 4.0 Médiathèque - Sélectionner une illustration
+
+.mediatheque
+  background-color: $grisPale;
+  .interieurMediatheque
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  .btnFermer
+    @include posAbsolue(fixed, 1.5rem, 2rem, auto, auto);
+  .contenantImage
+    @include flex-center;
+    @include transitionBase;
+    width: calc(50% - 1rem);
+    margin: .5rem;
+    padding: .5rem;
+    height: 250px;
+    background-color: #fff;
+    border: solid 1px transparent;
+    cursor: pointer;
+  .contenantImage:hover
+    border-radius: 2rem;
+    border: solid 1px $or;
+  .contenantIntro
+    @include accentTypo
+    width: 100%;
+    margin: 0 1rem;
+    flex-basis: 100%;
+    p
+      max-width: calc(520px + 4rem);
+      padding-right: 3rem;
+  img 
+    max-width: 100%;
+    max-height: 100%;
+
+// 5.0 Media queries
+@media (min-width: 400px)
+  .mediatheque
+    .contenantImage
+      padding: 1rem;
+      height: 300px;
+
+@media (min-width: 576px)
+  .formulaireModif
+    padding: 4.5rem 2.5rem 3rem;
+    .form-group .form-label
+      font-size: 1rem;
+    .inputForme
+      margin-right: .5rem;
+    .inputPastille:not(.inputFormeTriangle) input:after
+      width: 1.5rem;
+      height: 1.5rem;
+    #typeFormeTriangle:after
+      border-width: 0 0.85rem 1.5rem 0.85rem;
+
+  .mediatheque
+    .contenantImage
+      width: calc(33.33% - 1rem);
+      margin: .5rem;
+    .contenantIntro p
+      padding-right: 4rem;
+
+@media (min-width: 768px)
+  .grillePlantes
+    .itemGrille
+      width: calc(50% - 2rem);
+
+  .vueSeule
+    .colApercu
+      position: fixed;
+      height: 70vh;
+    .itemGrille
+      margin: 3rem auto;
+    .insideItem
+      max-height: calc(70vh - 3rem);
+    img
+      max-height: calc(70vh - 6rem);
+
+  .formulaireModif
+    background-color: rgba(238,238,238,.8);
+    padding: 2.5rem 2.5rem 3rem 4rem;
+    position: relative;
+    margin-left: -4rem;
+    margin-top: 0;
+    margin-bottom: 6rem;
+    margin-right: auto;
+    .optionsMontage
+      @include transitionBase;
+      background: rgb(255,255,255);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 40%, rgba(238,238,238,1) 100%);
+      border-radius: .25rem;
+      padding-bottom: 1rem;
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+    .optionsMontage.cacher, .optionsMontage.actif
+      display: flex;
+      position: static;
+    .optionsMontage.modifAnimation
+      background: -moz-linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(270deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    .optionsMontage.formes
+      background: -moz-linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      background: -webkit-linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    .form-group .form-label
+      font-weight: 500;
+      color: $noir;
+    .champsConditionnels
+      padding-top: 1rem;
+      padding-left: 15px;
+      padding-right: 15px;
+    .champsHaut
+      border-top: solid 2px $grisPale;
+
+  .mediatheque
+    .contenantImage
+      width: calc(33.33% - 2rem);
+      margin: 1rem;
+    .interieurMediatheque
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    .btnFermer
+      @include posAbsolue(fixed, 3rem, 2rem, auto, auto);
+
+@media (min-width: 991px)
+  .vueSeule
+    .apercuPlante
+      border-radius: 3rem;
+
+  .formulaireModif
+    margin-top: -1rem;
+    .adresseUrl
+      margin-bottom: 0;
+      margin-top: 0;
+
+  .mediatheque
+    .contenantImage
+      padding: 2rem;
+      height: 400px;

@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import iconeFleche from "../img/icone-retour.svg";
 
-const ButtonHomepage = () => {
+const ButtonHomepage = (props) => {
   return (
     <> 
-      <Link to="/" className="btn btn-primary mt-5">
-        Retour à la liste des animaux
+      <Link to="/" className={"btn btn-primary btnRetour btnMobile gauche " + (props.etatMontage === "mobileCacher" ? "actif" : "cacher")}>
+        <img src={iconeFleche} alt="retour" /><span class="desktop">Retour au portfolio</span>
       </Link>
     </>
   );

@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "./static/css/main.0c725652.chunk.css",
-    "main.js": "./static/js/main.5c77943e.chunk.js",
-    "main.js.map": "./static/js/main.5c77943e.chunk.js.map",
+    "main.css": "./static/css/main.aa4a5b29.chunk.css",
+    "main.js": "./static/js/main.e5549678.chunk.js",
+    "main.js.map": "./static/js/main.e5549678.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.362157e0.js",
     "runtime-main.js.map": "./static/js/runtime-main.362157e0.js.map",
     "static/css/2.e7c4c567.chunk.css": "./static/css/2.e7c4c567.chunk.css",
-    "static/js/2.b31eb964.chunk.js": "./static/js/2.b31eb964.chunk.js",
-    "static/js/2.b31eb964.chunk.js.map": "./static/js/2.b31eb964.chunk.js.map",
+    "static/js/2.e8b5f488.chunk.js": "./static/js/2.e8b5f488.chunk.js",
+    "static/js/2.e8b5f488.chunk.js.map": "./static/js/2.e8b5f488.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.7c25a6525558efc1b98bf2c109c32a0a.js": "./precache-manifest.7c25a6525558efc1b98bf2c109c32a0a.js",
+    "precache-manifest.5114985f4226a4531072f52c33034690.js": "./precache-manifest.5114985f4226a4531072f52c33034690.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.e7c4c567.chunk.css.map": "./static/css/2.e7c4c567.chunk.css.map",
-    "static/css/main.0c725652.chunk.css.map": "./static/css/main.0c725652.chunk.css.map",
-    "static/js/2.b31eb964.chunk.js.LICENSE.txt": "./static/js/2.b31eb964.chunk.js.LICENSE.txt",
+    "static/css/main.aa4a5b29.chunk.css.map": "./static/css/main.aa4a5b29.chunk.css.map",
+    "static/js/2.e8b5f488.chunk.js.LICENSE.txt": "./static/js/2.e8b5f488.chunk.js.LICENSE.txt",
     "static/media/main-style.css": "./static/media/fond_plantes3.c519970b.jpg",
+    "static/media/icone-magie.svg": "./static/media/icone-magie.97d7cb6a.svg",
+    "static/media/icone-poubelle.svg": "./static/media/icone-poubelle.6bb1fa53.svg",
+    "static/media/icone-retour.svg": "./static/media/icone-retour.509c3689.svg",
     "static/media/logo_annemoncion_illustration.svg": "./static/media/logo_annemoncion_illustration.2ef166be.svg",
-    "static/media/triangles-en-file.ee877ab3.svg": "./static/media/triangles-en-file.ee877ab3.svg",
+    "static/media/triangles-en-file.d3fde7f1.svg": "./static/media/triangles-en-file.d3fde7f1.svg",
     "static/media/vide.db262d43.svg": "./static/media/vide.db262d43.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.362157e0.js",
     "static/css/2.e7c4c567.chunk.css",
-    "static/js/2.b31eb964.chunk.js",
-    "static/css/main.0c725652.chunk.css",
-    "static/js/main.5c77943e.chunk.js"
+    "static/js/2.e8b5f488.chunk.js",
+    "static/css/main.aa4a5b29.chunk.css",
+    "static/js/main.e5549678.chunk.js"
   ]
 }

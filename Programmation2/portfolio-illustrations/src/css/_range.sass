@@ -1,0 +1,95 @@
+@import 'variables';
+
+@mixin track($fill: 0)
+  box-sizing: border-box;
+  border: none; 
+  height: $track-h;
+  background: $track-c;
+
+@mixin trackFocus($fill: 0)
+  box-sizing: border-box;
+  border: none; 
+  height: $track-h;
+  background: $filll-d;
+
+@mixin fill()
+  height: $track-h;
+  background: $filll-c
+
+@mixin fillFocus()
+  height: $track-h;
+  background: $filll-d
+
+@mixin thumb()
+  box-sizing: border-box;
+  border: none;
+  width: $thumb-d; 
+  height: $thumb-d;
+  border-radius: 50%;
+  background: $or;
+
+input[type='range']  
+  margin: 0;
+  padding: 0;
+  height: $thumb-d;
+  background: transparent;
+  font: 1em/1 arial, sans-serif;
+
+  &, &::-webkit-slider-thumb
+    -webkit-appearance: none;
+    
+  &::-webkit-slider-runnable-track
+    @include track(1)
+
+  &::-moz-range-track
+    @include track
+  &::-ms-track
+    @include track
+    
+  &::-moz-range-progress
+    @include fill
+  &::-ms-fill-lower
+    @include fill
+    
+  &::-webkit-slider-thumb
+    margin-top: .5*($track-h - $thumb-d);
+    @include thumb
+
+  &::-moz-range-thumb
+    @include thumb
+  &::-ms-thumb
+    margin-top: 0;
+    @include thumb
+    
+  &::-ms-tooltip
+    display: none
+  
+input[type='range']:focus
+  &, &::-webkit-slider-thumb
+    -webkit-appearance: none;
+    
+  &::-webkit-slider-runnable-track
+    @include trackFocus(1)
+
+  &::-moz-range-track
+    @include trackFocus
+  &::-ms-track
+    @include trackFocus
+    
+  &::-moz-range-progress
+    @include fillFocus
+  &::-ms-fill-lower
+    @include fillFocus
+    
+  &::-webkit-slider-thumb
+    margin-top: .5*($track-h - $thumb-d);
+    @include thumb
+
+  &::-moz-range-thumb
+    @include thumb
+  &::-ms-thumb
+    margin-top: 0;
+    @include thumb
+    
+  &::-ms-tooltip
+    display: none

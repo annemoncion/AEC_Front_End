@@ -1,0 +1,137 @@
+@import 'variables', 'mixins';
+
+.btn-primary:not(:disabled):not(.disabled):active
+  background-color: $or !important;
+
+.btnForm.btn-primary
+  @include accentTypo
+  background-color: #fff;
+  border: 2px solid $or;
+  padding: .5rem 1.5rem;
+
+.btnForm.btn-primary:hover, .btnForm.btn-primary:active
+  background-color: $or;
+  color: #fff;
+  border: 2px solid transparent;
+
+.btnGrand.btn-primary
+  padding: 2rem 3rem;
+  border-radius: .5rem;
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  margin: 5rem 3rem;
+
+.formulaireModif
+  .btnChoix
+    @include accentTypo(bold, $grisMoyen);
+    @include transitionBase;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-radius: .25rem;
+    padding: 1rem 1rem .5rem;
+    text-align: left;
+  .btnChoix.btnAnimation
+    text-align: right;
+  .btnChoix:focus, .btn-primary:not(:disabled):not(.disabled):active:focus
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
+  .btnChoix:hover, .btnChoix:not(:disabled):not(.disabled):active
+    background-color: transparent;
+    color: $orPale;
+    border: 0;
+  .btnChoix.actif, .btnChoix.actif:hover
+    color: $or;
+    cursor: default;
+  .btn-danger
+    background-color: transparent;
+    margin-right: 0;
+    margin-left: auto;
+    border-width: 2px;
+  .btn-danger img
+    width: 1.5rem;
+
+.btnFermer
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $or;
+  border: 0 solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color .5s ease, border-radius .3s ease;
+  .bar
+    @include transform-center;
+    width: 1.5rem;
+    height: .25rem;
+    background-color: $grisPale;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transition: background-color .5s ease, width .4s linear, transform .3s ease;
+  .barUn
+    transform: translate(-50%, -50%) rotate(45deg);
+  .barDeux
+    transform: translate(-50%, -50%) rotate(-45deg);
+.btnFermer:hover
+  border-radius: 0;
+  background-color: $grisPale;
+  .bar
+    transform: translate(-50%, -50%) rotate(0);
+    width: 3rem;
+    background-color: $or;
+
+.btn-primary.btnMobile.cacher
+  display: none;
+.btn-primary.btnMobile:active, .btn-primary.btnMobile:focus
+  background-color: $or;
+.btn-primary.btnMobile
+  @include flex-center;
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .5rem;
+  background-color: $orPale;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 999;
+  img
+    max-width: 80%;
+    max-height: 50%;
+.btn-primary.btnMobile.gauche
+  left: 0;
+.btn-primary.btnMobile.droite
+  right: 0;
+.btnMontage
+  top: 5rem;
+.btnRetour
+  top: 2rem;
+
+@media (min-width: 768px)
+  .contenantBtnFermer, .btnMontage.btnMobile, .btnRetour img
+    display: none;
+  
+  .btn-primary.btnRetour
+    @include flex-center;
+    @include posAbsolue(absolute, 2rem, auto, auto, 0);
+    background-color: #fff;
+    border-radius: 0;
+    color: $or;
+    height: 4rem;
+    width: auto;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+  .btn-primary.btnRetour:hover, .btn-primary.btnRetour:active
+    background-color: $orPale;
+    color: #fff;
+
+@media (min-width: 991px)
+  .btn-primary.btnRetour
+    @include posAbsolue(absolute, 4rem, auto, auto, 0);
+    padding-left: 4rem;

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58806c3d7325ad75c926471fea169685",
+    "revision": "177d076af084328b341bf3058f6f8c2b",
     "url": "./index.html"
   },
   {
-    "revision": "f92899d6ae56f6008ecb",
+    "revision": "91c2b14f127cecd992da",
     "url": "./static/css/2.e7c4c567.chunk.css"
   },
   {
-    "revision": "eb782b585a1979291e58",
-    "url": "./static/css/main.0c725652.chunk.css"
+    "revision": "33dc377fa00b69981471",
+    "url": "./static/css/main.aa4a5b29.chunk.css"
   },
   {
-    "revision": "f92899d6ae56f6008ecb",
-    "url": "./static/js/2.b31eb964.chunk.js"
+    "revision": "91c2b14f127cecd992da",
+    "url": "./static/js/2.e8b5f488.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "./static/js/2.b31eb964.chunk.js.LICENSE.txt"
+    "revision": "d77c619ca2e803ff4203c09914a159e3",
+    "url": "./static/js/2.e8b5f488.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eb782b585a1979291e58",
-    "url": "./static/js/main.5c77943e.chunk.js"
+    "revision": "33dc377fa00b69981471",
+    "url": "./static/js/main.e5549678.chunk.js"
   },
   {
     "revision": "653eeeed503c89582df5",
@@ -80,12 +80,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/fond_plantes3.c519970b.jpg"
   },
   {
+    "revision": "97d7cb6a82592e8cd646be10469dfa65",
+    "url": "./static/media/icone-magie.97d7cb6a.svg"
+  },
+  {
+    "revision": "6bb1fa534328e36bc0e183a037e49e2f",
+    "url": "./static/media/icone-poubelle.6bb1fa53.svg"
+  },
+  {
+    "revision": "509c3689c5237583128b0a6e3b4c7340",
+    "url": "./static/media/icone-retour.509c3689.svg"
+  },
+  {
     "revision": "2ef166bee332b5f66206a51e16d3565e",
     "url": "./static/media/logo_annemoncion_illustration.2ef166be.svg"
   },
   {
-    "revision": "ee877ab375ae1235716d916e5ab0024a",
-    "url": "./static/media/triangles-en-file.ee877ab3.svg"
+    "revision": "d3fde7f19dd9cd13bc649633a7aa4530",
+    "url": "./static/media/triangles-en-file.d3fde7f1.svg"
   },
   {
     "revision": "db262d433025de0d0f2fbde9a30c9fb0",

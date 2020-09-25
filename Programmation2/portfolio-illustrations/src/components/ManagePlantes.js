@@ -1,53 +1,69 @@
 import React, {useState, useEffect} from 'react';
 import Plante from './Plante';
+import BoutonAjouterPlante from './BoutonAjouterPlante';
+import Masonry from 'react-masonry-component';
+import {API} from '../constantes.js';
 
 function ManagePlantes(props) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [plantsFetched, setPlantsFetched] = useState(false);
+  const [test, setTest] = useState(0);
 
   useEffect(() => { 
     getPlantes();
-  }, [loading]);
-
-  async function getPlantes() {  
-    try {
-      const response = await fetch("http://localhost:3001/plantes");
-      const reponseDeApi = await response.json();
-      setData(reponseDeApi);
-      setLoading(true);
-      setPlantsFetched(true);
-      if (!response.ok) {
-          throw Error(response.statusText);
+  }, [test]);
+  
+  const getPlantes = async () => {  
+      try {
+        const response = await fetch(API);
+        const reponseDeApi = await response.json();
+        setData(reponseDeApi);
+        setTest(1);
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
       }
-    }
-    catch(error) {
-        console.log(error);
-    }
+      catch(error) {
+          console.log(error);
+      }
   }
-
-  //Charger la librairie mansonry.js quand les plantes ont été chargées.
-  useEffect(() => {
-      const script = document.createElement('script');
-      script.src = "/js/masonry.pkgd.js";
-      script.async = true;
-      document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, [plantsFetched]);
 
   return ( 
 
-    <div className="grillePlantes" data-masonry='{ "itemSelector": ".itemGrille", "columnWidth": ".itemGrille", "percentPosition": true }'> 
-
+    <Masonry
+      className={'grillePlantes'} // default ''
+      elementType={'div'} // default 'div'
+      options={{ "itemSelector": ".itemGrille", "columnWidth": ".itemGrille", "percentPosition": true }} // default {}
+      disableImagesLoaded={false} // default false
+      updateOnEachImageLoad={true} // default false and works only if disableImagesLoaded is false
+      >
       {Object.keys(data).map(key => ( 
 
-        <Plante key={key} idPerso={parseInt(key) + 1} image={data[key].image} toutLobjet={data[key]}></Plante>
+        
 
-        ))}
+        <Plante 
+          key={key} 
+          idPerso={data[key]._id}
+          image={data[key].image}
+          couleurBg={data[key].couleurBg} 
+          toutLobjet={data[key]}
+          titre={data[key].nomCommun}
+          animationActive={data[key].animation.actif}
+          nomAnimation={data[key].animation.nom}
+          profondeurAnimation={data[key].animation.profondeur}
+          formeEtendue={data[key].formes.etendue}
+          formeActive={data[key].formes.actif}
+          typeForme={data[key].formes.type}
+          couleurForme={data[key].formes.couleur}
+          profondeurForme={data[key].formes.profondeur}
+          largeurForme={data[key].formes.largeur}
+          hauteurForme={data[key].formes.hauteur}
+          posXForme={data[key].formes.posX}
+          posYForme={data[key].formes.posY}
+          />
 
-    </div> 
+      ))}
+        <BoutonAjouterPlante/>
+    </Masonry>
 
   ); 
 }

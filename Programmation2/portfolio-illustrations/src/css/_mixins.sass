@@ -1,0 +1,32 @@
+@import 'variables';
+  
+@mixin flex-center($x: center, $y: center)
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+
+@mixin transform-center
+  position: absolute;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+@mixin accentTypo($gras: bold, $couleur: $or)
+  font-weight: $gras;
+  color: $couleur;
+  line-height: 1.4em;
+  font-size: 1.2rem;
+
+@mixin transitionBase
+  -moz-transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+@mixin posAbsolue($position: absolute, $top: 0, $right: 0, $bottom: 0, $left: 0)
+  position: $position
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;

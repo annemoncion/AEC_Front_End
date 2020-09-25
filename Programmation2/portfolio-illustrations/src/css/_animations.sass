@@ -1,0 +1,61 @@
+@import 'variables', 'mixins'
+
+svg
+  position: absolute;
+#trianglesEnFile
+  @include posAbsolue(absolute, 0, 25%, 0, 25%);
+#eventail
+  @include posAbsolue(absolute, 1rem);
+
+.contenantRectangles
+  @include flex-center(center, flex-end)
+  position: absolute;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  .rectangle
+    width: 8px;
+    height: 630px;
+    background-color: $noir;
+    transform-origin: 50% 100%;
+
+.contenantHypnose
+  @include flex-center;
+  @include posAbsolue(absolute, 0, 0, 2.5rem, 0);
+  .triangle
+    @include transform-center;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform-origin: 50% 50%;
+    left: 50%;
+    top: 50%;
+  .triangle3
+    border-width: 0 34px 68px 34px;
+  .triangle1, .triangle2
+    top: calc(50% - 15px);
+    border-width: 0 10px 20px 10px;
+  .triangle1
+    border-color: transparent transparent $noir transparent;
+  .triangle2, .triangle3
+    border-color: transparent transparent #fff transparent;
+
+.animation.cacher
+  display: none;
+.animation.actif
+  display: block;
+.contenantRectangles.actif
+  display: flex;
+.animation.dessus
+  z-index: 2;
+.animation.dessous
+  z-index: 1;
+
+.forme 
+  @include transform-center;
+.forme.cercle
+  border-radius: 50%;
+.forme.triangle
+  width: 0;
+  height: 0;
+  border-style: solid;

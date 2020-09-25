@@ -1,0 +1,1 @@
+export const animations = [eventail, hypnose, triangles-en-file];

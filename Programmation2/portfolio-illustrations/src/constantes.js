@@ -1,0 +1,1 @@
+export const API = "https://crudcrud.com/api/166aa134c70d4c63bb4fa17c721a8b51/plantes/";
