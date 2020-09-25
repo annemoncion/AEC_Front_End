@@ -1,7 +1,7 @@
 {
   "name": "exercice-mock-api",
   "version": "0.1.0",
-  "homepage": "https://annemoncion.github.io/AEC_Front_End/Programmation2/portfolio-illustrations/build/index.html",
+  "homepage": "/AEC_Front_End/Programmation2/portfolio-illustrations/build/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
