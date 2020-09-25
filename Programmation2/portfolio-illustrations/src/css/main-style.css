@@ -424,7 +424,7 @@ input[type='range']:focus::-ms-tooltip {
   display: none;
 }
 
-.btn-primary.btnMobile:active, .btn-primary.btnMobile:focus {
+.btn-primary.btnMobile:active, .btn-primary.btnMobile:focus, .btn-primary.btnAPropos:active, .btn-primary.btnAPropos:hover {
   background-color: #786721;
 }
 
@@ -466,15 +466,20 @@ input[type='range']:focus::-ms-tooltip {
   top: 5rem;
 }
 
-.btnRetour {
+.btnRetour, .btnAPropos {
   top: 2rem;
+}
+
+.btn.btnAPropos {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
   .contenantBtnFermer, .btnMontage.btnMobile, .btnRetour img {
     display: none;
   }
-  .btn-primary.btnRetour {
+  .btn-primary.btnRetour, .btn-primary.btnAPropos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -484,18 +489,29 @@ input[type='range']:focus::-ms-tooltip {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: absolute;
-    top: 2rem;
-    right: auto;
-    bottom: auto;
-    left: 0;
     background-color: #a0892c;
     border-radius: 0;
     color: #fff;
     height: 4rem;
     width: auto;
+  }
+  .btn-primary.btnRetour {
+    position: absolute;
+    top: 2rem;
+    right: auto;
+    bottom: auto;
+    left: 0;
     padding-left: 2rem;
     padding-right: 1rem;
+  }
+  .btn-primary.btnAPropos {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    padding-left: 1rem;
+    padding-right: 2rem;
   }
   .btn-primary.btnRetour:hover, .btn-primary.btnRetour:active {
     background-color: #786721;
@@ -510,6 +526,14 @@ input[type='range']:focus::-ms-tooltip {
     bottom: auto;
     left: 0;
     padding-left: 4rem;
+  }
+  .btn-primary.btnAPropos {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    padding-right: 4rem;
   }
 }
 
@@ -650,10 +674,13 @@ svg {
   -- 4.0 -- Médiathèque
   -- 5.0 -- Media queries
   */
+.grandContenantGrille {
+  overflow: hidden;
+}
+
 .grillePlantes {
   margin: 1rem auto 4rem;
   max-width: 900px;
-  overflow: hidden;
 }
 
 .grillePlantes .itemGrille {
@@ -1220,6 +1247,20 @@ svg {
   max-width: 100%;
 }
 
+.aPropos .colTexte {
+  margin-bottom: 2rem;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.aPropos .colTexte:last-child {
+  margin-bottom: 8rem;
+}
+
+.aPropos h2 {
+  color: #786721;
+}
+
 @media (min-width: 400px) {
   .mediatheque .contenantImage {
     padding: 1rem;
@@ -1256,6 +1297,31 @@ svg {
 @media (min-width: 768px) {
   .grillePlantes .itemGrille {
     width: calc(50% - 2rem);
+  }
+  .aPropos .gForme {
+    position: absolute;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: -2rem;
+    position: absolute;
+    -webkit-transform: translate(-100%, -50%);
+    transform: translate(-100%, -50%);
+    width: 200px;
+    height: 200px;
+  }
+  .aPropos .gForme:not(.triangle) {
+    background-color: #a0892c;
+  }
+  .aPropos .cercle {
+    border-radius: 50%;
+  }
+  .aPropos .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 115px 199.2px 115px;
+    border-color: transparent transparent #a0892c transparent;
   }
   .vueSeule .colApercu {
     position: fixed;

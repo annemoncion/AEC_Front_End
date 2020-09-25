@@ -5,12 +5,12 @@
     justify-content: $x;
     align-items: $y;
 
-@mixin transform-center
+@mixin transform-center ($x: -50%, $y: -50%)
   position: absolute;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -moz-transform: translate($x, $y);
+  -webkit-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
 
 @mixin accentTypo($gras: bold, $couleur: $or)
   font-weight: $gras;

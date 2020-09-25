@@ -87,7 +87,7 @@
 
 .btn-primary.btnMobile.cacher
   display: none;
-.btn-primary.btnMobile:active, .btn-primary.btnMobile:focus
+.btn-primary.btnMobile:active, .btn-primary.btnMobile:focus, .btn-primary.btnAPropos:active, .btn-primary.btnAPropos:hover
   background-color: $or;
 .btn-primary.btnMobile
   @include flex-center;
@@ -109,23 +109,31 @@
   right: 0;
 .btnMontage
   top: 5rem;
-.btnRetour
+.btnRetour, .btnAPropos
   top: 2rem;
+.btn.btnAPropos
+  font-weight: bold;
+  font-size: 1.2rem;
 
 @media (min-width: 768px)
   .contenantBtnFermer, .btnMontage.btnMobile, .btnRetour img
     display: none;
   
-  .btn-primary.btnRetour
+  .btn-primary.btnRetour, .btn-primary.btnAPropos
     @include flex-center;
-    @include posAbsolue(absolute, 2rem, auto, auto, 0);
     background-color: $orPale;
     border-radius: 0;
     color: #fff;
     height: 4rem;
     width: auto;
+  .btn-primary.btnRetour
+    @include posAbsolue(absolute, 2rem, auto, auto, 0);
     padding-left: 2rem;
     padding-right: 1rem;
+  .btn-primary.btnAPropos
+    @include posAbsolue(absolute, 2rem, 0, auto, auto);
+    padding-left: 1rem;
+    padding-right: 2rem;
 
   .btn-primary.btnRetour:hover, .btn-primary.btnRetour:active
     background-color: $or;
@@ -134,3 +142,6 @@
   .btn-primary.btnRetour
     @include posAbsolue(absolute, 4rem, auto, auto, 0);
     padding-left: 4rem;
+  .btn-primary.btnAPropos
+    @include posAbsolue(absolute, 4rem, 0, auto, auto);
+    padding-right: 4rem;

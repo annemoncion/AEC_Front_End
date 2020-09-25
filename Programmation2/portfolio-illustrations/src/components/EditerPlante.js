@@ -76,14 +76,13 @@ function EditerPlante(props) {
 
   }, [planteID, donneesRecues.nomCommun, donneesRecues.nomLatin, donneesRecues.image, donneesRecues.couleurBg, donneesRecues.animation.actif, donneesRecues.formes.actif, donneesRecues.animation.profondeur, donneesRecues.animation.nom, donneesRecues.formes.type, donneesRecues.formes.couleur, donneesRecues.formes.etendue, donneesRecues.formes.profondeur, donneesRecues.formes.largeur, donneesRecues.formes.hauteur, donneesRecues.formes.posX, donneesRecues.formes.posY]);
 
-  console.log(planteID);
+
   async function editerPlante(elNomCommun, elNomLatin, elCouleurBg, elImage, elAnimationActif, elAnimationNom, elAnimationProfondeur, elFormesActif, elFormeType, elFormeProfondeur, elFormeEtendue, elFormeHauteur, elFormeLargeur, elFormeCouleur, elFormePosX, elFormePosY) {  
     try{  
       const response = await fetch(API + planteID, {  
         method:'PUT',  
         headers: {'Content-Type': 'application/json' },  
         body:JSON.stringify({
-          _id : planteID,
           nomCommun: elNomCommun, 
           nomLatin: elNomLatin, 
           couleurBg: elCouleurBg,
@@ -107,11 +106,12 @@ function EditerPlante(props) {
         })  
       });  
      
-      if(response.ok){   
+      if(response.ok){
         props.history.push("/"); 
         toast.warn("Modification du montage de " + elNomCommun); 
         return response;
-      }  
+      }
+
       throw new Error('Request failed!');  
     }  
      
@@ -119,8 +119,6 @@ function EditerPlante(props) {
       console.log(error);  
     }  
   }
-
-  console.log(donneesRecues);
 
   async function removePlante(nom) {
     try{  
@@ -257,8 +255,6 @@ function EditerPlante(props) {
   function handleEtatMontage(etat) {
     props.etatMontage(etat);
   }
-
-  console.log(etendue);
 
   return (
     <>

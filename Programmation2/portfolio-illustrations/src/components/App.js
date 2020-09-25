@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import Accueil from './Accueil'; 
 import EditerPlante from './EditerPlante';
 import AjouterPlante from './AjouterPlante';
+import APropos from './APropos';
 import {Header} from './Header';
 import Footer from './Footer';
 import ButtonHomepage from './ButtonHomepage';
+import BoutonAPropos from './BoutonAPropos';
 import PageNotFound from './PageNotFound';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -75,19 +77,21 @@ function App() {
       <ToastContainer autoClose={3000} hideProgressBar />
       {(location.pathname.indexOf("mediatheque") <= -1)  && <Header etatMontage={etatMontage}/> }
       {(location.pathname !== "/") && (location.pathname.indexOf("mediatheque") <= -1) && <ButtonHomepage etatMontage={etatMontage}/> }
+      {(location.pathname !== "/a-propos") && (location.pathname.indexOf("mediatheque") <= -1) && <BoutonAPropos etatMontage={etatMontage}/> }
       <Switch>
-        <Route path="/" exact component={Accueil} /> 
+        <Route path="/" exact component={Accueil} />
+        <Route path="/a-propos" component={APropos} /> 
         <Route 
           path="/illustration/:id"
           render={(props) => (
             <EditerPlante {...props} etatMontage={handleEtatMontage} />
           )} />
         <Route 
-          path="/ajouterMontage"
+          path="/ajouter-montage"
           render={(props) => (
             <AjouterPlante {...props} etatMontage={handleEtatMontage} />
           )} />
-        <Redirect from="/ajouter" to="ajouterMontage" />
+        <Redirect from="/ajouter" to="ajouter-montage" />
         <Route component={PageNotFound} />
       </Switch>
       <Footer />

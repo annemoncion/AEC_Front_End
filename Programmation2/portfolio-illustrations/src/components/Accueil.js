@@ -7,7 +7,7 @@ function Accueil(props) {
         <> 
         <Container fluid>
             <Row>
-                <Col sm={{ span:10, offset:1 }}md={{ span:12, offset:0 }} lg={{ span:10, offset:1 }} xl={{ span:8, offset:2 }} className="mb-6">
+                <Col className="grandContenantGrille mb-6" sm={{ span:10, offset:1 }}md={{ span:12, offset:0 }} lg={{ span:10, offset:1 }} xl={{ span:8, offset:2 }}>
                     <ManagePlantes/>
                 </Col>
             </Row>

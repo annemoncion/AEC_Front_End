@@ -62,6 +62,7 @@ function Montage(props) {
     else {
       valeur = false;
     }
+    console.log(valeur);
     props.gestionFormeEtendue(valeur);
   };
 

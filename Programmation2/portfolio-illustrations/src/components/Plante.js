@@ -186,7 +186,7 @@ function Plante(props) {
 
   return ( 
     <>
-    <div className={"itemGrille " + props.couleurBg  + " " + ((props.formeEtendue === "true" && !props.animationActive ? "depasseCadre" : "restreintCadre"))}>
+    <div className={"itemGrille " + props.couleurBg  + " " + ((props.formeEtendue && !props.animationActive ? "depasseCadre" : "restreintCadre"))}>
       <div className={"insideItem"}>
         <img src={props.image} alt={props.titre} />
         <Link className="lienVoir" to={"illustration/" + nettoyerURL(props.titre) + "?id=" + props.idPerso} onMouseEnter={handleSurvolerLienVoir} onMouseLeave={handleQuitterLienVoir} />
