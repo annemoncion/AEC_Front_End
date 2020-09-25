@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.0738f1fa.chunk.css",
+    "main.js": "./static/js/main.41fb42d6.chunk.js",
+    "main.js.map": "./static/js/main.41fb42d6.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.5dcef7f1.js",
+    "runtime-main.js.map": "./static/js/runtime-main.5dcef7f1.js.map",
+    "static/css/2.af3c1da9.chunk.css": "./static/css/2.af3c1da9.chunk.css",
+    "static/js/2.b15415e8.chunk.js": "./static/js/2.b15415e8.chunk.js",
+    "static/js/2.b15415e8.chunk.js.map": "./static/js/2.b15415e8.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.abad754468277715812309dcf3b0dd8b.js": "./precache-manifest.abad754468277715812309dcf3b0dd8b.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "./static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.0738f1fa.chunk.css.map": "./static/css/main.0738f1fa.chunk.css.map",
+    "static/js/2.b15415e8.chunk.js.LICENSE.txt": "./static/js/2.b15415e8.chunk.js.LICENSE.txt",
+    "static/media/accueil-baie-georgienne.jpg": "./static/media/accueil-baie-georgienne.83c30e62.jpg",
+    "static/media/photo1.jpg": "./static/media/photo1.d7fe2e05.jpg",
+    "static/media/photo10.jpg": "./static/media/photo10.1d5da96d.jpg",
+    "static/media/photo11.jpg": "./static/media/photo11.8e3030c4.jpg",
+    "static/media/photo12.jpg": "./static/media/photo12.d7a1ad6f.jpg",
+    "static/media/photo2.jpg": "./static/media/photo2.a6c5862b.jpg",
+    "static/media/photo3.jpg": "./static/media/photo3.e891b91e.jpg",
+    "static/media/photo4.jpg": "./static/media/photo4.fa3d5c10.jpg",
+    "static/media/photo5.jpg": "./static/media/photo5.3cbc80b6.jpg",
+    "static/media/photo6.jpg": "./static/media/photo6.1b13dd89.jpg",
+    "static/media/photo7.jpg": "./static/media/photo7.53f3298f.jpg",
+    "static/media/photo8.jpg": "./static/media/photo8.02a927ff.jpg",
+    "static/media/photo9.jpg": "./static/media/photo9.57350a6d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5dcef7f1.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.b15415e8.chunk.js",
+    "static/css/main.0738f1fa.chunk.css",
+    "static/js/main.41fb42d6.chunk.js"
+  ]
+}
