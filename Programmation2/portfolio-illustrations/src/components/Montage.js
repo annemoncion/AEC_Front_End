@@ -93,8 +93,6 @@ function Montage(props) {
     props.etatMontage(etat);
   }
 
-  console.log(props.titre);
-
   return (
     <>
     <Container fluid className="vueSeule">
