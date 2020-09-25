@@ -55,7 +55,14 @@ function Montage(props) {
   };
 
   function handleEtendue(e) {
-    props.gestionFormeEtendue(e.target.value);
+    let valeur;
+    if (e.target.value === "true") {
+      valeur = true;
+    }
+    else {
+      valeur = false;
+    }
+    props.gestionFormeEtendue(valeur);
   };
 
   function handleProfondeurForme(e) {
@@ -64,19 +71,23 @@ function Montage(props) {
   };
 
   function handleRangeLargeur(e) {
-    props.gestionLargeurForme(e.target.value);
+    const largeur = parseInt(e.target.value);
+    props.gestionLargeurForme(largeur);
   };
 
   function handleRangeHauteur(e) {
-    props.gestionHauteurForme(e.target.value);
+    const hauteur = parseInt(e.target.value);
+    props.gestionHauteurForme(hauteur);
   };
 
   function handleRangePosX(e) {
-    props.gestionPosXForme(e.target.value);
+    const posX = parseInt(e.target.value);
+    props.gestionPosXForme(posX);
   };
 
   function handleRangePosY(e) {
-    props.gestionPosYForme(e.target.value);
+    const posY = parseInt(e.target.value);
+    props.gestionPosYForme(posY);
   };
 
   function handleChoixAnimation(e) {
@@ -321,11 +332,11 @@ function Montage(props) {
                     inline
                     type="radio"
                     id="etendue2"
-                    className={"labelRadio " + (props.formeEtendue === "false" ? "selectionLabel" : "")}
+                    className={"labelRadio " + (props.formeEtendue === false ? "selectionLabel" : "")}
                     label="Devant"
                     value="false"
                     name="etendue"
-                    checked={props.formeEtendue === "false"}
+                    checked={props.formeEtendue === false}
                     onChange={handleEtendue}
                   />
 
@@ -333,11 +344,11 @@ function Montage(props) {
                     inline
                     type="radio"
                     id="etendue1"
-                    className={"labelRadio " + (props.formeEtendue === "true" ? "selectionLabel" : "")}
+                    className={"labelRadio " + (props.formeEtendue === true ? "selectionLabel" : "")}
                     label="Derrière"
                     value="true"
                     name="etendue"
-                    checked={props.formeEtendue === "true"} 
+                    checked={props.formeEtendue === true} 
                     onChange={handleEtendue}
                   />
                 </Form.Group>

@@ -28,7 +28,7 @@ function AjouterPlante(props) {
   const [profondeurAnimation, setProfondeurAnimation] = useState(1);
   const [typeForme, setTypeForme] = useState("triangle");
   const [couleurForme, setCouleurForme] = useState("#000");
-  const [etendue, setEtendue] = useState("false");
+  const [etendue, setEtendue] = useState(false);
   const [profondeurForme, setProfondeurForme] = useState(1);
   const [rangeLargeur, setRangeLargeur] = useState(300);
   const [rangeHauteur, setRangeHauteur] = useState(300);

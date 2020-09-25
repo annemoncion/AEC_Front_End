@@ -6,7 +6,7 @@ const ButtonHomepage = (props) => {
   return (
     <> 
       <Link to="/" className={"btn btn-primary btnRetour btnMobile gauche " + (props.etatMontage === "mobileCacher" ? "actif" : "cacher")}>
-        <img src={iconeFleche} alt="retour" /><span class="desktop">Retour au portfolio</span>
+        <img src={iconeFleche} alt="retour" /><span className="desktop">Retour au portfolio</span>
       </Link>
     </>
   );

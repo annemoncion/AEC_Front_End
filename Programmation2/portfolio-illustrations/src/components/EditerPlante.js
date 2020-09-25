@@ -27,7 +27,7 @@ function EditerPlante(props) {
   const [profondeurAnimation, setProfondeurAnimation] = useState(1);
   const [typeForme, setTypeForme] = useState("triangle");
   const [couleurForme, setCouleurForme] = useState("#000");
-  const [etendue, setEtendue] = useState("false");
+  const [etendue, setEtendue] = useState(false);
   const [profondeurForme, setProfondeurForme] = useState(1);
   const [rangeLargeur, setRangeLargeur] = useState(300);
   const [rangeHauteur, setRangeHauteur] = useState(300);
@@ -76,6 +76,7 @@ function EditerPlante(props) {
 
   }, [planteID, donneesRecues.nomCommun, donneesRecues.nomLatin, donneesRecues.image, donneesRecues.couleurBg, donneesRecues.animation.actif, donneesRecues.formes.actif, donneesRecues.animation.profondeur, donneesRecues.animation.nom, donneesRecues.formes.type, donneesRecues.formes.couleur, donneesRecues.formes.etendue, donneesRecues.formes.profondeur, donneesRecues.formes.largeur, donneesRecues.formes.hauteur, donneesRecues.formes.posX, donneesRecues.formes.posY]);
 
+  console.log(planteID);
   async function editerPlante(elNomCommun, elNomLatin, elCouleurBg, elImage, elAnimationActif, elAnimationNom, elAnimationProfondeur, elFormesActif, elFormeType, elFormeProfondeur, elFormeEtendue, elFormeHauteur, elFormeLargeur, elFormeCouleur, elFormePosX, elFormePosY) {  
     try{  
       const response = await fetch(API + planteID, {  
@@ -118,6 +119,8 @@ function EditerPlante(props) {
       console.log(error);  
     }  
   }
+
+  console.log(donneesRecues);
 
   async function removePlante(nom) {
     try{  
@@ -254,6 +257,8 @@ function EditerPlante(props) {
   function handleEtatMontage(etat) {
     props.etatMontage(etat);
   }
+
+  console.log(etendue);
 
   return (
     <>
