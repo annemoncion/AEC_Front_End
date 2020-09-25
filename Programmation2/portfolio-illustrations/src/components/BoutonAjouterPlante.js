@@ -6,7 +6,7 @@ const BoutonAjouterPlante = (/*props ici s'il y a lieu*/) => {
     <div className={"itemGrille btnAjout"}>
       <div className={"insideItem"}>
         <h2>Ajouter un montage</h2>
-        <Link to="/ajouterMontage"></Link>
+        <Link to="/ajouter-montage"></Link>
       </div>
     </div>
       
