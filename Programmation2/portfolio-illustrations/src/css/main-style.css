@@ -653,6 +653,7 @@ svg {
 .grillePlantes {
   margin: 1rem auto 4rem;
   max-width: 900px;
+  overflow: hidden;
 }
 
 .grillePlantes .itemGrille {
