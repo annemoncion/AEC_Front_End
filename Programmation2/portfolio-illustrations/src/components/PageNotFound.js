@@ -1,10 +1,11 @@
 import React from "react";
+import imgIntrouvable from "../img/404.jpg";
  
 const PageNotFound = () => { 
 
     return ( 
         <div className="pageNotFound">
-            <p>Cette page est introuvable (ajouter une image cute 404)</p>
+            <img src={imgIntrouvable} alt="404 - Page non trouvée" />
         </div> 
     ); 
 }

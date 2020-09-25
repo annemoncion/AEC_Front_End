@@ -489,17 +489,16 @@ input[type='range']:focus::-ms-tooltip {
     right: auto;
     bottom: auto;
     left: 0;
-    background-color: #fff;
+    background-color: #a0892c;
     border-radius: 0;
-    color: #786721;
+    color: #fff;
     height: 4rem;
     width: auto;
     padding-left: 2rem;
     padding-right: 1rem;
   }
   .btn-primary.btnRetour:hover, .btn-primary.btnRetour:active {
-    background-color: #a0892c;
-    color: #fff;
+    background-color: #786721;
   }
 }
 
@@ -1196,6 +1195,28 @@ svg {
 .mediatheque img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.pageNotFound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.pageNotFound img {
+  max-width: 100%;
 }
 
 @media (min-width: 400px) {
