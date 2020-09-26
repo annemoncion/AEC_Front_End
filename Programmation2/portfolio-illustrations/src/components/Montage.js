@@ -155,13 +155,13 @@ function Montage(props) {
               <Col lg="6">
                 <Form.Group controlId="nomCommun">
                   <Form.Label>Nom commun</Form.Label>
-                  <Form.Control type="text" defaultValue={props.titre} onChange={handleNomCommun}/>
+                  <Form.Control type="text" defaultValue={props.titre} onChange={handleNomCommun} disabled/>
                 </Form.Group>
               </Col>
               <Col lg="6">
                 <Form.Group controlId="nomLatin">
                   <Form.Label>Nom latin</Form.Label>
-                  <Form.Control type="text" defaultValue={props.nomLatin} onChange={handleNomLatin}/>
+                  <Form.Control type="text" defaultValue={props.nomLatin} onChange={handleNomLatin} disabled/>
                 </Form.Group>
               </Col>
             </Row>

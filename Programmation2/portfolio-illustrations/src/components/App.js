@@ -19,8 +19,6 @@ function App() {
   const[etatMontage, setEtatMontage] = useState("mobileCacher");
 
   let location = useLocation();
-
-  
   
   // Fonction pour populer crudcrud
 
