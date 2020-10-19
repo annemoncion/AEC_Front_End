@@ -387,22 +387,22 @@ function Montage(props) {
 
                 <Form.Group controlId="formeLargeur">
                   <Form.Label>Largeur</Form.Label>
-                  <Form.Control type="range" name="largeur" min="5" max="600" value={props.rangeLargeur} onChange={handleRangeLargeur} />
+                  <Form.Control type="range" name="largeur" min="5" max="600" value={props.largeurForme} onChange={handleRangeLargeur} />
                 </Form.Group>
 
                 <Form.Group controlId="formeHauteur" className={props.typeForme === "cercle" ? "cacher" : "actif"}>
                   <Form.Label>Hauteur</Form.Label>
-                  <Form.Control type="range" name="hauteur" min="5" max="600" value={props.rangeHauteur} onChange={handleRangeHauteur} />
+                  <Form.Control type="range" name="hauteur" min="5" max="600" value={props.hauteurForme} onChange={handleRangeHauteur} />
                 </Form.Group>
 
                 <Form.Group controlId="formePosX">
                   <Form.Label>Position horizontale</Form.Label>
-                  <Form.Control type="range" name="posX" min="0" max="100" value={props.rangePosX} onChange={handleRangePosX} />
+                  <Form.Control type="range" name="posX" min="0" max="100" value={props.posXForme} onChange={handleRangePosX} />
                 </Form.Group>
 
                 <Form.Group controlId="formePosY">
                   <Form.Label>Position verticale</Form.Label>
-                  <Form.Control type="range" name="posY" min="0" max="100" value={props.rangePosY} onChange={handleRangePosY} />
+                  <Form.Control type="range" name="posY" min="0" max="100" value={props.posYForme} onChange={handleRangePosY} />
                 </Form.Group>
 
               </Col>
