@@ -108,7 +108,9 @@ function EditerPlante(props) {
      
       if(response.ok){
         props.history.push("/"); 
-        toast.warn("Modification du montage de " + elNomCommun); 
+        toast.warn("Modification du montage de " + elNomCommun, {
+          autoClose: false
+        });
         return response;
       }
 

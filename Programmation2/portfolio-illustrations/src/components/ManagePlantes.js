@@ -7,12 +7,17 @@ import {API} from '../constantes.js';
 function ManagePlantes(props) {
   const [data, setData] = useState([]);
   const [test, setTest] = useState(0);
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => { 
+  useEffect(() => {
     getPlantes();
   }, [test]);
-  
-  const getPlantes = async () => {  
+
+  useEffect( () => {
+    setLoading(false);
+  }, [])
+
+  const getPlantes = async () => {
       try {
         const response = await fetch(API);
         const reponseDeApi = await response.json();
@@ -27,24 +32,42 @@ function ManagePlantes(props) {
       }
   }
 
-  return ( 
+  function handleLayoutComplete(e) {
+    console.log (e);
+  }
 
+  function handleImagesLoaded() {
+    console.log('images loaded');
+  }
+
+  function Loading() {
+    const isLoading = loading;
+    if (isLoading) {
+      return <div>Loading</div>;
+    }
+  }
+
+
+
+  return (
+
+    <>
+      {Loading()}
     <Masonry
       className={'grillePlantes'} // default ''
       elementType={'div'} // default 'div'
       options={{ "itemSelector": ".itemGrille", "columnWidth": ".itemGrille", "percentPosition": true }} // default {}
       disableImagesLoaded={false} // default false
-      updateOnEachImageLoad={true} // default false and works only if disableImagesLoaded is false
+      updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+      onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
       >
-      {Object.keys(data).map(key => ( 
+      {Object.keys(data).map(key => (
 
-        
-
-        <Plante 
-          key={key} 
+        <Plante
+          key={key}
           idPerso={data[key]._id}
           image={data[key].image}
-          couleurBg={data[key].couleurBg} 
+          couleurBg={data[key].couleurBg}
           toutLobjet={data[key]}
           titre={data[key].nomCommun}
           animationActive={data[key].animation.actif}
@@ -64,8 +87,9 @@ function ManagePlantes(props) {
       ))}
         <BoutonAjouterPlante/>
     </Masonry>
+    </>
 
-  ); 
+  );
 }
 
 export default ManagePlantes;

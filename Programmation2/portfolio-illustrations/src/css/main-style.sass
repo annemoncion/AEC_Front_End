@@ -1,4 +1,4 @@
-@import 'variables', 'fonts', 'mixins', 'base', 'range', 'boutons', 'animations';
+@import 'variables', 'fonts', 'mixins', 'base', 'range', 'boutons', 'animations', 'toast';
 
 /* Tables des matières
   -- 1.0 -- Grille d'images en accueil
@@ -6,7 +6,7 @@
   -- 2.0 -- Aperçu du montage
   -- 3.0 -- Formulaire modification du montage
   -- 4.0 -- Médiathèque
-  -- 5.0 -- Media queries 
+  -- 5.0 -- Media queries
   */
 
 // 1.0 Grille d'images en accueil
@@ -82,7 +82,7 @@
 
 // 2.0 Apercu illustration en mode modification
 
-.vueSeule 
+.vueSeule
   justify-content: center;
   .colApercu
     z-index: 5;
@@ -181,7 +181,7 @@
   .btnFermer
     @include posAbsolue(absolute, 50%, auto, auto, 50%);
     @include transform-center;
-    
+
   .champsConditionnels
     padding-top: 0;
     padding-left: .5rem;
@@ -321,7 +321,7 @@
     p
       max-width: calc(520px + 4rem);
       padding-right: 3rem;
-  img 
+  img
     max-width: 100%;
     max-height: 100%;
 
@@ -336,6 +336,7 @@
 
 // 6.0 À propos
 .aPropos
+  padding-top: 1rem;
   .colTexte
     margin-bottom: 2rem;
     position: relative;
@@ -384,7 +385,7 @@
       width: 200px;
       height: 200px;
     .gForme:not(.triangle)
-      background-color: $orPale; 
+      background-color: $orPale;
     .cercle
       border-radius: 50%;
     .triangle
