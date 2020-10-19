@@ -234,7 +234,7 @@ function Montage(props) {
                     type="radio"
                     id="typeFormeTriangle"
                     className={"inputForme inputPastille " + (props.typeForme === 'triangle' ? "selection" : "")}
-                    aria-label="triangle"
+                    label="triangle"
                     value="triangle"
                     name="typeForme"
                     checked={props.typeForme === 'triangle'} 
@@ -246,7 +246,7 @@ function Montage(props) {
                     type="radio"
                     id="typeFormeCercle"
                     className={"inputForme inputPastille " + (props.typeForme === 'cercle' ? "selection" : "")}
-                    aria-label="cercle"
+                    label="cercle"
                     value="cercle"
                     name="typeForme"
                     checked={props.typeForme === 'cercle'}
@@ -258,7 +258,7 @@ function Montage(props) {
                     type="radio"
                     id="typeFormeRect"
                     className={"inputForme inputPastille " + (props.typeForme === 'rectangle' ? "selection" : "")}
-                    aria-label="rectangle"
+                    label="rectangle"
                     value="rectangle"
                     name="typeForme"
                     checked={props.typeForme === 'rectangle'}
@@ -275,7 +275,7 @@ function Montage(props) {
                     type="radio"
                     id="couleurForme1"
                     className={"inputCouleur inputPastille blanc " + (props.couleurForme === '#fff' ? "selectionCouleur" : "")}
-                    aria-label="blanc"
+                    label="blanc"
                     value="#fff"
                     name="couleurForme"
                     checked={props.couleurForme === '#fff'} 
@@ -287,7 +287,7 @@ function Montage(props) {
                     type="radio"
                     id="couleurForme2"
                     className={"inputCouleur inputPastille noir " + (props.couleurForme === '#000' ? "selectionCouleur" : "")}
-                    aria-label="noir"
+                    label="noir"
                     value="#000"
                     name="couleurForme"
                     checked={props.couleurForme === '#000'}
@@ -304,7 +304,7 @@ function Montage(props) {
                     type="radio"
                     id="couleurBg1"
                     className={"inputCouleur inputPastille blanc " + (props.couleurBg === 'blanc' ? "selectionCouleur" : "")}
-                    aria-label="blanc"
+                    label="blanc"
                     value="blanc"
                     name="couleurBg"
                     checked={props.couleurBg === 'blanc'}
@@ -316,7 +316,7 @@ function Montage(props) {
                     type="radio"
                     id="couleurBg2"
                     className={"inputCouleur inputPastille noir " + (props.couleurBg === 'noir' ? "selectionCouleur" : "")}
-                    aria-label="noir"
+                    label="noir"
                     value="noir"
                     name="couleurBg"
                     checked={props.couleurBg === 'noir'}

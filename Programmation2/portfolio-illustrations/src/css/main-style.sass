@@ -11,8 +11,26 @@
 
 // 1.0 Grille d'images en accueil
 
+.loading
+  p
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $or;
+    text-align: center;
+.loading.hidden
+  display: none;
+.loading:not(.hidden)
+  display: block;
+
 .grandContenantGrille
   overflow: hidden;
+
+.grillePlantes:not(.hidden)
+  opacity: 1;
+.grillePlantes.hidden
+  opacity: 0;
+  max-height: 0;
 
 .grillePlantes
   margin: 1rem auto 4rem;
@@ -120,6 +138,11 @@
 
 // 3.0 Section formulaire de modification
 
+input[type=radio]
+  -moz-appearance:initial // Hack for Firefox Browsers
+
+
+
 .formulaireModif
   padding: 3.5rem 1.25rem 3rem;
   background-color: $grisPale;
@@ -202,21 +225,30 @@
   .form-group .labelInline
     margin-right: 1.5rem;
     margin-bottom: 0;
-  .inputPastille, .inputPastille:not(.inputForme) input:after
+  .inputPastille, .inputPastille:not(.inputForme) .form-check-label:after
     width: 1.5rem;
     height: 1.5rem;
   .inputPastille
     position: relative;
-  .inputForme:not(.inputFormeTriangle) input:after
-    width: 1.2rem;
-    height: 1.2rem;
+  .inputPastille .form-check-label
+    visibility: hidden;
+    position: absolute;
+    @include transform-center;
+    @include transitionBase;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
   .form-check-inline .form-check-input
     margin-right: 0;
     width: 1px;
     height: 1px;
     position: absolute;
-    left: 1rem;
-  .inputPastille input:after
+    @include transform-center;
+    left: 50%;
+    top: 60%;
+  .inputPastille .form-check-label:after
+    visibility: visible;
     @include transform-center;
     @include transitionBase;
     content: "";
@@ -224,24 +256,26 @@
     top: 50%;
     left: 50%;
     cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
   .groupeInline
     margin-bottom: 0;
   .inputForme
     margin-bottom: .5rem;
     margin-right: .2rem;
-  .inputForme input:after
+  .inputForme .form-check-label:after
     background-color: $grisMoyen;
     border-color: transparent transparent $grisMoyen transparent;
-  .inputCouleur input:after
+  .inputCouleur .form-check-label:after
     border-radius: .25rem;
   .inputCouleur.blanc, .inputCouleur.noir
     background-color: transparent;
-  .inputCouleur.blanc input:after
+  .inputCouleur.blanc .form-check-label:after
     border: solid 1px $grisMoyen;
     background-color: #fff;
-  .inputCouleur.noir input:after
+  .inputCouleur.noir .form-check-label:after
     background-color: $noir;
-  .inputCouleur.selectionCouleur input:after
+  .inputCouleur.selectionCouleur .form-check-label:after
     border: 2px solid $orPale;
     border-radius: 50%;
     cursor: default;
@@ -251,6 +285,8 @@
     background-color: #fff;
     border-radius: .25rem;
     width: 5.94rem;
+    position: relative;
+    z-index: 10;
   .labelRadio:nth-child(even)
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -265,15 +301,15 @@
     background-color: $or;
     color: #fff;
     cursor: default;
-  #typeFormeTriangle:after
+  #typeFormeTriangle + .form-check-label:after
     border-style: solid;
-    border-width: 0 0.65rem 1.2rem 0.65rem;
+    border-width: 0 0.75rem 1.4rem 0.75rem;
     background-color: transparent;
     width: 0;
     height: 0;
-  #typeFormeCercle:after
+  #typeFormeCercle + .form-check-label:after
     border-radius: 50%;
-  .inputForme.selection input:after
+  .inputForme.selection .form-check-label:after
     border-color: transparent transparent $or transparent;
     background-color: $or;
     cursor: default;
@@ -360,11 +396,13 @@
       font-size: 1rem;
     .inputForme
       margin-right: .5rem;
-    .inputPastille:not(.inputFormeTriangle) input:after
+    .inputPastille .form-check-label:after
       width: 1.5rem;
       height: 1.5rem;
-    #typeFormeTriangle:after
+    .inputForme #typeFormeTriangle + .form-check-label:after
       border-width: 0 0.85rem 1.5rem 0.85rem;
+      width: 0;
+      height: 0;
 
   .mediatheque
     .contenantImage

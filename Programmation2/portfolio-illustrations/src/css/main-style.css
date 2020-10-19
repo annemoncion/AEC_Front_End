@@ -712,8 +712,33 @@ svg {
   -- 4.0 -- Médiathèque
   -- 5.0 -- Media queries
   */
+.loading p {
+  padding-top: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #786721;
+  text-align: center;
+}
+
+.loading.hidden {
+  display: none;
+}
+
+.loading:not(.hidden) {
+  display: block;
+}
+
 .grandContenantGrille {
   overflow: hidden;
+}
+
+.grillePlantes:not(.hidden) {
+  opacity: 1;
+}
+
+.grillePlantes.hidden {
+  opacity: 0;
+  max-height: 0;
 }
 
 .grillePlantes {
@@ -1053,7 +1078,7 @@ svg {
   margin-bottom: 0;
 }
 
-.formulaireModif .inputPastille, .formulaireModif .inputPastille:not(.inputForme) input:after {
+.formulaireModif .inputPastille, .formulaireModif .inputPastille:not(.inputForme) .form-check-label:after {
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -1062,9 +1087,18 @@ svg {
   position: relative;
 }
 
-.formulaireModif .inputForme:not(.inputFormeTriangle) input:after {
-  width: 1.2rem;
-  height: 1.2rem;
+.formulaireModif .inputPastille .form-check-label {
+  visibility: hidden;
+  position: absolute;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
 }
 
 .formulaireModif .form-check-inline .form-check-input {
@@ -1072,10 +1106,15 @@ svg {
   width: 1px;
   height: 1px;
   position: absolute;
-  left: 1rem;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
 }
 
-.formulaireModif .inputPastille input:after {
+.formulaireModif .inputPastille .form-check-label:after {
+  visibility: visible;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1086,6 +1125,8 @@ svg {
   top: 50%;
   left: 50%;
   cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .formulaireModif .groupeInline {
@@ -1097,12 +1138,12 @@ svg {
   margin-right: .2rem;
 }
 
-.formulaireModif .inputForme input:after {
+.formulaireModif .inputForme .form-check-label:after {
   background-color: #b3b3b3;
   border-color: transparent transparent #b3b3b3 transparent;
 }
 
-.formulaireModif .inputCouleur input:after {
+.formulaireModif .inputCouleur .form-check-label:after {
   border-radius: .25rem;
 }
 
@@ -1110,16 +1151,16 @@ svg {
   background-color: transparent;
 }
 
-.formulaireModif .inputCouleur.blanc input:after {
+.formulaireModif .inputCouleur.blanc .form-check-label:after {
   border: solid 1px #b3b3b3;
   background-color: #fff;
 }
 
-.formulaireModif .inputCouleur.noir input:after {
+.formulaireModif .inputCouleur.noir .form-check-label:after {
   background-color: #000;
 }
 
-.formulaireModif .inputCouleur.selectionCouleur input:after {
+.formulaireModif .inputCouleur.selectionCouleur .form-check-label:after {
   border: 2px solid #a0892c;
   border-radius: 50%;
   cursor: default;
@@ -1133,6 +1174,8 @@ svg {
   background-color: #fff;
   border-radius: .25rem;
   width: 5.94rem;
+  position: relative;
+  z-index: 10;
 }
 
 .formulaireModif .labelRadio:nth-child(even) {
@@ -1158,19 +1201,19 @@ svg {
   cursor: default;
 }
 
-.formulaireModif #typeFormeTriangle:after {
+.formulaireModif #typeFormeTriangle + .form-check-label:after {
   border-style: solid;
-  border-width: 0 0.65rem 1.2rem 0.65rem;
+  border-width: 0 0.75rem 1.4rem 0.75rem;
   background-color: transparent;
   width: 0;
   height: 0;
 }
 
-.formulaireModif #typeFormeCercle:after {
+.formulaireModif #typeFormeCercle + .form-check-label:after {
   border-radius: 50%;
 }
 
-.formulaireModif .inputForme.selection input:after {
+.formulaireModif .inputForme.selection .form-check-label:after {
   border-color: transparent transparent #786721 transparent;
   background-color: #786721;
   cursor: default;
@@ -1320,12 +1363,14 @@ svg {
   .formulaireModif .inputForme {
     margin-right: .5rem;
   }
-  .formulaireModif .inputPastille:not(.inputFormeTriangle) input:after {
+  .formulaireModif .inputPastille .form-check-label:after {
     width: 1.5rem;
     height: 1.5rem;
   }
-  .formulaireModif #typeFormeTriangle:after {
+  .formulaireModif .inputForme #typeFormeTriangle + .form-check-label:after {
     border-width: 0 0.85rem 1.5rem 0.85rem;
+    width: 0;
+    height: 0;
   }
   .mediatheque .contenantImage {
     width: calc(33.33% - 1rem);

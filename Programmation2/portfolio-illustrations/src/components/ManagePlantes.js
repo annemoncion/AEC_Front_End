@@ -8,14 +8,11 @@ function ManagePlantes(props) {
   const [data, setData] = useState([]);
   const [test, setTest] = useState(0);
   const [loading, setLoading] = useState(true);
+  let initial = 0;
 
   useEffect(() => {
     getPlantes();
   }, [test]);
-
-  useEffect( () => {
-    setLoading(false);
-  }, [])
 
   const getPlantes = async () => {
       try {
@@ -32,34 +29,27 @@ function ManagePlantes(props) {
       }
   }
 
-  function handleLayoutComplete(e) {
-    console.log (e);
-  }
-
-  function handleImagesLoaded() {
-    console.log('images loaded');
-  }
-
-  function Loading() {
-    const isLoading = loading;
-    if (isLoading) {
-      return <div>Loading</div>;
+  function handleLayoutComplete() {
+    initial = initial + 1;
+    console.log('initial = ' + initial);
+    if (initial === 5) { // Masonry seems to enter the function at least 6 times... should be fixed.
+      setTimeout(function(){ setLoading(false) }, 1000);
     }
   }
-
-
 
   return (
 
     <>
-      {Loading()}
+    <div className={'loading ' + (loading ? '' : 'hidden')}>
+      <p>Mise en place du montage ...</p>
+    </div>
     <Masonry
-      className={'grillePlantes'} // default ''
+      className={'grillePlantes ' + (loading ? 'hidden' : '')} // default ''
       elementType={'div'} // default 'div'
       options={{ "itemSelector": ".itemGrille", "columnWidth": ".itemGrille", "percentPosition": true }} // default {}
       disableImagesLoaded={false} // default false
       updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-      onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
+      onLayoutComplete={() => handleLayoutComplete()}
       >
       {Object.keys(data).map(key => (
 
