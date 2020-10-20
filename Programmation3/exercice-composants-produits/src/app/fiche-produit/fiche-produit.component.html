@@ -1,0 +1,17 @@
+<div>
+    <p>Fiche produit</p>
+    <div class="dFlex">
+        <app-image class="image"></app-image>
+
+        <div class="nomEtDesc">
+        <app-nom-produit [produit]="produit"></app-nom-produit>
+        <app-description [produit]="produit"></app-description>
+        </div>
+
+        <div class="prixEtLiens">
+           <app-prix [produit]="produit"></app-prix>
+            <app-lien-details></app-lien-details>
+        </div>
+    </div>
+
+</div>
