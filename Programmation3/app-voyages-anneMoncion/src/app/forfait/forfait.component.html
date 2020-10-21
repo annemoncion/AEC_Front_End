@@ -1,0 +1,18 @@
+<div>
+    <h2>de {{ forfait.villeDepart }} à {{ forfait.destination }}</h2>
+    <p>{{ forfait.prix }}$</p>
+    <p>
+        <span>Du {{ forfait.dateDepart }} </span>
+        <span>au {{ forfait.dateRetour }}</span></p>
+    <p></p>
+    <div>
+        <h3>Hotel:</h3>
+        <h4>{{ forfait.hotel.nom }}</h4>
+        <p>{{ forfait.hotel.coordonnees }}</p>
+        <p>{{ forfait.hotel.nbEtoiles }} étoiles</p>
+        <p>{{ forfait.hotel.nbChambres }} chambres</p>
+        <ul>
+            <li *ngFor="let carac of forfait.hotel.caracteristiques">{{ carac }}</li>
+        </ul>
+    </div>
+ </div>

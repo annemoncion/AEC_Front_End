@@ -2,12 +2,8 @@
 <app-entete></app-entete>
 <div class="content">
     <app-recherche></app-recherche>
-    <div class="main">
-        <app-hero2 [hero]="tabHeros[0]"></app-hero2>
-        <app-hero2 [hero]="tabHeros[1]"></app-hero2>
-        <app-hero2 [hero]="tabHeros[2]"></app-hero2>
-        <app-hero2 [hero]="tabHeros[3]"></app-hero2>
-        <app-hero2 [hero]="tabHeros[4]"></app-hero2>
+    <div class="main" *ngFor="let hero of heros">
+        <app-hero2 [hero]="hero"></app-hero2>
     </div>
 </div>
 <app-pied-de-page></app-pied-de-page>

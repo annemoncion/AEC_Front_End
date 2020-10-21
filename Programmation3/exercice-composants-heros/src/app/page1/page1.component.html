@@ -4,10 +4,8 @@
     <app-recherche></app-recherche>
     <div class="main">
         <app-carousel></app-carousel>
-        <div class="heros">
-            <app-hero [hero]="tabHeros[0]"></app-hero>
-            <app-hero [hero]="tabHeros[1]"></app-hero>
-            <app-hero [hero]="tabHeros[2]"></app-hero>
+        <div class="heros" *ngFor="let hero of heros">
+            <app-hero [hero]="hero"></app-hero>
         </div>
     </div>
 </div>

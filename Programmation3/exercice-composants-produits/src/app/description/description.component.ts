@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./description.component.sass']
 })
 export class DescriptionComponent implements OnInit {
-  @Input () produit: object;
+  @Input () description: string;
   constructor() { }
 
   ngOnInit(): void {

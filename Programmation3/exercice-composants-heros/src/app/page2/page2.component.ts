@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HEROS } from '../mock-heros';
 
 @Component({
   selector: 'app-page2',
@@ -6,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./page2.component.sass']
 })
 export class Page2Component implements OnInit {
-  @Input() tabHeros: Array<string>;
+  heros : string[] = HEROS;
+  
   constructor() { }
 
   ngOnInit(): void {

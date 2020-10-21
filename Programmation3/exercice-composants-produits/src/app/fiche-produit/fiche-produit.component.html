@@ -4,12 +4,12 @@
         <app-image class="image"></app-image>
 
         <div class="nomEtDesc">
-        <app-nom-produit [produit]="produit"></app-nom-produit>
-        <app-description [produit]="produit"></app-description>
+        <app-nom-produit [nom]="produit.nom"></app-nom-produit>
+        <app-description [description]="produit.description"></app-description>
         </div>
 
         <div class="prixEtLiens">
-           <app-prix [produit]="produit"></app-prix>
+           <app-prix [prix]="produit.prix"></app-prix>
             <app-lien-details></app-lien-details>
         </div>
     </div>

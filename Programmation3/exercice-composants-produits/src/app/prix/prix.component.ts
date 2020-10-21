@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./prix.component.sass']
 })
 export class PrixComponent implements OnInit {
-  @Input () produit: object;
+  @Input () prix: number;
   constructor() { }
 
   ngOnInit(): void {

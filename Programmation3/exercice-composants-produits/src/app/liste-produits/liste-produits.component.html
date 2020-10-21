@@ -1,5 +1,6 @@
 <div>
-    <app-fiche-produit [produit]="tablette"></app-fiche-produit>
-    <app-fiche-produit [produit]="appareilPhoto"></app-fiche-produit>
+    <div *ngFor="let produit of produits">
+        <app-fiche-produit [produit]=produit></app-fiche-produit>
+    </div>
 </div>
 
