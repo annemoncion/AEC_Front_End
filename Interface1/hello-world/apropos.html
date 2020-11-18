@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>À propos</title>
+        <link rel="stylesheet" href="style/monstyle.css">
+        <script type="text/javascript" src="js/dynamic.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div w3-include-html="header.html"></div>
+            <h1>{{ titre }}</h1>
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </body>
+</html>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+      titre: 'À propos'
+  }
+})
+</script>
+
+<script>
+    includeHTML();
+</script>

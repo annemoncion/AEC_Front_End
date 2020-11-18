@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mon site web</title>
+        <link rel="stylesheet" href="style/monstyle.css">
+        <script type="text/javascript" src="js/dynamic.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div w3-include-html="header.html"></div>
+            <h1 id="grandTitre">{{ grandTitre }}</h1>
+            <h2>Et son sous-titre</h2>
+            <h3>Et son plus petit sous-titre</h3>
+            <p>{{ message }}</p>
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </body>
+</html>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue !',
+    grandTitre: 'Bienvenue dans mon site'
+  }
+})
+</script>
+
+<script>
+    includeHTML();
+</script>
