@@ -1,0 +1,59 @@
+<div class="formRecherche">
+  <h2>Trouvez un forfait</h2>
+  <div class="recherche">
+    <p>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Date de départ</mat-label>
+        <input
+          matInput
+          [matDatepicker]="pickerDateDepart"
+          [ngModel]="recherche.dateDepart"
+          (ngModelChange)="changeDateDepart($event)">
+        <mat-datepicker-toggle matSuffix [for]="pickerDateDepart"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDateDepart></mat-datepicker>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre de jours</mat-label>
+        <mat-select
+          [formControl]="nbJours"
+          multiple
+          [ngModel]="recherche.nbJours"
+          (ngModelChange)="changeNbJours($event)">
+          <mat-select-trigger>
+            {{nbJours.value ? nbJours.value[0] : ''}}
+            <span *ngIf="nbJours.value?.length > 1" class="additional-selection">
+              (+{{nbJours.value.length - 1}} {{nbJours.value?.length === 2 ? 'other' : 'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let item of duree" [value]="item">{{ item }} jours</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <p class="sliderEtoiles">
+      <label>Nombre d'étoiles</label>
+      <mat-slider
+        thumbLabel
+        [displayWith]="labelEtoiles"
+        tickInterval="1"
+        min="1"
+        max="5"
+        [ngModel]="recherche.nbEtoiles"
+        (ngModelChange)="changeNbEtoiles($event)">
+      </mat-slider>
+    </p>
+
+    <ul>
+      <li *ngFor="let carac of caracteristiques">
+        <mat-checkbox>
+          {{ carac }}
+        </mat-checkbox>
+      </li>
+    </ul>
+
+  </div>
+
+</div>

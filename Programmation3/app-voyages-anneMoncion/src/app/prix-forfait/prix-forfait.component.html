@@ -1,0 +1,9 @@
+<p class="prix">
+  <span class="prix">{{forfait.prix - forfait.rabais}}$</span>
+  <span>
+    <ng-template *ngIf="forfait.rabais > 0; then thenBlock;">{{forfait.prix}}$</ng-template>
+    <ng-template #thenBlock><del class="prixRature">{{forfait.prix}}$</del></ng-template>
+  </span>
+</p>
+<p class="rabais" *ngIf="forfait.rabais > 0">{{forfait.rabais}}$ de rabais</p>
+

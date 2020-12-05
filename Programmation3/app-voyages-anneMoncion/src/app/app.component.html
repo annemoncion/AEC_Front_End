@@ -1,8 +1,87 @@
 <style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .sidenav {
+    background-color: #fff;
+    padding: 1rem;
+    border-right: 4px solid #2a7fff;
+  }
+
+  .sidenav-content {
+    position: relative;
+  }
+
+  .sidenav-content button {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    padding: 0;
+    height: 2rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #2a7fff;
+  }
+
+  .sidenav-content i {
+    color: #fff;
+    margin-left: .75rem;
+  }
+
+  app-liste-forfaits {
+    display: block;
+    background-color: #f4eed7;
+  }
 
 </style>
 
-<app-liste-forfaits></app-liste-forfaits>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <i class="material-icons">search</i>
+    </button>
+    <app-liste-forfaits [recherche]="recherche"></app-liste-forfaits>
+  </div>
+
+</mat-drawer-container>
+
+
+<app-formulaire-forfait></app-formulaire-forfait>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->

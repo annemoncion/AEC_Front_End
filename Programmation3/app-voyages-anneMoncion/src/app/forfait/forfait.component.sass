@@ -1,0 +1,91 @@
+h2, h3
+  margin-bottom: 0
+  line-height: 1.2em
+
+h3
+  margin-bottom: .5rem
+
+ul
+  list-style-type: none
+  padding-left: 0
+  margin-top: 0.75rem
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+li
+  display: inline
+  white-space: nowrap
+li+li:before
+  content: ''
+  display: inline-block
+  border-radius: 50%
+  width: 4px
+  height: 4px
+  background-color: #2a7fff
+  margin: 0 .5rem
+  vertical-align: middle
+
+.villeDepart
+  display: block
+  font-size: .8rem
+
+.forfaitComplet
+  display: block
+  background-color: #fff
+  margin-top: 1rem
+  margin-bottom: .5rem
+
+.forfaitComplet.enVedette
+  border: solid 4px #2a7fff
+
+.photo
+  display: block
+  padding-bottom: 66.66%
+  flex-basis: 50%
+  flex-shrink: 0
+  position: relative
+  left: -0.5rem
+  top: -0.5rem
+  background-image: url("https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60")
+  background-repeat: no-repeat
+  background-size: cover
+  img
+    max-width: 100%
+
+.infos
+  display: flex
+
+.interieurInfos
+  padding: 1rem .5rem 0
+
+.infosSupp
+  padding: 0 1rem
+  text-align: center
+
+.contenantPrix
+  margin-right: 0
+  margin-left: auto
+  background-color: #0044aa
+  color: #fff
+  display: flex
+
+.duree
+  flex-basis: 50%
+  padding: 0.75rem 0.5rem 0.75rem 1rem
+  background-color: #0055d4
+  p
+    margin-bottom: 0rem
+  .nbJours
+    font-size: 1.1rem
+    margin-bottom: 0.75rem
+    display: inline-block
+    padding: 0 2rem 0 0.5rem
+    background-color: #2a7fff
+
+app-prix-forfait
+  display: block
+  align-self: center
+  flex-basis: 50%
+  text-align: center
+  height: 100%

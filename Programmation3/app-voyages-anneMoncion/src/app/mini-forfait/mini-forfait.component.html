@@ -1,0 +1,11 @@
+<mat-card class="carteMiniForfait">
+  <mat-card-header class="carteEntete">
+    <mat-card-subtitle>{{ miniForfait.destination }}, <span class="villeDepart">de {{ miniForfait.villeDepart }}</span></mat-card-subtitle>
+    <mat-card-title>{{ miniForfait.hotel.nom }}</mat-card-title>
+    <app-etoiles [nbEtoiles]="miniForfait.hotel.nbEtoiles"></app-etoiles>
+  </mat-card-header>
+  <mat-card-content>
+    <app-prix-forfait [forfait]="miniForfait"></app-prix-forfait>
+    <p class="duree">{{ dateDepart }}, {{ duree }} jours</p>
+  </mat-card-content>
+</mat-card>
