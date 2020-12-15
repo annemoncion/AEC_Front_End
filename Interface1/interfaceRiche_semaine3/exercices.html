@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Manipulation de vue - Exercice 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style/monstyle.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Exercice 1 Props -->
+
+      <titre-props valeur="Mon titre"></titre-props>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!-- Exercice 2 Props dynamiques -->
+
+      <input type="text" v-model="titre" />
+      <titre-dynamique :valeur="titre"></titre-dynamique>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+
+      <!-- Exercice 3 Validation custom de props -->
+
+      <input type="text" v-model="titreValide" />
+      <titre-valide :valeur="titreValide"></titre-valide>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!-- Exercice 4 Slots -->
+
+      <mes-slots>
+        <template v-slot:one>
+          <p>Contenu slot 1</p>
+        </template>
+        <template v-slot:two>
+          <p>Contenu slot 2</p>
+        </template>
+
+        <p>Contenu slot par défaut</p>
+
+        <template v-slot:three>
+          <p>Contenu slot 3</p>
+        </template>
+        <template v-slot:four>
+          <p>Contenu slot 4</p>
+        </template>
+
+        <p>Contenu slot par défaut</p>
+      </mes-slots>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!-- Exercice 5 Watch -->
+      <input type="number" v-model="km"/>
+      <input type="number" v-model="m"/>
+      <input type="number" v-model="cm"/>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!-- Exercice 6 -->
+      <async-component></async-component>
+      
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+
+    </div>
+
+    <script>
+
+      let TitreEnProps  = {
+        template: `<h1>{{valeur}}</h1>`,
+        props: {
+          valeur: String
+        }
+      }
+
+      let TitreDynamique  = {
+        template: `<h1>{{valeur}}</h1>`,
+        props: {
+          valeur: String
+        }
+      }
+
+      let TitreValide  = {
+        template: `<h1>{{valeur}}</h1>`,
+        props: {
+          valeur: {
+            validator: function (val) {
+              return /^[a-zA-Z]+$/.exec(val);
+            }
+          }
+        }
+      }
+
+      let MesSlots  = {
+        template: `<div>
+          <slot name="one"></slot>
+          <slot name="two"></slot>
+          <slot></slot>
+          <slot name="three"></slot>
+          <slot name="four"></slot>
+        </div>`
+      }
+
+      let Loading = {
+        template: "<div>En chargement...</div>"
+      }
+
+      const AsyncComponent = () => ({
+        component: new Promise(resolve => {
+          setTimeout(function () {
+          // Passe la définition du composant à la fonction de rappel `resolve`
+          resolve({
+            template: "<div>Je suis asynchrone !</div>"
+          });
+        }, 10000);
+        }),
+        loading: Loading,
+        delay: 0,
+        timeout: 10000
+      });
+      
+      let vm = new Vue({
+        el: "#app",
+        components: {
+          'titre-props': TitreEnProps,
+          'titre-dynamique': TitreDynamique,
+          'titre-valide': TitreValide,
+          'mes-slots': MesSlots,
+          'comp-loading': Loading,
+          'async-component': AsyncComponent
+        },
+        data: {
+          titre: 'Mon titre modifiable par un input',
+          titreValide: 'MonTitreAvecValidationCustom',
+          km: 1,
+          m: 1000,
+          cm: 100000,
+          etat: false
+        },
+        watch: {
+          kilometre: function(newVal) {
+            this.km = newVal;
+            this.m = newVal * 1000;
+            this.cm = newVal * 100000;
+          },
+          metre: function(newVal) {
+            this.m = newVal;
+            this.cm = newVal * 1000;
+          },
+          centimetre: function(newVal) {
+            this.cm = newVal;
+            this.m = Number((newVal / 1000).toFixed(2));
+          }
+        },
+        computed: {
+          kilometre() {
+            return this.km;
+          },
+
+          metre() {
+            return this.m;
+          },
+
+          centimetre() {
+            return this.cm;
+          }
+
+        },
+        methods: {
+
+        }
+      });
+    </script>
+  </body>
+</html>

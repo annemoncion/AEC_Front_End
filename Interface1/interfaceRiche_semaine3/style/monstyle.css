@@ -1,0 +1,59 @@
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: blueviolet;
+    font-size: 2rem;
+    opacity: 1;
+}
+
+h2 {
+    color: rgb(104, 26, 177);
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: rgb(36, 7, 63);
+    font-size: 1.2rem;
+}
+
+.clignote {
+    opacity: 0;
+}
+
+header {
+    background-color: yellowgreen;
+}
+
+nav {
+    background-color: yellow;
+    padding: 2rem;
+}
+
+footer {
+    background-color: papayawhip;
+    padding: 2rem;
+}
+
+.barre {
+    text-decoration: line-through;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.modal {
+    position: fixed;
+    z-index: 100;
+    width: 300px;
+    background-color: pink;
+    padding: 2rem;
+    top: 6rem;
+    left: calc(50% - 150px);
+}
