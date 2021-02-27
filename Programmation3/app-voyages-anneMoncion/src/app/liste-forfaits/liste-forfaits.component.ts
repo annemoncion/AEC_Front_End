@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FORFAITS } from '../mock-forfaits';
 import { Forfait } from '../forfait';
+import { ForfaitService } from '../forfait.service';
 import { Recherche } from '../recherche';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-liste-forfaits',
@@ -11,11 +12,30 @@ import { Recherche } from '../recherche';
 export class ListeForfaitsComponent implements OnInit {
   @Input() recherche: Recherche;
 
-  forfaits: Forfait[] = FORFAITS;
+  forfaits: Forfait[];
 
-  constructor() { }
+  visibleForfaits: String = 'all';
+
+  constructor(private forfaitService: ForfaitService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getForfaits();
+    this.showContent();
+    
+  }
+
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+        .subscribe(resultat => this.forfaits = resultat);
+  }
+
+  showContent() : void {
+    if(this.router.url === '/forfaits-mexique'){
+      this.visibleForfaits = 'mexique' ;
+    }
+    else if (this.router.url === '/forfaits-cuba') {
+      this.visibleForfaits = 'cuba';
+    };
   }
 
 }

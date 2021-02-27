@@ -1,17 +1,28 @@
-<div class="miniForfaitsListe">
-  <h2>Prenez des vacances</h2>
-  <div class="interieurMini">
-    <div class="miniForfait" *ngFor="let miniForfait of forfaits | forfaitsVedette">
-      <app-mini-forfait  [miniForfait]="miniForfait"></app-mini-forfait>
-    </div>
-  </div>
-</div>
-
-<mat-list class="forfaitsListe">
+<div>
+  <mat-list class="forfaitsListe" *ngIf="visibleForfaits === 'all'">
     <mat-list-item class="forfait" *ngFor="let forfait of forfaits">
-      <app-forfait [forfait]="forfait" [ngClass]="{'enVedette': forfait.forfaitVedette}"></app-forfait>
+        <app-forfait [forfait]="forfait" [ngClass]="{'enVedette': forfait.vedette}"></app-forfait>
       <mat-divider></mat-divider>
     </mat-list-item>
-</mat-list>
+  </mat-list>
+
+  <mat-list class="forfaitsListe" *ngIf="visibleForfaits === 'cuba'" >
+    <mat-list-item class="forfait" *ngFor="let forfait of forfaits | forfaitsCuba">
+        <app-forfait [forfait]="forfait" [ngClass]="{'enVedette': forfait.vedette}"></app-forfait>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+  <mat-list class="forfaitsListe" *ngIf="visibleForfaits === 'mexique'" >
+    <mat-list-item class="forfait" *ngFor="let forfait of forfaits | forfaitsMexique">
+        <app-forfait [forfait]="forfait" [ngClass]="{'enVedette': forfait.vedette}"></app-forfait>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>
+
+
+
+
 
 

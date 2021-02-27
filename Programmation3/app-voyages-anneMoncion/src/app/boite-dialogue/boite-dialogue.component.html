@@ -1,0 +1,182 @@
+<mat-dialog-content>
+<form #forfaitFormAjout="ngForm" id="forfaitFormAjout" class="formForfait">
+    <h2>Ajouter un forfait</h2>
+    <div class="destination">
+      <p>
+        <mat-form-field appearance="fill">
+            <input 
+                type="text"
+                name="destination"
+                required
+                minlength="2"
+                maxlength="50"
+                [(ngModel)]="newForfait.destination"
+                matInput
+                #destination="ngModel"
+                placeholder="Destination"
+                aria-label="destination">
+            <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('required')">La destination est obligatoire.</mat-error>
+            <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('minlength')">La destination doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="destination.invalid && (destination.dirty || destination.touched) && destination.hasError('maxlength')">La destination doit contenir au maximum 50 caractères.</mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill">
+          <input type="text"
+                name="villeDepart"
+                 required
+                 placeholder="Ville de départ"
+                 aria-label="ville de départ"
+                 matInput
+                 [(ngModel)]="newForfait.villeDepart"
+                 #villeDepart="ngModel">
+        </mat-form-field>
+      </p>
+    </div>
+  
+    <div class="hotel">
+      <h3>Informations sur l'hôtel</h3>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Nom de l'hôtel</mat-label>
+          <input
+            type="text"
+            name="ctrlNomHotel"
+            required
+            matInput
+            placeholder="Nom de l'hôtel"
+            minlength="2"
+            [(ngModel)]="newForfait.hotel.nom"
+            #ctrlNomHotel="ngModel">
+          <mat-error *ngIf="ctrlNomHotel.hasError('required')">
+            Le nom de l'hôtel est <strong>obligatoire</strong>.
+          </mat-error>
+          <mat-error *ngIf="ctrlNomHotel.hasError('minlength')">
+            La longueur minimale du nom de l'hôtel est de 2 caractères.
+          </mat-error>
+        </mat-form-field>
+      </p>
+  
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Coordonnées</mat-label>
+          <input
+            type="text"
+            name="ctrlCoordonnees"
+            required
+            matInput
+            placeholder="Coordonnées"
+            minlength="2"
+            [(ngModel)]="newForfait.hotel.coordonnees"  
+            #ctrlCoordonnees="ngModel">
+          <mat-hint>No app., No et nom de rue, Ville, Province, Code postal, Pays</mat-hint>
+          <mat-error *ngIf="ctrlCoordonnees.hasError('required')">
+            Les coordonnées de l'hôtel sont <strong>obligatoires</strong>.
+          </mat-error>
+          <mat-error *ngIf="ctrlCoordonnees.hasError('minlength')">
+            La longueur minimale des coordonnées est de 20 caractères.
+          </mat-error>
+        </mat-form-field>
+      </p>
+  
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre de chambres</mat-label>
+          <input
+            id="ctrlNbChambres"
+            name="ctrlNbChambres"
+            type="number"
+            required
+            min="0"
+            matInput
+            [(ngModel)]="newForfait.hotel.nombreChambres"
+            placeholder="Nombre de chambres"
+            #ctrlNbChambre="ngModel">
+        </mat-form-field>
+      </p>
+  
+      <p class="sliderEtoiles">
+        <label>Nombre d'étoiles</label>
+        <mat-slider
+            name="nbEtoiles"
+            required
+            thumbLabel
+            [displayWith]="labelEtoiles"
+            tickInterval="1"
+            min="1"
+            max="5"
+            [(ngModel)]="newForfait.hotel.nombreEtoiles"
+            #nbEtoiles="ngModel"
+          ></mat-slider>
+      </p>
+  
+      <ul>
+        <li *ngFor="let carac of caracteristiques">
+          <mat-checkbox>{{ carac }}</mat-checkbox>
+        </li>
+      </ul>
+  
+    </div>
+  
+    <div class="dates">
+      <p>
+        <mat-form-field appearance="fill">
+            <input 
+                type="text"
+                name="dateDepart"
+                required
+                minlength="10"
+                maxlength="10"
+                [(ngModel)]="newForfait.dateDepart"
+                #dateDepart="ngModel"
+                matInput
+                placeholder="Date de départ"
+                aria-label="Date de départ">
+            <mat-error *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('required')">La date de départ est obligatoire.</mat-error>
+            <mat-error *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('minlength')">La date a le format suivant: AAAA-MM-DD.</mat-error>
+        </mat-form-field>
+      </p>
+  
+      <p>
+        <mat-form-field appearance="fill">
+            <input 
+                type="text"
+                name="dateRetour"
+                required
+                minlength="10"
+                maxlength="10"
+                [(ngModel)]="newForfait.dateRetour"
+                #dateRetour="ngModel"
+                matInput
+                placeholder="Date de retour"
+                aria-label="Date de retour">
+            <mat-error *ngIf="dateRetour.invalid && (dateRetour.dirty || dateRetour.touched) && dateRetour.hasError('required')">La date de départ est obligatoire.</mat-error>
+            <mat-error *ngIf="dateRetour.invalid && (dateRetour.dirty || dateRetour.touched) && dateRetour.hasError('minlength')">La date a le format suivant: AAAA-MM-DD.</mat-error>
+        </mat-form-field>
+      </p>
+    </div>
+  
+    <div class="prix">
+      <mat-form-field appearance="fill">
+        <mat-label>Prix</mat-label>
+        <input
+          type="number"
+          name="prix"
+          required
+          matInput
+          min="0"
+          [(ngModel)]="newForfait.prix"
+          #prix="ngModel"
+          placeholder="Prix">
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions>
+        <button mat-button (click)="onAnnulerClick()">Annuler</button>
+        <button mat-button [mat-dialog-close]="newForfait" cdkFocusInitial>Ok</button>
+    </div>
+  </form>
+</mat-dialog-content>
+  
+  
+  

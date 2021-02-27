@@ -1,0 +1,25 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()" class="search-btn">
+        <i class="material-icons">search</i>
+      </button>
+
+     
+      <div class="miniForfaitsListe">
+        <h2>Prenez des vacances</h2>
+        <div class="interieurMini">
+          <div class="miniForfait" *ngFor="let miniForfait of forfaits | forfaitsVedette">
+            <app-mini-forfait  [miniForfait]="miniForfait"></app-mini-forfait>
+          </div>
+        </div>
+      </div>
+
+      <app-liste-forfaits [recherche]="recherche"></app-liste-forfaits>
+
+      
+    </div>
+</mat-drawer-container>

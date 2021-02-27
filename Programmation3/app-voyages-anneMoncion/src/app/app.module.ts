@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ForfaitService } from './forfait.service';
+
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { ForfaitComponent } from './forfait/forfait.component';
@@ -9,7 +14,7 @@ import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { EtoilesComponent } from './etoiles/etoiles.component';
 import { PrixForfaitComponent } from './prix-forfait/prix-forfait.component';
 import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -26,10 +31,25 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { ForfaitsVedettePipe } from './forfaits-vedette.pipe';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 import { FormatDatePipe } from './format-date.pipe';
+import { AccueilComponent } from './accueil/accueil.component';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { AdminComponent } from './admin/admin.component';
+import { EnteteComponent } from './entete/entete.component';
+import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { ForfaitsMexiqueComponent } from './forfaits-mexique/forfaits-mexique.component';
+import { ForfaitsCubaComponent } from './forfaits-cuba/forfaits-cuba.component';
+import { ForfaitsMexiquePipe } from './forfaits-mexique.pipe';
+import { ForfaitsCubaPipe } from './forfaits-cuba.pipe';
+import { ForfaitsAccueilPipe } from './forfaits-accueil.pipe';
+import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
+import { BoiteDialogueComponent } from './boite-dialogue/boite-dialogue.component';
 
 
 @NgModule({
@@ -43,7 +63,19 @@ import { FormatDatePipe } from './format-date.pipe';
     FormulaireForfaitComponent,
     ForfaitsVedettePipe,
     FormulaireRechercheComponent,
-    FormatDatePipe
+    FormatDatePipe,
+    AccueilComponent,
+    AProposComponent,
+    AdminComponent,
+    EnteteComponent,
+    PiedDePageComponent,
+    ForfaitsMexiqueComponent,
+    ForfaitsCubaComponent,
+    ForfaitsMexiquePipe,
+    ForfaitsCubaPipe,
+    ForfaitsAccueilPipe,
+    TableauForfaitsComponent,
+    BoiteDialogueComponent
   ],
   imports: [
     BrowserModule,
@@ -63,9 +95,14 @@ import { FormatDatePipe } from './format-date.pipe';
     MatSelectModule,
     MatSidenavModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule,
+    MatTableModule,
+    MatDialogModule,
+    ChartsModule,
+    MatMenuModule,
   ],
-  providers: [],
+  providers: [ForfaitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

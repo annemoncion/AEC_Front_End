@@ -9,7 +9,7 @@ import { Forfait } from '../forfait';
 export class ForfaitComponent implements OnInit {
   @Input () forfait: Forfait;
 
-  get dateDepart() {
+  /*get dateDepart() {
     const dateOb = this.forfait.dateDepart;
 
     // ajouter le zéro pour les dates à un chiffre
@@ -125,7 +125,7 @@ export class ForfaitComponent implements OnInit {
     const dateDepart = this.forfait.dateDepart;
     const dateRetour = this.forfait.dateRetour;
     return -((dateDepart.valueOf() - dateRetour.valueOf()) / (1000 * 3600 * 24)) + 1;
-  }
+  }*/
 
   constructor() { }
 

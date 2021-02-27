@@ -1,4 +1,4 @@
-<div class="forfaitComplet" [ngClass]="{'enVedette': forfait.forfaitVedette}">
+<div class="forfaitComplet" [ngClass]="{'enVedette': forfait.vedette}">
 
   <div class="infos">
     <div class="photo"></div>
@@ -9,8 +9,8 @@
         <span class="villeDepart">de {{ forfait.villeDepart }}</span>
       </h3>
       <h2>{{ forfait.hotel.nom }}</h2>
-      <app-etoiles [nbEtoiles]="forfait.hotel.nbEtoiles"></app-etoiles>
-      <p>{{ forfait.hotel.nbChambres }} chambres</p>
+      <app-etoiles [nbEtoiles]="forfait.hotel.nombreEtoiles"></app-etoiles>
+      <p>{{ forfait.hotel.nombreChambres }} chambres</p>
     </div>
   </div>
 
@@ -23,9 +23,9 @@
 
   <div class="contenantPrix">
     <div class="duree">
-      <p class="nbJours">{{ duree }} jours</p>
-      <p>Du {{ dateDepart }} </p>
-      <p>au {{ dateRetour }}</p>
+      <p class="nbJours">14 jours</p>
+      <p>Du {{ forfait.dateDepart }} </p>
+      <p>au {{ forfait.dateRetour }}</p>
     </div>
     <app-prix-forfait [forfait]="forfait"></app-prix-forfait>
   </div>

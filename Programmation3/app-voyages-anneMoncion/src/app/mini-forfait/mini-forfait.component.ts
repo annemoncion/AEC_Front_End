@@ -8,7 +8,7 @@ import { Forfait } from '../forfait';
 })
 export class MiniForfaitComponent implements OnInit {
   @Input () miniForfait: Forfait;
-
+/*
   get dateDepart() {
     const dateOb = this.miniForfait.dateDepart;
 
@@ -69,7 +69,7 @@ export class MiniForfaitComponent implements OnInit {
     const dateDepart = this.miniForfait.dateDepart;
     const dateRetour = this.miniForfait.dateRetour;
     return -((dateDepart.valueOf() - dateRetour.valueOf()) / (1000 * 3600 * 24)) + 1;
-  }
+  }*/
 
   constructor() { }
 
