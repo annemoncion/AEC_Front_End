@@ -15,7 +15,7 @@ import { ForfaitService } from '../forfait.service';
 export class TableauForfaitsComponent implements OnInit {
   @ViewChild(MatTable) table: MatTable<any>;
 
-  columnsToDisplay = ['dateDepart', 'dateRetour', 'nomHotel', 'prixForfait', 'actions'];
+  columnsToDisplay = ['actions', 'dateDepart', 'dateRetour', 'nomHotel', 'prixForfait'];
   forfaits: Forfait[];
   newForfait: Forfait;
   selectedForfait: Forfait;
@@ -26,20 +26,20 @@ export class TableauForfaitsComponent implements OnInit {
  
     this.newForfait = {
       _id: null, 
-      destination: 'Mexique', 
-      villeDepart: 'Canada', 
+      destination: '', 
+      villeDepart: '', 
       hotel: { 
-        nom: 'Hôtel no1', 
-        coordonnees: 'adresse, nom de rue, adresse', 
-        nombreEtoiles: 2, 
-        nombreChambres: 1, 
-        caracteristiques: ['Face à la plage'] 
+        nom: '', 
+        coordonnees: '', 
+        nombreEtoiles: null, 
+        nombreChambres: null, 
+        caracteristiques: [] 
       },
-      dateDepart: '2020-01-02', 
-      dateRetour: '2020-01-08', 
-      dateDepartD: '2020-01-01T00:00:00.000Z', 
-      dateRetourD: '2020-01-08T00:00:00.000Z', 
-      prix: 500, 
+      dateDepart: '', 
+      dateRetour: '', 
+      dateDepartD: '', 
+      dateRetourD: '', 
+      prix: null, 
       rabais: 0, 
       vedette: false, 
       da: '1996427' 
@@ -59,31 +59,30 @@ export class TableauForfaitsComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       if(result) {
-        this.newForfait = result;
-        console.log(this.newForfait);
+        this.newForfait = result;  
         this.forfaitService.addForfait(this.newForfait)
             .subscribe(forfait  => { 
               this.forfaits.push(forfait);
               this.newForfait._id = null; 
-              this.newForfait.destination='';
-              this.newForfait.villeDepart='';
-              this.newForfait.hotel.nom='';
-              this.newForfait.hotel.coordonnees='';
-              this.newForfait.hotel.nombreEtoiles=1;
-              this.newForfait.hotel.nombreChambres=1;
-              this.newForfait.hotel.caracteristiques=[];
-              this.newForfait.dateDepart='';
-              this.newForfait.dateRetour='';
-              this.newForfait.dateDepartD='';
-              this.newForfait.dateRetourD='';
-              this.newForfait.prix=0;
-              this.newForfait.rabais=0;
-              this.newForfait.vedette=false;
-              this.newForfait.da='1996427';
+              this.newForfait.destination = '';
+              this.newForfait.villeDepart = '';
+              this.newForfait.hotel.nom = '';
+              this.newForfait.hotel.coordonnees = ''; 
+              this.newForfait.hotel.nombreEtoiles = null;
+              this.newForfait.hotel.nombreChambres = null;
+              this.newForfait.hotel.caracteristiques = [];
+              this.newForfait.dateDepart = '';
+              this.newForfait.dateRetour = '';
+              this.newForfait.dateDepartD = '';
+              this.newForfait.dateRetourD = '';
+              this.newForfait.prix = null;
+              this.newForfait.rabais = 0;
+              this.newForfait.vedette = false;
+              this.newForfait.da = '1996427';
               this.table.renderRows()});
       }
+      
     });
   }
 

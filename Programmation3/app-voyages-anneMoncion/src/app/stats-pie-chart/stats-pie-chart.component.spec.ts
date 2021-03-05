@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormulaireForfaitComponent } from './formulaire-forfait.component';
+import { StatsPieChartComponent } from './stats-pie-chart.component';
 
-describe('FormulaireForfaitComponent', () => {
-  let component: FormulaireForfaitComponent;
-  let fixture: ComponentFixture<FormulaireForfaitComponent>;
+describe('StatsPieChartComponent', () => {
+  let component: StatsPieChartComponent;
+  let fixture: ComponentFixture<StatsPieChartComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormulaireForfaitComponent ]
+      declarations: [ StatsPieChartComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormulaireForfaitComponent);
+    fixture = TestBed.createComponent(StatsPieChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,11 +9,19 @@ import { Forfait } from '../forfait';
 export class ForfaitComponent implements OnInit {
   @Input () forfait: Forfait;
 
-  /*get dateDepart() {
-    const dateOb = this.forfait.dateDepart;
+  get duree() {
+    const dateDepart = new Date(this.forfait.dateDepart);
+    const dateRetour = new Date(this.forfait.dateRetour);
+    let duree = 0;
+    duree = (dateRetour.valueOf() - dateDepart.valueOf()) / (1000 * 3600 * 24) + 1;
+    return duree;
+  }
+
+  get dateDepart() {
+    const dateOb = new Date(this.forfait.dateDepart);
 
     // ajouter le zéro pour les dates à un chiffre
-    const date = ('0' + dateOb.getDate()).slice(-2);
+    const date = dateOb.getDate() + 1;
 
     // associer le mois au raccourci français
     const monthNumeric = dateOb.getMonth() + 1;
@@ -66,10 +74,10 @@ export class ForfaitComponent implements OnInit {
   }
 
   get dateRetour() {
-    const dateOb = this.forfait.dateRetour;
+    const dateOb = new Date(this.forfait.dateRetour);
 
     // ajouter le zéro pour les dates à un chiffre
-    const date = ('0' + dateOb.getDate()).slice(-2);
+    const date = dateOb.getDate() + 1;
 
     // associer le mois au raccourci français
     const monthNumeric = dateOb.getMonth() + 1;
@@ -120,12 +128,6 @@ export class ForfaitComponent implements OnInit {
     // retourner la date dans le format DD MM AAAA
     return date + ' ' + month + ' ' + year;
   }
-
-  get duree() {
-    const dateDepart = this.forfait.dateDepart;
-    const dateRetour = this.forfait.dateRetour;
-    return -((dateDepart.valueOf() - dateRetour.valueOf()) / (1000 * 3600 * 24)) + 1;
-  }*/
 
   constructor() { }
 

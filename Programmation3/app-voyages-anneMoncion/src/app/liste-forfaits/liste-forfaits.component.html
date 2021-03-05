@@ -1,6 +1,6 @@
 <div>
   <mat-list class="forfaitsListe" *ngIf="visibleForfaits === 'all'">
-    <mat-list-item class="forfait" *ngFor="let forfait of forfaits">
+    <mat-list-item class="forfait" *ngFor="let forfait of forfaits | forfaitsAccueil:recherche">
         <app-forfait [forfait]="forfait" [ngClass]="{'enVedette': forfait.vedette}"></app-forfait>
       <mat-divider></mat-divider>
     </mat-list-item>

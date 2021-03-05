@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DUREE } from '../mock-duree';
-import { CARACTERISTIQUES } from '../mock-caracteristiques';
 import { Recherche } from '../recherche';
 import {FormControl} from '@angular/forms';
 import {MAT_MOMENT_DATE_FORMATS, MomentDateAdapter} from '@angular/material-moment-adapter';
@@ -30,8 +29,6 @@ export class FormulaireRechercheComponent implements OnInit {
   constructor() { }
 
   duree: number[] = DUREE;
-
-  caracteristiques: string[] = CARACTERISTIQUES;
 
   // Datepicker takes `Moment` objects instead of `Date` objects.
   date = new FormControl(moment([2020, 0, 1]));

@@ -1,5 +1,5 @@
 export interface Caracteristique {
-  id: string;
   nom: string;
+  valeur: string;
   active: boolean;
 }

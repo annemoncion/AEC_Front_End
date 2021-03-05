@@ -1,6 +1,23 @@
-<button matSuffix  type="submit" mat-icon-button color="primary" (click)="openDialogNewForfait()"><i class="material-icons">add</i></button>
+<button class="btn-ajout" matSuffix mat-button type="submit" (click)="openDialogNewForfait()"><i class="material-icons">add</i> Nouveau forfait</button>
 
-<table mat-table #tableauForfaits [dataSource]="forfaits">
+<div class="table">
+    <table mat-table #tableauForfaits [dataSource]="forfaits">
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let forfait" class="boutonsAction">
+            <button class="btn-form" *ngIf="(selectedForfait && selectedForfait === forfait);else editButton;" color="primary" form="forfaitFormEdition" 
+        mat-button><i class="material-icons">done</i></button>
+            <ng-template #editButton>
+                <form (ngSubmit)="onSelect(forfait)">
+                    <button class="btn-form" mat-button><i class="material-icons">edit</i></button>
+                </form>
+            </ng-template>
+            <form (ngSubmit)="onDelete(forfait)">
+                <button class="btn-form" mat-button ><i class="material-icons">delete</i></button>
+            </form>
+        </td>
+    </ng-container>
 
     <ng-container matColumnDef="dateDepart">
         <th mat-header-cell *matHeaderCellDef> Date de départ </th>
@@ -40,26 +57,12 @@
         <th mat-header-cell *matHeaderCellDef> Prix du forfait </th>
         <td mat-cell *matCellDef="let forfait"> {{forfait.prix}} </td>
     </ng-container>
-
-    <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let forfait" class="boutonsAction">
-            <button *ngIf="(selectedForfait && selectedForfait === forfait);else editButton;" color="primary" form="forfaitFormEdition" 
-     mat-button><i class="material-icons">done</i></button>
-            <ng-template #editButton>
-                <form (ngSubmit)="onSelect(forfait)">
-                    <button mat-button><i class="material-icons">edit</i></button>
-                </form>
-            </ng-template>
-            <form (ngSubmit)="onDelete(forfait)">
-                <button mat-button ><i class="material-icons">delete</i></button>
-            </form>
-        </td>
-     </ng-container>
      
  
     <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
  
  </table>
+</div>
+
  

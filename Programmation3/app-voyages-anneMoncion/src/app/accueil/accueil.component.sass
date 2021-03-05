@@ -31,10 +31,14 @@
 
 .interieurMini
   display: flex
-  flex-wrap: nowrap
+  flex-wrap: wrap
   align-items: stretch
   height: 100%
-  padding: 0 4px
+  padding: 0 1rem
+  margin: 0 -0.25rem -0.5rem
+  .miniForfait
+    flex-basis: calc(33.33% - 0.25rem)
+    margin-bottom: 0.5rem
 
 h2
   color: #fff

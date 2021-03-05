@@ -13,7 +13,6 @@ import { ForfaitComponent } from './forfait/forfait.component';
 import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { EtoilesComponent } from './etoiles/etoiles.component';
 import { PrixForfaitComponent } from './prix-forfait/prix-forfait.component';
-import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { ChartsModule } from 'ng2-charts';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -37,7 +36,6 @@ import {MatMenuModule} from '@angular/material/menu';
 
 import { ForfaitsVedettePipe } from './forfaits-vedette.pipe';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
-import { FormatDatePipe } from './format-date.pipe';
 import { AccueilComponent } from './accueil/accueil.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { AdminComponent } from './admin/admin.component';
@@ -50,6 +48,8 @@ import { ForfaitsCubaPipe } from './forfaits-cuba.pipe';
 import { ForfaitsAccueilPipe } from './forfaits-accueil.pipe';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 import { BoiteDialogueComponent } from './boite-dialogue/boite-dialogue.component';
+import { StatsLineChartComponent } from './stats-line-chart/stats-line-chart.component';
+import { StatsPieChartComponent } from './stats-pie-chart/stats-pie-chart.component';
 
 
 @NgModule({
@@ -60,10 +60,8 @@ import { BoiteDialogueComponent } from './boite-dialogue/boite-dialogue.componen
     MiniForfaitComponent,
     EtoilesComponent,
     PrixForfaitComponent,
-    FormulaireForfaitComponent,
     ForfaitsVedettePipe,
     FormulaireRechercheComponent,
-    FormatDatePipe,
     AccueilComponent,
     AProposComponent,
     AdminComponent,
@@ -75,7 +73,9 @@ import { BoiteDialogueComponent } from './boite-dialogue/boite-dialogue.componen
     ForfaitsCubaPipe,
     ForfaitsAccueilPipe,
     TableauForfaitsComponent,
-    BoiteDialogueComponent
+    BoiteDialogueComponent,
+    StatsLineChartComponent,
+    StatsPieChartComponent
   ],
   imports: [
     BrowserModule,

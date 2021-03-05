@@ -8,12 +8,20 @@ import { Forfait } from '../forfait';
 })
 export class MiniForfaitComponent implements OnInit {
   @Input () miniForfait: Forfait;
-/*
+
+  get duree() {
+    const dateDepart = new Date(this.miniForfait.dateDepart);
+    const dateRetour = new Date(this.miniForfait.dateRetour);
+    let duree = 0;
+    duree = (dateRetour.valueOf() - dateDepart.valueOf()) / (1000 * 3600 * 24) + 1;
+    return duree;
+  }
+
   get dateDepart() {
-    const dateOb = this.miniForfait.dateDepart;
+    const dateOb = new Date(this.miniForfait.dateDepart);
 
     // ajouter le zéro pour les dates à un chiffre
-    const date = ('0' + dateOb.getDate()).slice(-2);
+    const date = dateOb.getDate() + 1;
 
     // associer le mois au raccourci français
     const monthNumeric = dateOb.getMonth() + 1;
@@ -64,12 +72,6 @@ export class MiniForfaitComponent implements OnInit {
     // retourner la date dans le format DD MM AAAA
     return date + ' ' + month + ' ' + year;
   }
-
-  get duree() {
-    const dateDepart = this.miniForfait.dateDepart;
-    const dateRetour = this.miniForfait.dateRetour;
-    return -((dateDepart.valueOf() - dateRetour.valueOf()) / (1000 * 3600 * 24)) + 1;
-  }*/
 
   constructor() { }
 

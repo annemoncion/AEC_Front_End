@@ -18,14 +18,14 @@
     <ul>
       <li *ngFor="let carac of forfait.hotel.caracteristiques">{{ carac }}</li>
     </ul>
-    <p>{{ forfait.hotel.coordonnees }}</p>
+    <p class="coordonnees">{{ forfait.hotel.coordonnees }}</p>
   </div>
 
   <div class="contenantPrix">
     <div class="duree">
-      <p class="nbJours">14 jours</p>
-      <p>Du {{ forfait.dateDepart }} </p>
-      <p>au {{ forfait.dateRetour }}</p>
+      <p class="nbJours">{{ duree }} jours</p>
+      <p>Du {{ dateDepart }} </p>
+      <p>au {{ dateRetour }}</p>
     </div>
     <app-prix-forfait [forfait]="forfait"></app-prix-forfait>
   </div>

@@ -1,0 +1,11 @@
+<div class="graphique">
+    <h3>Destinations populaires</h3>
+    <canvas id="monGraphique" baseChart
+        [datasets]="mesdonnees.data"
+        [labels]="mesdonnees.etiquettes"
+        [options]="mongraphique.options"
+        [legend]="mongraphique.legende"
+        [chartType]="mongraphique.type"
+        height="300px">
+    </canvas>
+</div>    

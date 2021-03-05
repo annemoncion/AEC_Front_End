@@ -1,5 +1,5 @@
 <mat-dialog-content>
-<form #forfaitFormAjout="ngForm" id="forfaitFormAjout" class="formForfait">
+<form #forfaitFormAjout="ngForm" id="forfaitFormAjout" class="formForfait" (ngSubmit)="forfaitFormAjout.form.valid">
     <h2>Ajouter un forfait</h2>
     <div class="destination">
       <p>
@@ -23,13 +23,18 @@
       <p>
         <mat-form-field appearance="fill">
           <input type="text"
-                name="villeDepart"
+                 name="villeDepart"
+                 minlength="2"
+                 maxlength="50"
                  required
                  placeholder="Ville de départ"
                  aria-label="ville de départ"
                  matInput
                  [(ngModel)]="newForfait.villeDepart"
                  #villeDepart="ngModel">
+                 <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('required')">La ville de départ est obligatoire.</mat-error>
+            <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('minlength')">La ville de départ doit contenir au moins 2 caractères.</mat-error>
+            <mat-error *ngIf="villeDepart.invalid && (villeDepart.dirty || villeDepart.touched) && villeDepart.hasError('maxlength')">La ville de départ doit contenir au maximum 50 caractères.</mat-error>
         </mat-form-field>
       </p>
     </div>
@@ -92,6 +97,9 @@
             [(ngModel)]="newForfait.hotel.nombreChambres"
             placeholder="Nombre de chambres"
             #ctrlNbChambre="ngModel">
+            <mat-error *ngIf="ctrlNbChambre.hasError('required')">
+              Le nombre de chambre est <strong>obligatoire</strong>.
+            </mat-error>
         </mat-form-field>
       </p>
   
@@ -112,7 +120,11 @@
   
       <ul>
         <li *ngFor="let carac of caracteristiques">
-          <mat-checkbox>{{ carac }}</mat-checkbox>
+          <mat-checkbox
+            name="caracteristiques"
+            value = "{{carac.valeur}}"
+            [(ngModel)]="carac.active"
+            (change)="updateCaracteristiques()">{{ carac.nom }}</mat-checkbox>
         </li>
       </ul>
   
@@ -132,6 +144,7 @@
                 matInput
                 placeholder="Date de départ"
                 aria-label="Date de départ">
+            <mat-hint>Format AAAA-MM-DD</mat-hint>
             <mat-error *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('required')">La date de départ est obligatoire.</mat-error>
             <mat-error *ngIf="dateDepart.invalid && (dateDepart.dirty || dateDepart.touched) && dateDepart.hasError('minlength')">La date a le format suivant: AAAA-MM-DD.</mat-error>
         </mat-form-field>
@@ -150,6 +163,7 @@
                 matInput
                 placeholder="Date de retour"
                 aria-label="Date de retour">
+            <mat-hint>Format AAAA-MM-DD</mat-hint>
             <mat-error *ngIf="dateRetour.invalid && (dateRetour.dirty || dateRetour.touched) && dateRetour.hasError('required')">La date de départ est obligatoire.</mat-error>
             <mat-error *ngIf="dateRetour.invalid && (dateRetour.dirty || dateRetour.touched) && dateRetour.hasError('minlength')">La date a le format suivant: AAAA-MM-DD.</mat-error>
         </mat-form-field>
@@ -168,7 +182,31 @@
           [(ngModel)]="newForfait.prix"
           #prix="ngModel"
           placeholder="Prix">
+          <mat-error *ngIf="prix.hasError('required')">
+            Le prix est <strong>obligatoire</strong>.
+          </mat-error>
       </mat-form-field>
+    </div>
+
+    <div class="rabais">
+      <mat-form-field appearance="fill">
+        <mat-label>Rabais</mat-label>
+        <input
+          type="number"
+          name="rabais"
+          matInput
+          min="0"
+          [(ngModel)]="newForfait.rabais"
+          #rabais="ngModel"
+          placeholder="Rabais">
+      </mat-form-field>
+    </div>
+
+    <div class="vedette">
+      <mat-checkbox
+          name="vedette"
+          [(ngModel)]="newForfait.vedette"
+          #vedette="ngModel">Forfait en vedette</mat-checkbox>
     </div>
 
     <div mat-dialog-actions>
